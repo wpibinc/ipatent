@@ -19,10 +19,10 @@
 define('DB_NAME', 'ipatent_wmg');
 
 /** MySQL database username */
-define('DB_USER', 'dev');
+define('DB_USER', 'ipatent_wmg');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'nakujho');
+define('DB_PASSWORD', 'M45nv2qA');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
