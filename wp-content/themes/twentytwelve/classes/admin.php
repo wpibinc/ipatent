@@ -27,7 +27,7 @@ function my_custom_logo() {
 <?php 
 }
 
-add_action( 'admin_init', 'wmg_adminroles');
+add_action( 'admin_head', 'wmg_adminroles');
 function wmg_adminroles(){
 
 	global $wp_roles;
