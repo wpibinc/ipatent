@@ -26,11 +26,7 @@ function my_custom_logo() {
 	
 <?php 
 }
-?>
 
-
-
-<?php 
 add_action( 'admin_init', 'wmg_adminroles');
 function wmg_adminroles(){
 
@@ -53,6 +49,9 @@ if($user_role=='editor')
 		#dashboard_primary,#dashboard_secondary,.versions{visibility: hidden;}
 		table.form-table tr{display:none;}
 		table.form-table tr#password{display:block;}
+		
+		#nav-menu-theme-locations, #trackbacksdiv, #postcustom, #commentstatusdiv, #commentsdiv, 
+		#formatdiv, #slugdiv, #profile-page h3, #profile-page .editform, #wpfooter, #postexcerpt p {display:none;}
 		
 	</style>
 	<script>
@@ -115,6 +114,4 @@ if($user_role=='editor')
 	
 
  }
-
-
 ?>
