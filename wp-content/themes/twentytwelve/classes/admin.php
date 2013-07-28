@@ -77,7 +77,8 @@ if($user_role=='editor')
 				'edit_pages',
 				'edit_posts',
 				'gform_full_access',
-				'edit_theme_options'
+				'edit_theme_options',
+				'edit_media'
 		);
 
 		
