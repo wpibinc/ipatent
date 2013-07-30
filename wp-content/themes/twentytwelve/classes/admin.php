@@ -4,10 +4,11 @@ function my_login_head() {
 	echo "
 	<style>
 	body.login #login h1 a {
-		background: url('".get_bloginfo('template_url')."/images/Logo.png') no-repeat scroll center top transparent;
+		background: url('".get_bloginfo('template_url')."/images/Logo.png') no-repeat scroll center top gray;
 		height: 115px;
-		width: 265px;
+		width: 329px;
 	}
+	body.login{background-color:gray;}
 	</style>
 	";
 }
@@ -76,6 +77,8 @@ if($user_role=='editor')
 		$add_caps= array(
 				'edit_pages',
 				'edit_posts',
+				'edit_others_posts',
+				'edit_others_pages',
 				'gform_full_access',
 				'edit_theme_options',
 				'edit_media'
