@@ -1884,21 +1884,21 @@ ul#gform_fields_1{margin-left:5px;}
 #gform_wrapper_1{width:600px;}
 
 .gform_title{display:none;}
-.large{width:508px !important;}
+.large{width:496px !important;}
 .medium{width:100% !important;}
 .gform_wrapper .top_label .gfield_label{float:left;clear:none !important;}
-.ginput_container{float:left;width:75%;margin:5px 0 0 7px;}
+.ginput_container{float:left;width:75%;margin:5px 0 0 17px;}
 
-#field_1_1{width:44.5%;/*border:1px solid red;*/}
+#field_1_1{width:121.8%;/*border:1px solid red;*/}
 #field_1_5{width:54%;float:left;padding:0 0 0 8px;/*border:1px solid red;*/}
 #field_1_2{width:99%;/*border:1px solid red;*/}
 #field_1_3{width:99%;/*border:1px solid red;*/}
 #field_1_4{width:100%;/*border:1px solid red;*/}
 
-#field_1_1 .ginput_container{margin:5px 0 0 22px;width:65%;}
+#field_1_1 .ginput_container{margin:5px 0 0 2px;width:68%;}
 #field_1_5 .ginput_container{width:66.2%;/*border:1px solid blue;*/}
-#field_1_2 .ginput_container{margin:5px 0 0 24px;}
-#field_1_4 .ginput_container{margin:5px 0 0 12px;}
+#field_1_2 .ginput_container{margin:5px 0 0 36px;}
+#field_1_4 .ginput_container{margin:5px 0 0 24px;}
 
 /*#field_1_5 input{width:66% !important;}*/
 
