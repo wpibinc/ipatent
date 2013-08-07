@@ -23,7 +23,7 @@ get_header();
 				<header class="entry-header">
 					<h1 class="entry-title"><?php the_title(); $title = the_title('', '', false);?></h1>
 				</header>
-				<div class="right-header"><span><?php echo(types_render_field( "excerpt")); ?></span></div>
+				<div class="right-header"><span><?php echo(types_render_field("degrees")); ?></span></div>
 				<div class="right-img">
 					<?php 
 						$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full");
@@ -38,8 +38,9 @@ get_header();
 					</a>
 					<!-- details under the image -->
 					<div class="right-details">
-						<?php if (types_render_field( "phone")) {?><span>Tel: <?php echo(types_render_field( "phone")); ?></span><?php } ?>
-						<?php if (types_render_field( "email")) {?><span><img src="/wp-content/themes/twentytwelve/images/email.gif" />&nbsp;&nbsp;&nbsp; <?php echo(types_render_field( "email")); ?></span><?php } ?>
+						<?php if (types_render_field( "phone")) {?><span>Tel: <?php echo(types_render_field( "phone")); //echo "073-7919199";  ?></span><?php //} ?>
+						<?php if (types_render_field( "fax")) {?><span>Fax: <?php  echo(types_render_field( "fax")); //echo "073-7919100";  ?></span><?php //} ?>
+						<?php if (types_render_field( "email")) {?><span><img src="/wp-content/themes/twentytwelve/images/email.gif" />&nbsp;&nbsp;&nbsp; <?php echo(types_render_field( "email")); echo "@ipatent.co.il"; ?></span><?php } ?>
 						<?php if (types_render_field( "linkedln")) {?><a><span><img src="/wp-content/themes/twentytwelve/images/linkedin.gif" />&nbsp;&nbsp;&nbsp;<?php echo(types_render_field( "linkedln")); ?></span></a><?php } ?>
 						<?php if (types_render_field( "practice-areas")) {?><div class="practice-area">
 							<span class="ptitle">Practice areas</span>
@@ -49,14 +50,32 @@ get_header();
 					</div>
 				</div>
 				<div class="right-text" style="float:left;width:375px;">
+					
 					<div class="right-text-header1">Experience & Background</div>
 					<div style="margin:5px 0 0 20px;">
 						<?php while ( have_posts() ) : the_post(); ?>
 						<?php get_template_part( 'content', 'page' ); ?>
 						<?php endwhile; // end of the loop. ?>
 					</div>
+					
 					<div class="right-text-header1">Resume</div>
 					<div style="margin:5px 0 0 20px;word-break:break-word;width:351px;" class="resume-text"><?php echo(types_render_field("resume_field")); ?></div>
+					
+					<div class="right-text-header1">Education</div>
+					<div style="margin:5px 0 0 20px;word-break:break-word;width:351px;" class="resume-text"><?php echo(types_render_field("education_field")); ?></div>
+					
+					<div class="right-text-header1">Academic Awards</div>
+					<div style="margin:5px 0 0 20px;word-break:break-word;width:351px;" class="resume-text"><?php echo(types_render_field("academic_awards")); ?></div>
+					
+					<div class="right-text-header1">Rankings & Recognitions</div>
+					<div style="margin:5px 0 0 20px;word-break:break-word;width:351px;" class="resume-text"><?php echo(types_render_field("rankings_recognitions")); ?></div>
+					
+					<div class="right-text-header1">Voluntary Activities</div>
+					<div style="margin:5px 0 0 20px;word-break:break-word;width:351px;" class="resume-text"><?php echo(types_render_field("voluntary_activities")); ?></div>
+					
+					<div class="right-text-header1">Admissions</div>
+					<div style="margin:5px 0 0 20px;word-break:break-word;width:351px;" class="resume-text"><?php echo(types_render_field("admissions")); ?></div>
+					
 				</div>				
 			</div>
 			<div class="left-div">
