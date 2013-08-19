@@ -38,8 +38,8 @@ get_header();
 					</a>
 					<!-- details under the image -->
 					<div class="right-details">
-						<?php if (types_render_field( "phone")) {?><span>Tel: <?php  echo "073-7919199"; //echo(types_render_field( "phone")); //echo "073-7919199";  ?></span><?php //} ?>
-						<?php if (types_render_field( "fax")) {?><span>Fax: <?php  echo "073-7919100"; //echo(types_render_field( "fax")); //echo "073-7919100";  ?></span><?php //} ?>
+						<?php if (types_render_field( "phone")) {?><span>Tel: <?php  echo "073-7919199"; //echo(types_render_field( "phone")); //echo "073-7919199";  ?></span><?php } ?>
+						<?php if (types_render_field( "fax")) {?><span>Fax: <?php  echo "073-7919100"; //echo(types_render_field( "fax")); //echo "073-7919100";  ?></span><?php } ?>
 						<?php if (types_render_field( "email")) {?><span><img src="/wp-content/themes/twentytwelve/images/email.gif" />&nbsp;&nbsp;&nbsp; <?php echo(types_render_field( "email")); echo "@ipatent.co.il"; ?></span><?php } ?>
 						<?php if (types_render_field( "linkedln")) {?><a><span><img src="/wp-content/themes/twentytwelve/images/linkedin.gif" />&nbsp;&nbsp;&nbsp;<?php echo(types_render_field( "linkedln")); ?></span></a><?php } ?>
 						<?php if (types_render_field( "practice-areas")) {?><div class="practice-area">
