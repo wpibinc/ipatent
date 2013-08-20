@@ -9,7 +9,7 @@
 
 get_header(); ?>
 <style>
-#primary{background-color:#49443f; }
+#primary{/*background-color:#49443f;*/ }
 
 </style>
 	<div id="primary" class="site-content">
