@@ -620,10 +620,9 @@ a:hover {
 }
 
 #home-top-inner {
-	left: 723px;
+	left: 45%;
     position: relative;
-   /* top: 140px;*/
-   	bottom:250px;
+   	bottom:55%;
     color: #fff;
     width: 545px;
     height: 135px;

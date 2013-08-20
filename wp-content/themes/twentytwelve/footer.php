@@ -50,7 +50,7 @@
 	<div style="clear:both;"></div>
 	<div class="footer-rights">
 		
-		<span>All Rights Reserved, Erlich & FENSTER | <a href="#">Terms and Conditions</a></span>
+		<span>All Rights Reserved, Ehrlich & FENSTER | <a href="#">Terms and Conditions</a></span>
 		<span class="footer-rights-social">
 			<a href="http://linkedin.com" class="linkedin social"></a>
 			<a href="http://facebook.com" class="facebook social"></a>
