@@ -25,13 +25,27 @@
 <!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
+
+
+
+<meta name="keywords" content="<?php 
+		if ( is_home() )
+			echo ', Patent, Trademark, Patent Firm';
+		else	
+			wp_title( '|', true, 'right' ); echo ', Patent, Trademark, Patent Firm'; ?>"  />
+<meta name="description" content="<?php 
+		if ( is_home() )
+			echo 'Ehrlich & Fenster is a leading Israel based Patent Attorneys Firm. The Firm specializes in all matters concerning protection and prose- cution of Intellectual Property';
+		else	
+			wp_title( '|', true, 'right' ); echo 'Ehrlich & Fenster is a leading Israel based Patent Attorneys Firm. The Firm specializes in all matters concerning protection and prose- cution of Intellectual Property'; ?>" />
+
 <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.gif" type="image/x-icon" />
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.gif" type="image/x-icon" />
 <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/facebookshare.jpg" />
 <meta name="viewport" content="width=device-width" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<title><?php wp_title( '|', true, 'right' ); ?></title>
+<title><?php wp_title( '|', true, 'right' ); echo 'Erlich & Fenster - Patent & Trademark attorney'; ?>'); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
