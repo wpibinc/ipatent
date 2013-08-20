@@ -1,8 +1,0 @@
-
-total 10 images.
-
-animation should be for ~6-7 images. but they should have some to play/ swap etc via the CMS:
-some photos fit better extra text on them - others don't so..
-
-Images size for hp: 495X2560pix
-Back ground colour behind the images (ya, for those really extra big screen of more then 2560pix!): #1c1a15
