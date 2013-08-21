@@ -61,21 +61,30 @@ get_header();
 					<div class="right-text-header1">Resume</div>
 					<div style="margin:5px 0 0 20px;word-break:break-word;width:351px;" class="resume-text"><?php echo(types_render_field("resume_field")); ?></div>
 					
+					<?php if(types_render_field("education_field")!=""){?>
 					<div class="right-text-header1">Education</div>
 					<div style="margin:5px 0 0 20px;word-break:break-word;width:351px;" class="resume-text"><?php echo(types_render_field("education_field")); ?></div>
+					<?php }?>
 					
+					<?php if(types_render_field("academic_awards")!=""){?>
 					<div class="right-text-header1">Academic Awards</div>
 					<div style="margin:5px 0 0 20px;word-break:break-word;width:351px;" class="resume-text"><?php echo(types_render_field("academic_awards")); ?></div>
+					<?php }?>
 					
+					<?php if(types_render_field("rankings_recognitions")!=""){?>
 					<div class="right-text-header1">Rankings & Recognitions</div>
 					<div style="margin:5px 0 0 20px;word-break:break-word;width:351px;" class="resume-text"><?php echo(types_render_field("rankings_recognitions")); ?></div>
+					<?php }?>
 					
+					<?php if(types_render_field("voluntary_activities")!=""){?>		
 					<div class="right-text-header1">Voluntary Activities</div>
 					<div style="margin:5px 0 0 20px;word-break:break-word;width:351px;" class="resume-text"><?php echo(types_render_field("voluntary_activities")); ?></div>
+					<?php }?>
 					
+					<?php if(types_render_field("admissions")!=""){?>	
 					<div class="right-text-header1">Admissions</div>
 					<div style="margin:5px 0 0 20px;word-break:break-word;width:351px;" class="resume-text"><?php echo(types_render_field("admissions")); ?></div>
-					
+					<?php }?>
 				</div>				
 			</div>
 			<div class="left-div">
