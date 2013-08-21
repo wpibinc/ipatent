@@ -2011,6 +2011,7 @@ li:first-child .a-news{border-top:none;}
 	padding:0 0 0 60px;
 	margin-right: 0;
 	margin-bottom: -2px;
+	display: none;
 }
 
 a.social{
@@ -2074,7 +2075,8 @@ a.social-contact.twitter:hover{background-position:-41px -16px;}
 	float:right;
 	/*border:1px solid blue;*/
 	position: relative;
-	right:23.5%;	
+	right:23.5%;
+	display: none;	
 }
 
 #home #content p {
