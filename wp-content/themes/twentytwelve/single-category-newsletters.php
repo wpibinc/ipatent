@@ -1,3 +1,4 @@
+
 <?php
 /**
  * The template for displaying all pages.
@@ -17,6 +18,30 @@ $current_name = $category->cat_name;
 if($current_name=="footer_logos")
 	header("Location:index.php");
 get_header(); ?>
+
+<script>
+
+
+   $(document).ready(	function()
+						{
+							   $(".date-clicked").click( function(event) 
+									   									{	
+								   											event.preventDefault();													
+								   											id=$(this).attr("id");
+																			//alert(id);
+																			
+																			if ($("."+id+'-post').is(":hidden")) 
+																				$("."+id+'-post').slideDown("slow");
+																			else 
+																				$("."+id+'-post').hide();
+										   								}
+									      				);
+			   							
+						}
+			    );
+</script>
+
+
 <?php 
 					
 ?>
@@ -40,7 +65,7 @@ get_header(); ?>
 					<div class="inner-left-div">
 						<ul class="left-menu">
 						<?php
-								
+								$flag_take_date=1;
 								$category_query_args = array(
     							'category_name' => "$current_name",
 								'orderby' => 'date', 
@@ -55,13 +80,27 @@ get_header(); ?>
 									while ($category_query->have_posts()) : 
 										$category_query->the_post();
 										$temp_title = the_title('', '', false);
+										$post_date=get_the_date("M");
+										
 										$class="";
 										if($temp_title==$title)
 											$class="current";
 										else
 											$class="";
-										//$temp_title = (strlen($temp_title) > 33) ? substr($temp_title, 0, 33) . '...' : $temp_title;
-										echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-news'>  $temp_title ></a></li>";
+										
+										if($temp_date!=$post_date)
+											$flag_take_date=1;
+										
+										if($flag_take_date)
+										{	
+											$temp_date=$post_date;
+											$flag_take_date=0;
+											echo "<a href='' class='date-clicked' id='$temp_date'>$post_date</a><br/>";
+										}
+										
+										
+										echo "<li class='$class $temp_date-post' style='display:none;'><a href=". get_permalink($post->ID)." class='a-news'> $temp_title ></a></li>";
+										
 										//echo "<br/>";
 									endwhile;
 								

@@ -551,6 +551,19 @@ function add_search_box_secondary_menu($items, $args) {
  */
 add_filter('wp_nav_menu_items','add_search_box_secondary_menu', 10, 2);
 
-
+add_filter('single_template', 'check_for_category_single_template');
+function check_for_category_single_template( $t )
+{
+	foreach( (array) get_the_category() as $cat )
+	{
+		if ( file_exists(TEMPLATEPATH . "/single-category-{$cat->slug}.php") ) return TEMPLATEPATH . "/single-category-{$cat->slug}.php";
+		if($cat->parent)
+		{
+		$cat = get_the_category_by_ID( $cat->parent );
+		if ( file_exists(TEMPLATEPATH . "/single-category-{$cat->slug}.php") ) return TEMPLATEPATH . "/single-category-{$cat->slug}.php";
+		}
+		}
+		return $t;
+}
 
 

@@ -1,0 +1,11 @@
+newsletter
+----------
+
+go to Categories
+add the category newsletter with the same slug name
+
+go to Appearnce->Menues
+Custom Links
+feed Url with this line: http://ipatent.co.il/?p=565 
+feed Label with this line:Newsletter
+put it under the News tab
