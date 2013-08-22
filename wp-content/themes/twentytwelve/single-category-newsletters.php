@@ -80,8 +80,8 @@ get_header(); ?>
 									while ($category_query->have_posts()) : 
 										$category_query->the_post();
 										$temp_title = the_title('', '', false);
-										$post_date=get_the_date("M");
-										
+										$post_date=get_the_date("F");
+										$post_date_year=get_the_date("Y");
 										$class="";
 										if($temp_title==$title)
 											$class="current";
@@ -95,7 +95,7 @@ get_header(); ?>
 										{	
 											$temp_date=$post_date;
 											$flag_take_date=0;
-											echo "<a href='' class='date-clicked' id='$temp_date'>$post_date</a><br/>";
+											echo "<a href='' class='date-clicked' id='$temp_date'>$post_date $post_date_year</a><br/>";
 										}
 										
 										
