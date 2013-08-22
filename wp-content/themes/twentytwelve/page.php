@@ -31,6 +31,18 @@ get_header(); ?>
 					<?php if(the_title("","",false)!="About"):?>
 					
 						<div class="inner-left-div">
+
+						
+						<ul class="left-menu">
+						<?php
+						
+						$id=$post->post_parent;
+						wp_list_pages("depth=1&child_of=".$id ."&title_li=");
+						
+																
+						?>
+						</ul>
+						
 						<ul class="left-menu">
 						<?php
 								$category_query_args = array(
