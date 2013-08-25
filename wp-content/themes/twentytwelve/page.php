@@ -28,7 +28,7 @@ get_header(); ?>
 			</div>
 			<div class="left-div">
 				<div class="right-div-entry-title">
-					<?php if(the_title("","",false)!="About"):?>
+					<?php if(the_title("","",false)!="About" && the_title("","",false)!="Sitemap" ):?>
 					
 						<div class="inner-left-div">
 
