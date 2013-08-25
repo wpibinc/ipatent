@@ -9,3 +9,18 @@ Custom Links
 feed Url with this line: http://ipatent.co.il/?p=565 
 feed Label with this line:Newsletter
 put it under the News tab
+
+sitemap defenitions
+-------------------
+1.create a new page named Sitemap
+2.put the lines:
+[wpms-pages]
+[wpms-posts]
+[wpms-categories-posts]
+
+google-sitemap-generator
+------------------------
+Open the plugin configuration page, which is located under Options -> XML-Sitemap 
+and build the sitemap the first time. 
+If you get a permission error, check the file permissions of the newly created files.
+The plugin will automatically update your sitemap of you publish a post, so theres nothing more to do :)
