@@ -1974,6 +1974,9 @@ white-space:pre;
 .footer-rights span{}
 .a-services{text-decoration: none;}
 .a-services:hover{text-decoration: underline;}
+.left-menu li a{text-decoration: none;}
+.left-menu li a:hover{text-decoration: underline;}
+.left-menu li a:after{/*content:" >";*/}
 .right-img{margin:25px 0;float:left;}
 .right-text-header1{margin:25px 0 0 15px;height:25px;border-top:1px solid;border-bottom:1px solid;line-height:25px;font-weight: bold;font-size: 16px;padding-left:5px;}
 .left-text-header{border-top:1px solid;border-bottom:1px solid;line-height:25px;color:#666;margin-top:15px;}
@@ -2092,4 +2095,4 @@ a.social-contact.twitter:hover{background-position:-41px -16px;}
 }
 #form-404{width:340px;height:311px;background:url(images/404-form.png) no-repeat;display:block;margin:auto;margin-top:55px; }
 #home-button{width: 177px;height:32px;background:url(images/home-button.png) top no-repeat;display:inline-block;cursor: pointer;margin:21px 0; }
-
+.current_page_item a{color:#757575;font-weight:bold;}
