@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://ipatent.co.il/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.5.1" -->
 <!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.2.9" -->
-<!-- generated-on="September 1, 2013 5:43 am" -->
+<!-- generated-on="September 10, 2013 8:04 am" -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
 		<loc>http://ipatent.co.il/</loc>
 		<lastmod>2013-07-24T13:22:45+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>http://ipatent.co.il/?page_id=35</loc>
+		<lastmod>2013-09-10T08:04:21+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://ipatent.co.il/?page_id=40</loc>
+		<lastmod>2013-09-10T08:03:59+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://ipatent.co.il/?page_id=291</loc>
+		<lastmod>2013-09-10T08:03:58+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://ipatent.co.il/?page_id=647</loc>
+		<lastmod>2013-09-10T07:56:39+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>http://ipatent.co.il/?page_id=600</loc>
@@ -66,12 +90,6 @@
 		<lastmod>2013-08-21T09:54:24+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
-	</url>
-	<url>
-		<loc>http://ipatent.co.il/?page_id=291</loc>
-		<lastmod>2013-08-21T09:36:26+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>http://ipatent.co.il/?page_id=321</loc>
@@ -152,12 +170,6 @@
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://ipatent.co.il/?page_id=35</loc>
-		<lastmod>2013-08-19T07:11:30+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.6</priority>
-	</url>
-	<url>
 		<loc>http://ipatent.co.il/?page_id=98</loc>
 		<lastmod>2013-08-19T07:08:08+00:00</lastmod>
 		<changefreq>weekly</changefreq>
@@ -206,19 +218,13 @@
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://ipatent.co.il/?page_id=40</loc>
+		<loc>http://ipatent.co.il/?page_id=317</loc>
 		<lastmod>2013-07-24T13:22:45+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>http://ipatent.co.il/?page_id=19</loc>
-		<lastmod>2013-07-24T13:22:45+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.6</priority>
-	</url>
-	<url>
-		<loc>http://ipatent.co.il/?page_id=317</loc>
 		<lastmod>2013-07-24T13:22:45+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
@@ -236,13 +242,13 @@
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://ipatent.co.il/?page_id=21</loc>
+		<loc>http://ipatent.co.il/?page_id=39</loc>
 		<lastmod>2013-07-24T13:22:44+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://ipatent.co.il/?page_id=39</loc>
+		<loc>http://ipatent.co.il/?page_id=21</loc>
 		<lastmod>2013-07-24T13:22:44+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
@@ -296,25 +302,25 @@
 		<priority>0.2</priority>
 	</url>
 	<url>
-		<loc>http://ipatent.co.il/?p=377</loc>
-		<lastmod>2013-07-24T13:21:20+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-	<url>
 		<loc>http://ipatent.co.il/?p=375</loc>
 		<lastmod>2013-07-24T13:21:20+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
 	<url>
-		<loc>http://ipatent.co.il/?p=373</loc>
+		<loc>http://ipatent.co.il/?p=377</loc>
 		<lastmod>2013-07-24T13:21:20+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
 	<url>
 		<loc>http://ipatent.co.il/?p=278</loc>
+		<lastmod>2013-07-24T13:21:20+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://ipatent.co.il/?p=373</loc>
 		<lastmod>2013-07-24T13:21:20+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>

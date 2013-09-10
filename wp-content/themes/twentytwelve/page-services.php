@@ -29,30 +29,42 @@ get_header(); ?>
 			</div>
 			<div class="left-div">
 				<div class="right-div-entry-title"></div>
-				<div class="left-header"><span>Patent Fields</span></div>
+				<div class="left-header"><span><?php the_title(); ?> <?php _e('Fields','twentytwelve');?></span></div>
 					<div class="inner-left-div">
+						
+						
 						<ul class="left-menu">
+						
 						<?php
-								$category_query_args = array(
-    							'category_name' => "services"
-								);
-
-								$category_query = new WP_Query( $category_query_args );
-								
-								if ( $category_query->have_posts() ) : 
-									
-									while ($category_query->have_posts()) : 
-										$category_query->the_post();
-										$temp_title = the_title('', '', false);
-										$class = "";
-										if($temp_title==$title)
-											$class="current";
-										echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-services'>$temp_title ></a></li>";
-									endwhile;
-								
-								endif;
-								
+							$id=$post->ID;
+							$children =wp_list_pages("depth=1&child_of=".$id ."&title_li=");
 						?>
+						<?php
+							echo $children;
+						?>
+						
+						<div class="left-text-header"><span><?php _e('More Services','twentytwelve');?> </span></div>
+						<?php 
+						if ( 0 == $post->post_parent ) {
+    						$id=get_page_by_title(the_title("","",false));
+							} else {
+							    $parents = get_post_ancestors( $post->ID );
+							    $id= end ($parents ) ;
+							}
+							$children =wp_list_pages("depth=1&child_of=".$id ."&title_li=");
+							echo $children;
+						?>
+						
+						<div class="left-text-header"><span><?php _e('Team Services','twentytwelve');?> </span></div>
+									
+									<?php $my_query = new WP_Query(array( 'meta_key' => '_wp_page_template', 'meta_value' => 'page-team.php','category_name' => the_title("","",false))); ?>
+                					<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+                    				<?php 
+                    					$temp_title = the_title('', '', false);
+                    					echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-services'>".$temp_title ." ></a></li>"; 
+                    				?>	
+                					<?php endwhile; ?>			
+						
 						</ul>
 					</div>	
 			</div>	
