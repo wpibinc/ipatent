@@ -1610,13 +1610,13 @@ img#wpstats {
 	.main-navigation li ul ul {
 		top: 28px;
 		margin: 0 0;
-		width:676px;
+		width:697px;
 		background-color:#787068;
 		
 	}
 	.main-navigation li ul ul li{
 	height:auto;
-	width:158px;
+	width:230px;
 	}
 	.main-navigation ul li:hover > ul {
 		border-left: 0;
