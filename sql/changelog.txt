@@ -24,3 +24,19 @@ Open the plugin configuration page, which is located under Options -> XML-Sitema
 and build the sitemap the first time. 
 If you get a permission error, check the file permissions of the newly created files.
 The plugin will automatically update your sitemap of you publish a post, so theres nothing more to do :)
+------------------------
+
+Allow selecting main Team category in team memebers:
+1. Types -> Custom fields -> Team member details
+2. Add select field on top:
+Name: Main Team
+Slug: main-team
+Description: This is the team that its members will be shown on the left
+Options (Title - Slug): 
+Patents - patents
+Litigation Support - litigation
+Breeder's Rights - breeders
+Trademarks - trademarks
+Design - design
+3. Page -> Categories: Adjust slugs of sub-categories of Team accordingly
+---------------------TP

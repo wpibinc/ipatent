@@ -14,7 +14,7 @@
  */
 
 get_header(); 
-					$category = end(get_the_category());
+					$category = get_category_by_slug(get_post_meta(get_the_ID(),"wpcf-main-team",true));
 					$current_name = $category->cat_name;
 ?>
 	<div id="primary" class="site-content">
@@ -38,8 +38,8 @@ get_header();
 					</a>
 					<!-- details under the image -->
 					<div class="right-details">
-						<?php if (types_render_field( "phone")) {?><span>Tel: <?php  echo "073-7919199"; //echo(types_render_field( "phone")); //echo "073-7919199";  ?></span><?php } ?>
-						<?php if (types_render_field( "fax")) {?><span>Fax: <?php  echo "073-7919100"; //echo(types_render_field( "fax")); //echo "073-7919100";  ?></span><?php } ?>
+						<span>Tel: 073-7919199</span>
+						<span>Fax: 073-7919100</span>
 						<?php if (types_render_field( "email")) {?><span><img src="/wp-content/themes/twentytwelve/images/email.gif" />&nbsp;&nbsp;&nbsp; <?php echo(types_render_field( "email")); echo "@ipatent.co.il"; ?></span><?php } ?>
 						<?php if (types_render_field( "linkedln")) {?><a><span><img src="/wp-content/themes/twentytwelve/images/linkedin.gif" />&nbsp;&nbsp;&nbsp;<?php echo(types_render_field( "linkedln")); ?></span></a><?php } ?>
 						<?php if (types_render_field( "practice-areas")) {?><div class="practice-area">
@@ -50,13 +50,18 @@ get_header();
 					</div>
 				</div>
 				<div class="right-text" style="float:left;width:375px;">
-					
-					<div class="right-text-header1">Experience & Background</div>
-					<div style="margin:5px 0 0 20px;">
-						<?php while ( have_posts() ) : the_post(); ?>
-						<?php get_template_part( 'content', 'page' ); ?>
-						<?php endwhile; // end of the loop. ?>
+					<div style="margin:5px 0 0 20px;word-break:break-word;width:351px;" class="resume-text">
+					<?php while ( have_posts() ) : the_post(); ?>
+					<?php get_template_part( 'content', 'page' ); ?>
+					<?php endwhile; // end of the loop. ?>
 					</div>
+					
+					<?php if(types_render_field("experience_field")!=""){?>
+					<div class="right-text-header1">Experience & Background</div>
+					<div style="margin:5px 0 0 20px;word-break:break-word;width:351px;" class="resume-text">
+						<?php echo(types_render_field("experience_field")); ?>
+					</div>
+					<?php }?>
 					
 					<div class="right-text-header1">Resume</div>
 					<div style="margin:5px 0 0 20px;word-break:break-word;width:351px;" class="resume-text"><?php echo(types_render_field("resume_field")); ?></div>
@@ -89,12 +94,17 @@ get_header();
 			</div>
 			<div class="left-div">
 				<div class="right-div-entry-title"></div>
+				<?php if ($category) {?>
 				<div class="left-header"><span><?php echo $current_name;?> Team</span></div>
 					<div class="inner-left-div">
+					
 						<ul class="left-menu">
 						<?php
+						
 								$category_query_args = array(
-    							'category_name' => "team"
+    								'cat' => $category->term_id,
+									'meta_key' => '_wp_page_template', 
+									'meta_value' => 'page-team.php'
 								);
 
 								$category_query = new WP_Query( $category_query_args );
@@ -115,8 +125,11 @@ get_header();
 								
 						?>
 						</ul>
-					</div>	
+					
+					</div>
+			<?php } ?>	
 			</div>	
+			
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

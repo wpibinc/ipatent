@@ -48,8 +48,8 @@ if($user_role=='editor')
 		#wp-admin-bar-wp-logo{ display: none; visibility: hidden; }
 		.update-nag{  visibility: hidden; }
 		#dashboard_primary,#dashboard_secondary,.versions{visibility: hidden;}
-		table.form-table tr{display:none;}
-		table.form-table tr#password{display:block;}
+		#profile-page table.form-table tr{display:none;}
+		#profile-page table.form-table tr#password{display:block;}
 		
 		#nav-menu-theme-locations, #trackbacksdiv, #postcustom, #commentstatusdiv, #commentsdiv, 
 		#formatdiv, #slugdiv, #profile-page h3, #profile-page .editform, #wpfooter, #postexcerpt p {display:none;}
@@ -64,17 +64,14 @@ if($user_role=='editor')
 	<?php	
 		$roles = get_role( 'editor' );
 		$remove_caps = array(
-				'manage_categories',
 				'manage_links',
 				'edit_others_posts',
 				'edit_others_pages',
 				'delete_posts',
 				'comment_moderation'
-				
-				
-				
 		);
 		$add_caps= array(
+				'manage_categories',
 				'edit_pages',
 				'edit_posts',
 				'edit_others_posts',
