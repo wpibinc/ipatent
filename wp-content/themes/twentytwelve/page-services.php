@@ -29,27 +29,32 @@ get_header(); ?>
 			</div>
 			<div class="left-div">
 				<div class="right-div-entry-title"></div>
-				<div class="left-header"><span><?php the_title(); ?> <?php _e('Fields','twentytwelve');?></span></div>
-					<div class="inner-left-div">
-						
-						
-						<ul class="left-menu">
-						
-						<?php
+				<?php
 							$id=$post->ID;
-							$children =wp_list_pages("depth=1&child_of=".$id ."&title_li="."&link_after= >");
+							$children =wp_list_pages("depth=1&child_of=".$id ."&title_li="."&link_after= >&echo=0");
+														
 							if(get_current_page_depth()==2)
 							{
 								$id=$post->post_parent;
-								$children =wp_list_pages("depth=1&child_of=".$id ."&title_li="."&link_after= >");
-							}	
+								$children =wp_list_pages("depth=1&child_of=".$id ."&title_li="."&link_after= >&echo=0");
+							}
+							$title=get_the_title($id);	
 						?>
 						<?php
 							$titlenamer = get_the_title($id);
 							if($title==$titlenamer)
 							$children = str_replace('<li>','<li class="current">', $children);
-							echo $children ;
-						?>
+				?>
+				<?php if ($children) { ?>  
+				<div class="left-header"><span><?php echo $title; ?> <?php _e('Fields','twentytwelve');?></span></div>
+				<ul class="left-menu">
+				<?php echo $children; ?>
+				</ul>
+				<?php } ?>
+						
+						<ul class="left-menu">
+						
+						
 						
 						<div class="left-text-header"><span><?php _e('More Services','twentytwelve');?> </span></div>
 						<?php 
@@ -64,23 +69,29 @@ get_header(); ?>
 							if($title==$titlenamer)
 								$children = str_replace('<li>','<li class="current">', $children);
 							echo $children;
+							
+						$categories = get_the_category();
+						foreach ($categories as $category) {
+								$parent = get_category($category->parent);
+								if ($parent->slug=="team") $cat = $category->term_id;
+						}
 						?>
+			
 						
-						
-						<?php $my_query = new WP_Query(array( 'meta_key' => '_wp_page_template', 'meta_value' => 'page-team.php','category_name' => the_title("","",false))); ?>
+						<?php $my_query = new WP_Query(array( 'meta_key' => '_wp_page_template', 'meta_value' => 'page-team.php','cat' => $cat)); ?>
 						<?php if($my_query->have_posts()){?>
-						<div class="left-text-header"><span><?php _e('Team Services','twentytwelve');?> </span></div>
+						<br /><br />		
+						<div class="left-header"><span><?php echo get_the_category_by_ID($cat)."&nbsp;";_e('Team','twentytwelve');?> </span></div>
 						<?php }?>			
 									
                 					<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
                     				<?php 
                     					$temp_title = the_title('', '', false);
-                    					echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-services'>".$temp_title ."> </a></li>"; 
+                    					echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-services'>".$temp_title ." > </a></li>"; 
                     				?>	
                 					<?php endwhile; ?>			
 						
 						</ul>
-					</div>	
 			</div>	
 		</div><!-- #content -->
 	</div><!-- #primary -->
