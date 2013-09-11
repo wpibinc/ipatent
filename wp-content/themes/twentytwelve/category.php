@@ -10,10 +10,11 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
-/* Start the Loop */
+/* Go to first post in category */
 while ( have_posts() ) : the_post();
 	header("location:".get_permalink());
 	exit;
+/* Start the Loop */
 	/* Include the post format-specific template for the content. If you want to
 	 * this in a child theme then include a file called called content-___.php
 	 * (where ___ is the post format) and that will be used instead.
