@@ -1609,7 +1609,7 @@ img#wpstats {
 	}
 	.main-navigation li ul ul {
 		top: 28px;
-		left: 20%;
+		margin: 0 0;
 		width:676px;
 		background-color:#787068;
 		
