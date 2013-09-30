@@ -128,8 +128,8 @@
 							echo '<li>';
 							echo wp_get_attachment_image( $attachment->ID, 'full' );
 							echo '<p class="flex-caption">';
-									
-								echo '<span><img src="'; echo get_template_directory_uri(); echo '/images/Logo.png" style="width:auto;"></span>';
+								
+							echo '<span><img src="'; echo get_template_directory_uri(); echo '/images/Logo.png" style="width:auto;"></span>';
 							//echo apply_filters( 'the_title', $attachment->post_title );
 							echo '</p>';
 							echo '</li>';
@@ -142,9 +142,11 @@
 		    </ul>
 		    	
 		 </div>
-		   
-		
+		 <div class="main_total_top_holder">
+		 <div class="header_container_div">
 		 <div id="home-top-inner">	The Right Move on the IP Chessboard</div>
+		 </div>
+		 </div>
 </div>
 
 <div id="page" class="hfeed site">

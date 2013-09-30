@@ -620,11 +620,10 @@ a:hover {
 }
 
 #home-top-inner {
-	left: 45%;
-    position: relative;
-   	bottom:55%;
     color: #fff;
-    width: 545px;
+    float:right;
+margin-top: 60px;
+    width: 611px;
     height: 135px;
     font-size: 22px;
     line-height:135px;
@@ -1543,7 +1542,7 @@ img#wpstats {
 		line-height: 1.846153846;
 		margin-bottom: 0;
 	}
-	.main-navigation ul.nav-menu,
+	
 	.main-navigation div.nav-menu > ul {
 		/*border-bottom: 1px solid #ededed;
 		border-top: 1px solid #ededed;*/
@@ -1552,6 +1551,12 @@ img#wpstats {
 		height: 50px;
 		width:100%;
 		float:left;
+	}
+	.main-navigation ul.nav-menu{
+		display: inline-block !important;
+		height: 50px;
+		width:940px;
+		text-align:left;
 	}
 	.main-navigation ul {
 		margin: 0;
@@ -1944,20 +1949,19 @@ white-space:pre;
 	float:left;
 }
 .right{
-width: 600px;
-position: relative;
-left: 45%;
+width: 590px;
+margin-left: 30px;
+float: right;
 /*	width: 660px;*/
 	/*border:1px solid red;*/
 }
 .left-div{
 	/*border:1px solid red;*/
 	width: 318px;
-	width: 980px;
+	float:left;
 margin: auto;
-margin-top: -244px;
 }
-.inner-left-div{/*border:1px solid red;*/margin:14px 5px;}
+.inner-left-div{/*border:1px solid red;*/margin:14px 0px;}
 .right-header , .left-header{background-color:#666;color:white;height:25px;font-size:18px;line-height:25px;}
 .right-header span , .left-header span{margin:0 0 0 5px;font-size:15px;}
 .right-div-entry-title{/*border:1px solid red;*/height:38px;}
@@ -2104,4 +2108,15 @@ a.social-contact.twitter:hover{background-position:-41px -16px;}
 .current_page_item a{color:#757575;font-weight:bold;}
 .home #content{
 	height:218px;
+	width: 940px;
+margin: auto;
+}
+.main_total_top_holder{
+	position: absolute;
+width: 100%;
+top: 90px;
+}
+.header_container_div{
+	width: 940px;
+margin: auto;
 }

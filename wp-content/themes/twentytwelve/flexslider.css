@@ -45,7 +45,7 @@ html[xmlns] .slides {display: block;}
 /*.flex-caption {background:none; -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
 filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); zoom: 1;}*/
 /*.flex-caption {width: 96%; padding: 2%; position: absolute; left: 0; bottom: 0; background: rgba(0,0,0,.3); color: #fff; text-shadow: 0 -1px 0 rgba(0,0,0,.3); font-size: 14px; line-height: 18px;}*/
-.flex-caption {width: 95%; padding: 2%; position: absolute; left: 0px; top:26px;margin:auto;/*border:1px solid red;*/}
+.flex-caption {width: 95%; padding: 2%; position: absolute; left: 0px; top:0px;margin:auto;/*border:1px solid red;*/}
 .flex-caption p{direction:ltr;text-align:left;}
 .flex-caption span{width:1000px;margin:auto;display:block;}
 /* Direction Nav */
