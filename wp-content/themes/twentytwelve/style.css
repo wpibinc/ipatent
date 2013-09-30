@@ -1946,7 +1946,10 @@ white-space:pre;
 	margin:0 0 4px 0 !important;
 }
 .gform_wrapper .top_label li.gfield.gf_left_half{margin:0 0 4px 0 !important;}
-.bottom-contact-div{width:464px;text-align: justify;margin:0 0 0 43px;font-size: 10px;}
+.bottom-contact-div{text-align: justify;margin-left: 110px;font-size: 10px;}
+.bottom-contact-div p{
+	font-size:12px;
+}
 .left{
 	float:left;
 }
@@ -2125,4 +2128,7 @@ margin: auto;
 #main{
 	width: 940px;
 	margin: auto;
+}
+#field_1_6{
+	margin-left:0px;
 }
