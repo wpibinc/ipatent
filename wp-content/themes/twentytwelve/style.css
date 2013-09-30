@@ -1893,7 +1893,7 @@ ul#gform_fields_1{margin-left:5px;}
 #gform_wrapper_1 .gform_heading{display:none;}
 .gform_wrapper textarea.large{height:146px !important; width:100% !important; padding-right:2px !important;}
 #gform_wrapper_2 textarea.large{height:146px !important;width:525px !important;}
-#gform_wrapper_1{width:600px;}
+
 
 .gform_title{display:none;}
 .medium{width:100% !important;}
@@ -1924,14 +1924,15 @@ float: right;
 #gform_submit_button_2{width:139px;height:34px;background:url(images/send_form_btn.gif) top no-repeat;float:right;/*margin:0 47px;*/}
 #gform_submit_button_2:hover{background:url(images/send_form_btn.gif) bottom no-repeat;}
 
-#gform_wrapper_2{width:600px;}
-#gform_wrapper_2 .large{width:530px !important;}
-#gform_wrapper_2 .ginput_container{width:70.9%;/*border:1px solid blue;*/}
+
 #field_2_1{width:44%;/*border:1px solid;*/}
 #field_2_2{width:50%;float:left;/*border:1px solid;*/}
 #field_2_3{width:100%;/*border:1px solid;*/}
 #field_2_4{margin:0 0 0 0px;}
 #input_2_2{width:256px !important;}
+#field_2_1 .ginput_container , #field_2_2 .ginput_container{
+	width:70%;
+}
 
 #field_2_4 .ginput_container{width:58%;/*border:1px solid blue;*/}
 #gform_submit_button_2{float:right;}
