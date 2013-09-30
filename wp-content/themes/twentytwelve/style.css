@@ -1520,8 +1520,6 @@ img#wpstats {
 	.site-content {
 		float: left;
 		width: 65.104166667%;
-		position:relative;
-		left:5px;
 	}
 	body.template-front-page .site-content,
 	body.single-attachment .site-content,
