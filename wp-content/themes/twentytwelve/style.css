@@ -810,6 +810,12 @@ article.sticky .featured-post {
 .mu_register {
 	line-height: 1.714285714;
 }
+.entry-content{
+	padding:0px 5px;
+}
+.page-template-page-contact-php .entry-content{
+	padding:0;
+}
 .entry-content h1,
 .comment-content h1,
 .entry-content h2,
@@ -1992,7 +1998,7 @@ margin: auto;
 .left-menu li a:after{/*content:" >";*/}
 .right-img{margin:25px 0;float:left;}
 .right-text-header1{margin:25px 0 0 15px;height:25px;border-top:1px solid;border-bottom:1px solid;line-height:25px;font-weight: bold;font-size: 16px;padding-left:5px;}
-.left-text-header{border-top:1px solid;border-bottom:1px solid;line-height:25px;color:#666;}
+.left-text-header{border-top:1px solid;border-bottom:1px solid;line-height:25px;color:#666;padding-left:5px;}
 .right-details{/*border:1px solid red;*/clear:both;font-size:13px; width:213px;}
 .right-details span{display: block;padding:5px 0;width:100%;word-break:break-all;}
 .right-details a{text-decoration:none;color:#666;}
@@ -2077,7 +2083,7 @@ a.social-contact.twitter:hover{background-position:-41px -16px;}
 }
 .left-menu a{color:#9ea08d;line-height:30px;}
 .left-menu li.current a{font-weight:bold;color:#757575;}
-.left-menu li{min-height:30px;}
+.left-menu li{min-height:30px;padding-left:5px;}
 .resume-text p{
 	padding-bottom:10px;
 	font-size: 15px;
