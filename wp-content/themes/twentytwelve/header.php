@@ -99,18 +99,21 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div style="width:100%">
+	<header class="block">
+	<div id="nav-div">
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+			</nav>
+	</div>
+	</header>
+	<div id="top-div">
+		<img src="wp-content/themes/twentytwelve/images/header_bg.jpg" />
+	</div>
+</div>
 <section class="container">
 
-<header class="block">
-<div id="nav-div">
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-		</nav>
-</div>
-</header>
-<div id="top-div">
 
-</div>
 
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
