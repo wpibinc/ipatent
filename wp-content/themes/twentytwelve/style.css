@@ -605,9 +605,10 @@ a:hover {
 /* Navigation Menu */
 #top-div{
 	/*border:1px solid blue;*/
-	background:url(images/header_bg.jpg) no-repeat black;
+	text-align:center;
 	height: 275px;
 	width:100%;
+	background-color:black;
 	margin: auto;
 }
 
