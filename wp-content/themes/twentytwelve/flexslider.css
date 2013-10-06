@@ -16,7 +16,7 @@
 
 /* FlexSlider Necessary Styles
 *********************************/ 
-.flexslider {width: 100%; margin: 0; padding: 0;overflow: hidden;height: 40%;position: fixed;}
+.flexslider {width: 100%; margin: 0; padding: 0;overflow: hidden;height: 35%;position: fixed;}
 .flexslider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides img {max-width: 100%; display:block;width:100%;position: fixed;left: 0%;}
 .flex-caption img{left:auto !important;}
