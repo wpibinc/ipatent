@@ -622,7 +622,7 @@ a:hover {
 #home-top-inner {
     color: #fff;
     float:right;
-margin-top: 60px;
+margin-top: 80px;
     width: 611px;
     height: 135px;
     font-size: 22px;
@@ -707,6 +707,7 @@ section[role="banner"] {
 	margin-left: 2.571428571rem;
 }
 .inner-left-div .textwidget p{line-height:20px;}
+.inner-left-div img {width:100%;height:auto;}
 .widget-area .widget a {
 	color: #757575;
 }
