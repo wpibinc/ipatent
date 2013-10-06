@@ -16,9 +16,10 @@
 
 /* FlexSlider Necessary Styles
 *********************************/ 
-.flexslider {width: 100%; margin: 0; padding: 0;}
+.flexslider {width: 100%; margin: 0; padding: 0;overflow: hidden;height: 360px;position: fixed;}
 .flexslider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides img {max-width: 100%; display:block;width:100%;}
+.flexslider .slides img {max-width: 100%; display:block;width:100%;position: fixed;left: 0%;}
+.flex-caption img{left:auto !important;}
 .flex-pauseplay span {text-transform: capitalize;}
 
 /* Clearfix for the .slides element */
@@ -34,8 +35,8 @@ html[xmlns] .slides {display: block;}
 
 /* FlexSlider Default Theme
 *********************************/
-.flexslider {background: #1c1a15;  position: relative;zoom: 1;}
-.flexslider .slides {zoom: 1;}
+.flexslider {background: #1c1a15; zoom: 1;}
+.flexslider .slides {zoom: 1;width: 2560px;}
 .flexslider .slides > li {position: relative;}
 /* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
 .flex-container {zoom: 1; position: relative;}
@@ -45,7 +46,7 @@ html[xmlns] .slides {display: block;}
 /*.flex-caption {background:none; -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
 filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); zoom: 1;}*/
 /*.flex-caption {width: 96%; padding: 2%; position: absolute; left: 0; bottom: 0; background: rgba(0,0,0,.3); color: #fff; text-shadow: 0 -1px 0 rgba(0,0,0,.3); font-size: 14px; line-height: 18px;}*/
-.flex-caption {width: 95%; padding: 2%; position: absolute; left: 0px; top:0px;margin:auto;/*border:1px solid red;*/}
+.flex-caption {width: 95%; padding: 2%; position: fixed; left: 2%; top:50px;margin:auto;/*border:1px solid red;*/}
 .flex-caption p{direction:ltr;text-align:left;}
 .flex-caption span{width:1000px;margin:auto;display:block;}
 /* Direction Nav */
