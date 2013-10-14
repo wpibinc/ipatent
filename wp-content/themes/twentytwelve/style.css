@@ -73,8 +73,9 @@ html, body {
 	height: 100%;
 }
 .container {
-	display: table;
-	height: 100%;
+	display: block;
+overflow: hidden;
+	height: auto;
 	width:100%;
 	margin:auto;
 }
@@ -618,9 +619,9 @@ width: 100%;
 #home-top-div {
 	/*background:url(images/header_home_bg.jpg) no-repeat black;*/
 	
-	height: 43%;
-	width:100%;
-	margin: auto;
+height: 495px;
+width: 100%;
+margin: auto;
 }
 
 #home-top-inner {
