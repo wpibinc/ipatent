@@ -609,12 +609,14 @@ a:hover {
 	text-align:center;
 	height: 20%;
 	width:100%;
+	overflow: hidden;
 	background-color:black;
 	margin: auto;
 }
 #top-div img{
 	margin-bottom: -2px;
-width: 100%;
+width: 1840px;
+height: 275px;
 }
 #home-top-div {
 	/*background:url(images/header_home_bg.jpg) no-repeat black;*/
