@@ -93,7 +93,7 @@ get_header(); ?>
 										
 										if($flag_take_date)
 										{	
-											$temp_date=$post_date;
+											$temp_date=$post_date . '-' . $post_date_year;
 											$flag_take_date=0;
 											echo "<a href='' class='date-clicked' id='$temp_date'>$post_date $post_date_year</a><br/>";
 										}
