@@ -40,3 +40,7 @@ Trademarks - trademarks
 Design - design
 3. Page -> Categories: Adjust slugs of sub-categories of Team accordingly
 ---------------------TP
+
+Limit image upload size
+1. Enable plugin 'Resize Image After Upload'
+P---------------------
