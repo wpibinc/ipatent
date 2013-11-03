@@ -118,7 +118,7 @@ get_header();
 											$class="current";
 										else
 											$class="";
-										echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-services'>$temp_title ></a></li>";
+										echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-services'>$temp_title </a></li>";
 									endwhile;
 								
 								endif;

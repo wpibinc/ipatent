@@ -10,6 +10,15 @@
  * @since Twenty Twelve 1.0
  */
 ?>
+		<?php if(!(is_page_template('page-home.php'))):?> 
+		<div class="breadcrumbs">
+		    <?php if(function_exists('bcn_display'))
+		    {
+		        bcn_display();
+		    }?>
+		</div>
+		
+		<?php endif;?>
 	</div><!-- #main .wrapper -->
 	
 </div><!-- #page -->

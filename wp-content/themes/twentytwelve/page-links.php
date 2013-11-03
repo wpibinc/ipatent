@@ -54,7 +54,7 @@ get_header(); ?>
 										if($temp_title==$title)
 											$class="current";
 										//$temp_title = (strlen($temp_title) > 33) ? substr($temp_title, 0, 33) . '...' : $temp_title;
-										echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-news'>$temp_title ></a></li>";
+										echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-news'>$temp_title</a></li>";
 										echo "<br/>";
 									endwhile;
 								

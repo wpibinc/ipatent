@@ -99,7 +99,7 @@ get_header(); ?>
 										}
 										
 										
-										echo "<li class='$class $temp_date-post' style='display:none;'><a href=". get_permalink($post->ID)." class='a-news'> $temp_title ></a></li>";
+										echo "<li class='$class $temp_date-post' style='display:none;'><a href=". get_permalink($post->ID)." class='a-news'> $temp_title</a></li>";
 										
 										//echo "<br/>";
 									endwhile;
