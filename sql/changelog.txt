@@ -38,6 +38,13 @@ Litigation Support - litigation
 Breeder's Rights - breeders
 Trademarks - trademarks
 Design - design
+Biotech - biotech
+Pharma - pharma
+Software - software
+Medical Devices - medical-devices
+Physics - physics
+Hi-Tech - hi-tech
+" " - " "
 3. Page -> Categories: Adjust slugs of sub-categories of Team accordingly
 ---------------------TP
 
