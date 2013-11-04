@@ -621,7 +621,7 @@ height: 275px;
 #home-top-div {
 	/*background:url(images/header_home_bg.jpg) no-repeat black;*/
 	
-height: 495px;
+height: 100%;
 width: 100%;
 margin: auto;
 }
@@ -1682,6 +1682,20 @@ img#wpstats {
 	.menu-toggle {
 		display: none;
 	}
+	.entry-title-hide{
+			font-size: 22px;
+		font-size: 1.571428571rem;
+		font-size:28px;
+		color:#514942;
+		font-weight: 100;
+		line-height: 1.2;
+font-weight: normal;
+width: 615px;
+margin-bottom: 5px;
+visibility: hidden;
+	}
+	
+	
 	.entry-header .entry-title {
 		font-size: 22px;
 		font-size: 1.571428571rem;
@@ -1978,6 +1992,8 @@ float: right;
 	width: 295px;
 	float:left;
 margin: auto;
+overflow: hidden;
+position: relative;
 }
 .inner-left-div{/*border:1px solid red;*/margin:14px 0px;}
 .right-header , .left-header{background-color:#666;color:white;height:25px;font-size:18px;line-height:25px;}

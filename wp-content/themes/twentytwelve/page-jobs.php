@@ -29,7 +29,7 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 			</div>
 			<div class="left-div">
-				<div class="right-div-entry-title"></div>
+				<h1 class="entry-title-hide"><?php the_title(); $title = the_title('', '', false);?></h1>
 				<div class="left-header"><span>Our Offices:</span></div>
 					<div class="inner-left-div">
 						<?php dynamic_sidebar("jobs"); ?>

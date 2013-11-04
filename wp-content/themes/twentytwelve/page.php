@@ -27,7 +27,7 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 			</div>
 			<div class="left-div">
-				<div class="right-div-entry-title">
+				<div class="right-div-entry-title"></div>
 					<?php if(the_title("","",false)!="About" && the_title("","",false)!="Sitemap" ):?>
 					
 						<div class="inner-left-div">

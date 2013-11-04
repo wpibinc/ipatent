@@ -21,35 +21,37 @@ get_header(); ?>
 				<header class="entry-header">
 					<h1 class="entry-title"><?php the_title(); $title = the_title('', '', false);?></h1>
 				</header>
-				<div class="right-header"><span><?php echo(types_render_field( "excerpt")); ?></span></div>
+				<div class="right-header"></div>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 					<?php comments_template( '', true ); ?>
 				<?php endwhile; // end of the loop. ?>
 			</div>
+			
 			<div class="left-div">
 				<div class="right-div-entry-title"></div>
 				<?php
 							$id=$post->ID;
-							$children =wp_list_pages("depth=1&child_of=".$id ."&title_li="."&link_after= >&echo=0");
+							$children =wp_list_pages("depth=1&child_of=".$id ."&title_li="."&echo=0&sort_column='menu_order'");
 														
 							if(get_current_page_depth()==2)
 							{
 								$id=$post->post_parent;
-								$children =wp_list_pages("depth=1&child_of=".$id ."&title_li="."&link_after= >&echo=0");
+								$children =wp_list_pages("depth=1&child_of=".$id ."&title_li="."&echo=0&sort_column='menu_order'");
 							}
 							$title=get_the_title($id);	
 						?>
 						<?php
 							$titlenamer = get_the_title($id);
-							if($title==$titlenamer)
-							$children = str_replace('<li>','<li class="current">', $children);
+							if($title==$titlenamer){
+								$children = str_replace('<li>','<li class="current">', $children);
+							}
 				?>
 				<?php if ($children) { ?>  
-				<div class="left-header"><span><?php echo $title; ?> <?php _e('Fields','twentytwelve');?></span></div>
-				<ul class="left-menu">
-				<?php echo $children; ?>
-				</ul>
+					<div class="left-header"><span><?php echo $title; ?> <?php _e('','twentytwelve');?></span></div>
+						<ul class="left-menu">
+							<?php echo $children; ?>
+						</ul>
 				<?php } ?>
 						
 						<ul class="left-menu">
@@ -59,37 +61,42 @@ get_header(); ?>
 						<div class="left-text-header"><span><?php _e('More Services','twentytwelve');?> </span></div>
 						<?php 
 						if ( 0 == $post->post_parent ) {
-    						$id=get_page_by_title(the_title("","",false));
-							} else {
+    							$id=get_page_by_title(the_title("","",false));
+							}
+							 else {
 							    $parents = get_post_ancestors( $post->ID );
 							    $id= end ($parents ) ;
 							}
-							$children =wp_list_pages("depth=1&child_of=".$id ."&title_li="."&link_after= >");
+							$children =wp_list_pages("depth=1&child_of=".$id ."&title_li="."&sort_column=menu_order");
 							$titlenamer = get_the_title($id);
-							if($title==$titlenamer)
-								$children = str_replace('<li>','<li class="current">', $children);
+							if($title==$titlenamer){
+									$children = str_replace('<li>','<li class="current">', $children);
+							}
 							echo $children;
 							
-						$categories = get_the_category();
+							$categories = get_the_category();
 						foreach ($categories as $category) {
 								$parent = get_category($category->parent);
+
 								if ($parent->slug=="team") $cat = $category->term_id;
 						}
 						?>
 			
 						
-						<?php $my_query = new WP_Query(array( 'meta_key' => '_wp_page_template', 'meta_value' => 'page-team.php','cat' => $cat)); ?>
+						<?php $my_query = new WP_Query(array( 'meta_key' => '_wp_page_template', 'meta_value' => 'page-team.php','cat' => $cat, 'orderby' => 'menu_order title', 'order' => 'ASC')); ?>
+
 						<?php if($my_query->have_posts()){?>
 						<br /><br />		
 						<div class="left-header"><span><?php echo get_the_category_by_ID($cat)."&nbsp;";_e('Team','twentytwelve');?> </span></div>
-						<?php }?>			
+								
 									
                 					<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
                     				<?php 
                     					$temp_title = the_title('', '', false);
                     					echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-services'>".$temp_title ." > </a></li>"; 
                     				?>	
-                					<?php endwhile; ?>			
+                					<?php endwhile; ?>
+                					<?php }?>			
 						
 						</ul>
 			</div>	

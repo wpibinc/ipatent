@@ -28,7 +28,7 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 			</div>
 			<div class="left-div">
-				<div class="right-div-entry-title"></div>
+				<h1 class="entry-title-hide"><?php the_title(); $title = the_title('', '', false);?></h1>
 				<?php $imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full");?>
 				<a class="group1" href="<?php echo $imgsrc[0];?>" title="" ><?php echo get_the_post_thumbnail();?> </a>			
 			</div>	
