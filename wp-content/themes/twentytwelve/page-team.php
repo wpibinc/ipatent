@@ -104,7 +104,9 @@ get_header();
 								$category_query_args = array(
     								'cat' => $category->term_id,
 									'meta_key' => '_wp_page_template', 
-									'meta_value' => 'page-team.php'
+									'meta_value' => 'page-team.php',
+									'orderby' => 'menu_order', 
+									'order' => 'DESC'
 								);
 
 								$category_query = new WP_Query( $category_query_args );
