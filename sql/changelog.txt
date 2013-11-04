@@ -51,3 +51,8 @@ Hi-Tech - hi-tech
 Limit image upload size
 1. Enable plugin 'Resize Image After Upload'
 P---------------------
+
+Task #6
+1.Create new page with patents-template.
+2. Update the menu with the new page data
+T-----------------------------------------
