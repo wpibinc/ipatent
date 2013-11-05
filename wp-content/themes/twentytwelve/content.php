@@ -16,7 +16,9 @@
 		</div>
 		<?php endif; ?>
 		<header class="entry-header">
+		<div class="gray">
 			<?php the_post_thumbnail(); ?>
+			</div>
 			<?php if ( is_single() ) : ?>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php else : ?>

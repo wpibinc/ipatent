@@ -12,7 +12,9 @@ get_header(); ?>
 	<section id="primary" class="site-content">
 		<div id="content" role="main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php
+		
+		 if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
@@ -21,11 +23,29 @@ get_header(); ?>
 			<?php twentytwelve_content_nav( 'nav-above' ); ?>
 
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
+			<?php 
+			while ( have_posts() ){
+				the_post(); 
+/* 				print  basename(get_page_template());
+				echo("<br>"); */
+				 
+				
+				if (basename(get_page_template()) == "page-team.php") {
+					get_template_part( 'content', get_post_format() );		
+				}
+			}
+			
+			rewind_posts();
+			
+			while ( have_posts() ){
+				the_post();
+				if (get_page_template() != "page-team.php") {
+					get_template_part( 'content', get_post_format() );
+				}
+			} 
+				
 
-			<?php twentytwelve_content_nav( 'nav-below' ); ?>
+			twentytwelve_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
 
