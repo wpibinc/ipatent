@@ -16,7 +16,7 @@
 		</div>
 		<?php endif; ?>
 		<header class="entry-header">
-		<div class="gray">
+		<div class="grayscale">
 			<?php the_post_thumbnail(); ?>
 			</div>
 			<?php if ( is_single() ) : ?>
