@@ -24,13 +24,12 @@ get_header(); ?>
 
 			<?php /* Start the Loop */ ?>
 			<?php 
+
 			while ( have_posts() ){
 				the_post(); 
 /* 				print  basename(get_page_template());
 				echo("<br>"); */
-				 
-				
-				if (basename(get_page_template()) == "page-team.php") {
+				if (basename(get_page_template()) == "page-team.php" && stristr( get_the_title(), get_search_query())) {
 					get_template_part( 'content', get_post_format() );		
 				}
 			}
@@ -39,7 +38,7 @@ get_header(); ?>
 			
 			while ( have_posts() ){
 				the_post();
-				if (get_page_template() != "page-team.php") {
+				if (get_page_template() != "page-team.php" && !stristr( get_the_title(), get_search_query()) ) {
 					get_template_part( 'content', get_post_format() );
 				}
 			} 
