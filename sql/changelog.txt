@@ -53,6 +53,10 @@ Limit image upload size
 P---------------------
 
 Task #6
-1.Create new page with patents-template.
+1. Create new page with patents-template.
 2. Update the menu with the new page data
 T-----------------------------------------
+
+Task #15
+1. Go to Languages > Language switcher options > (drop down) 'Choose where to display the language switcher widget'
+T-----------------------------------------------------------------------------------------
