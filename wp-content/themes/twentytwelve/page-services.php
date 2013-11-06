@@ -93,7 +93,7 @@ get_header(); ?>
                 					<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
                     				<?php 
                     					$temp_title = the_title('', '', false);
-                    					echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-services'>".$temp_title ." > </a></li>"; 
+                    					echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-services'>".$temp_title ."</a></li>"; 
                     				?>	
                 					<?php endwhile; ?>
                 					<?php }?>			
