@@ -2161,3 +2161,6 @@ margin: auto;
 #field_1_6{
 	margin-left:0px;
 }
+.page-template-page-patents-php li{
+	list-style: none;
+}
