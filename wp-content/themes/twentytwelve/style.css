@@ -1657,6 +1657,7 @@ img#wpstats {
 		width: 12.85714286rem;*/
 		white-space: nowrap;
 		color: #272320;
+				font-weight: normal;
 	}
 	
 	.main-navigation li ul li a:hover {
@@ -1669,7 +1670,7 @@ img#wpstats {
 	.main-navigation .current_page_item > a,
 	.main-navigation .current_page_ancestor > a {
 		color: white;
-		/*font-weight: bold;*/
+		font-weight: normal;
 		
 		
 	}

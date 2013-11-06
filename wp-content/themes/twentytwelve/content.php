@@ -16,9 +16,17 @@
 		</div>
 		<?php endif; ?>
 		<header class="entry-header">
-		<div class="grayscale">
-			<?php the_post_thumbnail(); ?>
+		<?php if ( has_post_thumbnail()) : ?>
+<div class="grayscale" style="
+    width: 215px;
+    height: 282px;
+    margin-bottom: 22px;
+">
+			<?php
+			 the_post_thumbnail(); ?>
 			</div>
+ <?php endif; ?>
+		
 			<?php if ( is_single() ) : ?>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php else : ?>
