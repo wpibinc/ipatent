@@ -58,22 +58,26 @@ get_header(); ?>
 						
 						
 						
-						<div class="left-text-header"><span><?php _e('More Services','twentytwelve');?> </span></div>
 						<?php 
 						if ( 0 == $post->post_parent ) {
-    							$id=get_page_by_title(the_title("","",false));
+    							$id=0;
 							}
 							 else {
 							    $parents = get_post_ancestors( $post->ID );
-							    $id= end ($parents ) ;
+							    $id= end($parents);
+							    
 							}
-							$children =wp_list_pages("depth=1&child_of=".$id ."&title_li="."&sort_column=menu_order");
+
+							$children = wp_list_pages("depth=1&child_of=" . $id ."&title_li="."&sort_column=menu_order&echo=0");
 							$titlenamer = get_the_title($id);
 							if($title==$titlenamer){
 									$children = str_replace('<li>','<li class="current">', $children);
 							}
-							echo $children;
-							
+
+							if ($children && $id) {
+								echo '<div class="left-text-header"><span>' . __('More Services','twentytwelve') . '</span></div>';
+								echo $children;
+							}
 							$categories = get_the_category();
 						foreach ($categories as $category) {
 								$parent = get_category($category->parent);
@@ -85,7 +89,7 @@ get_header(); ?>
 						
 						<?php $my_query = new WP_Query(array( 'meta_key' => '_wp_page_template', 'meta_value' => 'page-team.php','cat' => $cat, 'orderby' => 'menu_order title', 'order' => 'ASC')); ?>
 
-						<?php if($my_query->have_posts()){?>
+						<?php if($my_query->have_posts()) {?>
 						<br /><br />		
 						<div class="left-header"><span><?php echo get_the_category_by_ID($cat)."&nbsp;";_e('Team','twentytwelve');?> </span></div>
 								
@@ -96,7 +100,7 @@ get_header(); ?>
                     					echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-services'>".$temp_title ."</a></li>"; 
                     				?>	
                 					<?php endwhile; ?>
-                					<?php }?>			
+                					<?php } ?>			
 						
 						</ul>
 			</div>	
@@ -104,4 +108,3 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
-
