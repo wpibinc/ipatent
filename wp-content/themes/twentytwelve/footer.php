@@ -10,7 +10,7 @@
  * @since Twenty Twelve 1.0
  */
 ?>
-		<?php if(!(is_page_template('page-home.php'))):?> 
+		<?php if(!(is_page_template('page-home.php'))){?> 
 		<div class="breadcrumbs">
 		    <?php if(function_exists('bcn_display'))
 		    {
@@ -18,7 +18,7 @@
 		    }?>
 		</div>
 		
-		<?php endif;?>
+
 	</div><!-- #main .wrapper -->
 	
 </div><!-- #page -->
@@ -68,6 +68,7 @@
 		
 	</div>
 </footer><!-- #colophon -->
+		<?php }?>
 <?php wp_footer(); ?>
   
 </body>

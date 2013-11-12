@@ -585,3 +585,4 @@ function get_current_page_depth(){
 
 	return $depth;
 }
+?>
