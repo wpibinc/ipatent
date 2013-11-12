@@ -143,9 +143,34 @@
 		    	
 		 </div>
 		 <div class="main_total_top_holder">
-		 <div class="header_container_div">
-		 <div id="home-top-inner">	The Right Move on the IP Chessboard</div>
-		 </div>
+			 <div class="header_container_div">
+			 	<div id="home-top-inner">	The Right Move on the IP Chessboard</div>
+			 				 <div class="clearfix"></div>
+			 <div  class="port-ip" >
+				 <p>My IP Portfolio</p>
+				 <form action="">
+				 <div class="inpts">
+				 	<label for="name">User Name</label>
+				 	<input class=""  type="text" name="name" />
+				 	<label for="pswd">Password</label>
+				 	
+				 	<input class=""  type="password" name="pswd" />
+				 	</div>
+				 	<div class="inpts">
+<span style="
+    font-family: sans-serif;
+    color: red;
+    float: right;
+    margin-top: 3px;
+    margin-left: 5px;
+">►</span>
+				 	<input type="submit"  name="sub"  value="Log In"></input>
+				 	 <div class="clearfix"></div>
+				 	</div>
+				 </form>
+			 </div>
+			 </div>
+
 		 </div>
 </div>
 

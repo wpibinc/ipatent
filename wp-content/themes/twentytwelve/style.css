@@ -1597,6 +1597,8 @@ img#wpstats {
 	}
 	.searchbox{
 	background: none !important;
+	padding: 15px 0px !important;
+margin-right: -24px !important;
 	}
 	.main-navigation li {
 		margin: 0 40px 0 0;
@@ -1902,12 +1904,12 @@ visibility: hidden;
 #searchform input[type="submit"]{
 	/*border:1px solid red;*/
 	font-size:0;
-	width:25px;
+	width:24px;
 	height: 22px;
 	padding:0;
 	margin:0;
 	position:relative;
-	top:-6px;
+	top:-5px;
 	right:30px;
 	background: url(images/search.gif) top no-repeat !important;
 }
@@ -2165,3 +2167,42 @@ margin: auto;
 .page-template-page-patents-php li{
 	list-style: none;
 }
+.port-ip{
+	float: right;
+width: 264px;
+margin-top: 75px;
+}
+.clearfix{
+	clear:both;
+}
+.port-ip p, .port-ip .inpts, .port-ip input[type="text"], .port-ip input[type="password"], .port-ip input[type="submit"]{
+	background-color: #fff;
+	padding: 4px;
+}
+
+.port-ip .inpts{
+	margin-bottom: 4px
+}
+.port-ip input[type="submit"]{
+    background:none!important;
+     border:none; 
+     padding:0!important;
+    
+    /*optional*/
+    font-family:verdana,arial,sans-serif; /*input has OS specific font-family*/
+     color:#ccc;
+     text-decoration: none;
+     cursor:pointer;
+     text-align: right;
+     float: right;
+     -moz-box-shadow: none!important;
+-webkit-box-shadow: none!important;
+box-shadow: none!important;
+margin: 0px;
+font-size: 14px;
+}
+.port-ip p{margin-bottom: 5px; color: red; text-align: right; }
+
+.port-ip form{}
+.port-ip input[type="text"], .port-ip input[type="password"]{height: 10px;}
+.port-ip input[type="password"]{margin-top: 3px; margin-left: 11px;}
