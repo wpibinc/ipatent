@@ -18,7 +18,7 @@
 		    	echo $bcn;
 		    }?>
 		</div>
-		
+		<?php }?>
 
 	</div><!-- #main .wrapper -->
 	
@@ -69,7 +69,7 @@
 		
 	</div>
 </footer><!-- #colophon -->
-		<?php }?>
+		
 <?php wp_footer(); ?>
   
 </body>

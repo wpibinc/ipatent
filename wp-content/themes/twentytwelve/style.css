@@ -2091,7 +2091,7 @@ a.social-contact{
 background:url(images/social_network_btn.gif) 0px 0px no-repeat;
 	width:19px;
 	height:16px;
-	display:block;
+	display:none;
 	float: left;
 	margin-top: 6px;	
 }
