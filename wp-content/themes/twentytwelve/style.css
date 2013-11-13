@@ -360,7 +360,7 @@ img.wp-post-image {
 	max-width: 100%;
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
-img.wp-post-image{margin:0px 0;width:215px;height:282px;}
+img.wp-post-image{margin:0px 0;width:215px;height:318px;}
 
 /* Make sure videos and embeds fit their containers */
 embed,
@@ -911,7 +911,7 @@ article.sticky .featured-post {
 .entry-content ul,
 .comment-content ul,
 .mu_register ul {
-	list-style: disc outside;
+	list-style: disc inside;
 }
 .entry-content ol,
 .comment-content ol {
@@ -2207,5 +2207,8 @@ font-size: 14px;
 height: 14px;
 padding-top: 6px;}
 .port-ip form{}
-.port-ip input[type="text"], .port-ip input[type="password"]{height: 10px; float: right;}
+.port-ip input[type="text"], .port-ip input[type="password"]{height: 10px; float: right; width: 165px;}
 .port-ip input[type="password"]{margin-top: 3px;}
+#field_2_5 {
+	width:392px !important;
+}

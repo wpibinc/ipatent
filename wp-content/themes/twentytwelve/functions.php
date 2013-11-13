@@ -588,7 +588,7 @@ function get_current_page_depth(){
 add_filter('bcn_breadcrumb_title', 'breadcrumbs');
 function breadcrumbs($str){
 
-	$ret =  str_replace("Ehrlich & Fenster - Patent & Trademark Attorney","Ehrlich & Fenster" ,$str);
+	$ret =  str_replace("Ehrlich &amp; Fenster - Patent &amp; Trademark Attorney","Ehrlich &amp; Fenster" ,$str);
 	return	$ret;
 }
 
