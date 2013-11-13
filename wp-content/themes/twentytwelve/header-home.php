@@ -154,6 +154,7 @@
 				 	<input class=""  type="text" name="uname" />
 				 	<label for="pass">Password</label>
 				 	<input class=""  type="password" name="pass" />
+				 					 	 <div class="clearfix"></div>
 				 	</div>
 				 	<div class="inpts">
 <span style="

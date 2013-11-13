@@ -8,6 +8,8 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
+
+
 ?>
 <!DOCTYPE html>
 
@@ -95,7 +97,11 @@
 
 
 
-<?php wp_head(); ?>
+<?php wp_head(); 
+global  $bcn;
+$bcn =  bcn_display(true);
+	
+?>
 </head>
 
 <body <?php body_class(); ?>>

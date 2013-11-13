@@ -585,4 +585,14 @@ function get_current_page_depth(){
 
 	return $depth;
 }
+add_filter('bcn_breadcrumb_title', 'breadcrumbs');
+function breadcrumbs($str){
+	
+	$ret =  substr_replace($str, '', 21,47);
+	return	$ret;
+}
+
+
+
+
 ?>

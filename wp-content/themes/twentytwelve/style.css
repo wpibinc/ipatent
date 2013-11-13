@@ -1596,9 +1596,10 @@ img#wpstats {
 		color: #fff;
 	}
 	.searchbox{
-	background: none !important;
-	padding: 15px 0px !important;
-margin-right: -24px !important;
+background: none !important;
+padding: 15px 0px !important;
+margin-right: -30px !important;
+float: right;
 	}
 	.main-navigation li {
 		margin: 0 40px 0 0;
@@ -2114,7 +2115,7 @@ a.social-contact.twitter:hover{background-position:-41px -16px;}
 .resume-text p{
 	padding-bottom:10px;
 	font-size: 15px;
-	line-height:17px;
+	line-height:20px;
 }
 .page-template-page-team-php .site-content article{
 	margin-bottom:0px;
@@ -2138,7 +2139,7 @@ a.social-contact.twitter:hover{background-position:-41px -16px;}
 }
 
 #home #content p {
-	margin-top:0;
+	margin-top:11px;
 }
 #form-404{width:340px;height:311px;background:url(images/404-form.png) no-repeat;display:block;margin:auto;margin-top:55px; }
 #home-button{width: 177px;height:32px;background:url(images/home-button.png) top no-repeat;display:inline-block;cursor: pointer;margin:21px 0; }
@@ -2202,7 +2203,9 @@ margin: 0px;
 font-size: 14px;
 }
 .port-ip p{margin-bottom: 5px; color: red; text-align: right; }
-
+.port-ip label{float: left;
+height: 14px;
+padding-top: 6px;}
 .port-ip form{}
-.port-ip input[type="text"], .port-ip input[type="password"]{height: 10px;}
-.port-ip input[type="password"]{margin-top: 3px; margin-left: 11px;}
+.port-ip input[type="text"], .port-ip input[type="password"]{height: 10px; float: right;}
+.port-ip input[type="password"]{margin-top: 3px;}
