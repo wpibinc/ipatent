@@ -32,12 +32,12 @@ get_header(); ?>
 				<div class="right-div-entry-title"></div>
 				<?php
 							$id=$post->ID;
-							$children =wp_list_pages("depth=1&child_of=".$id ."&title_li="."&echo=0&sort_column='menu_order'");
+							$children =wp_list_pages("depth=1&child_of=".$id ."&title_li="."&echo=0&sort_column=menu_order");
 														
 							if(get_current_page_depth()==2)
 							{
 								$id=$post->post_parent;
-								$children =wp_list_pages("depth=1&child_of=".$id ."&title_li="."&echo=0&sort_column='menu_order'");
+								$children =wp_list_pages("depth=1&child_of=".$id ."&title_li="."&echo=0&sort_column=menu_order");
 							}
 							$title=get_the_title($id);	
 						?>
