@@ -148,13 +148,12 @@
 			 				 <div class="clearfix"></div>
 			 <div  class="port-ip" >
 				 <p>My IP Portfolio</p>
-				 <form action="">
+				 <form action="http://my.ipatent.co.il"  method="POST"  target="_blank">
 				 <div class="inpts">
-				 	<label for="name">User Name</label>
-				 	<input class=""  type="text" name="name" />
-				 	<label for="pswd">Password</label>
-				 	
-				 	<input class=""  type="password" name="pswd" />
+				 	<label for="uname">User Name</label>
+				 	<input class=""  type="text" name="uname" />
+				 	<label for="pass">Password</label>
+				 	<input class=""  type="password" name="pass" />
 				 	</div>
 				 	<div class="inpts">
 <span style="
