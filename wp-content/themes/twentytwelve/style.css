@@ -2212,3 +2212,6 @@ padding-top: 6px;}
 #field_2_5 {
 	width:392px !important;
 }
+.searchbox input[type="text"]{
+	width: 152px;
+}
