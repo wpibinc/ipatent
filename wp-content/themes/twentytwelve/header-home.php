@@ -153,7 +153,7 @@
 				 	<label for="uname">User Name</label>
 				 	<input class=""  type="text" name="uname" />
 				 	<label for="pass">Password</label>
-				 	<input class=""  type="password" name="pass" />
+				 	<input class=""  type="password" name="upass" />
 				 					 	 <div class="clearfix"></div>
 				 	</div>
 				 	<div class="inpts">
