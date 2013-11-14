@@ -1633,7 +1633,7 @@ float: right;
 	.main-navigation li ul ul {
 		top: 28px;
 		margin: 0 0;
-		width:50px;
+		width:235px;
 		background-color:#787068;
 		
 	}
@@ -2116,6 +2116,7 @@ a.social-contact.twitter:hover{background-position:-41px -16px;}
 	padding-bottom:10px;
 	font-size: 15px;
 	line-height:20px;
+	text-align: justify;
 }
 .page-template-page-team-php .site-content article{
 	margin-bottom:0px;
