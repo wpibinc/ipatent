@@ -23,8 +23,7 @@
 <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.gif" type="image/x-icon" />
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.gif" type="image/x-icon" />
 <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/facebookshare.jpg" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -127,9 +126,9 @@
 						foreach ( $attachments as $attachment ) {
 							echo '<li>';
 							echo wp_get_attachment_image( $attachment->ID, 'full' );
-							echo '<p class="flex-caption">';
+							//echo '<p class="flex-caption">';
 								
-							echo '<span><img src="'; echo get_template_directory_uri(); echo '/images/Logo.png" style="width:auto;"></span>';
+							//echo '<span><img src="'; echo get_template_directory_uri(); echo '/images/Logo.png" style="width:auto;"></span>';
 							//echo apply_filters( 'the_title', $attachment->post_title );
 							echo '</p>';
 							echo '</li>';
@@ -143,6 +142,13 @@
 		    	
 		 </div>
 		 <div class="main_total_top_holder">
+		 <?php 
+		 echo '<p class="flex-caption">';
+		 
+		 echo '<span><img src="'; echo get_template_directory_uri(); echo '/images/Logo.png" style="width:265px;"></span>';
+		 //echo apply_filters( 'the_title', $attachment->post_title );
+		 echo '</p>';
+		 ?>
 			 <div class="header_container_div">
 			 	<div id="home-top-inner">	The Right Move on the IP Chessboard</div>
 			 				 <div class="clearfix"></div>
