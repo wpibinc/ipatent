@@ -17,11 +17,7 @@
 		<?php endif; ?>
 		<header class="entry-header">
 		<?php if ( has_post_thumbnail()) : ?>
-<div class="grayscale" style="
-    width: 215px;
-    height: 282px;
-    margin-bottom: 22px;
-">
+<div class="grayscale" style="display: inline-block;">
 			<?php
 			 the_post_thumbnail(); ?>
 			</div>
