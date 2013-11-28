@@ -26,7 +26,7 @@ get_header();
 				<div class="right-header"><span><?php echo(types_render_field("degrees")); ?></span></div>
 				<div class="right-img">
 					<?php 
-						$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full");
+						$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "fullsize");
 					?>
 					<a class="group1" href="<?php echo $imgsrc[0];?>" title="" >
 					
@@ -34,7 +34,7 @@ get_header();
 						$attr = array(
 								'class' => 'grayscale'
 						);
-						echo get_the_post_thumbnail($post->ID, 'large-thumb', $attr);?> 
+						echo get_the_post_thumbnail($post->ID, array(215,318), $attr);?> 
 					</a>
 					<!-- details under the image -->
 					<div class="right-details">
