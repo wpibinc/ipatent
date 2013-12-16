@@ -55,7 +55,7 @@ get_header(); ?>
 				<div class="right-header" <?php $style=($current_name=="Links")? 'display:none;' : "";  ?> style="<?php echo $style;?>"><span><?php $pfx_date = get_the_date( 'd.m.Y' ); echo $pfx_date;?></span></div>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
-					<?php comments_template( '', true ); ?>
+					<?php //comments_template( '', true ); ?>
 				<?php endwhile; // end of the loop. ?>
 			</div>
 			

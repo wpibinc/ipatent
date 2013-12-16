@@ -55,13 +55,8 @@ if($user_role=='editor')
 		#formatdiv, #slugdiv, #profile-page h3, #profile-page .editform, #wpfooter, #postexcerpt p {display:none;}
 		
 	</style>
-	<script>
 
-	
-		
-		
-	</script>
-	<?php	
+	<?php
 		$roles = get_role( 'editor' );
 		$remove_caps = array(
 				'manage_links',

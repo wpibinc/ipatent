@@ -24,7 +24,7 @@ get_header(); ?>
 				<div class="right-header"><span>You can also contact us via the form below:</span></div>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
-					<?php comments_template( '', true ); ?>
+					<?php //comments_template( '', true ); ?>
 				<?php endwhile; // end of the loop. ?>
 			</div>
 			<div class="left-div">
