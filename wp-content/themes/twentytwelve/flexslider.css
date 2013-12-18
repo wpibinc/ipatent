@@ -26,7 +26,7 @@
 	left: 0%;
 	height: 100%;
 }
-.flex-caption img{left:auto !important;}
+.flex-caption img{left:auto !important;padding-left: 31px;}
 .flex-pauseplay span {text-transform: capitalize;}
 
 /* Clearfix for the .slides element */
@@ -55,7 +55,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 /*.flex-caption {width: 96%; padding: 2%; position: absolute; left: 0; bottom: 0; background: rgba(0,0,0,.3); color: #fff; text-shadow: 0 -1px 0 rgba(0,0,0,.3); font-size: 14px; line-height: 18px;}*/
 .flex-caption {width: 95%; position: absolute; left: 2%;/*border:1px solid red;*/}
 .flex-caption p{direction:ltr;text-align:left;}
-.flex-caption span{width:1000px;margin:auto;display:block;}
+.flex-caption span{width:1004px;margin:auto;display:block;}
 /* Direction Nav */
 .flex-direction-nav li a {width: 52px; height: 52px; margin: -13px 0 0; display: block; background: url(theme/bg_direction_nav.png) no-repeat 0 0; position: absolute; top: 50%; cursor: pointer; text-indent: -9999px;display:none;}
 .flex-direction-nav li a.next {background-position: -52px 0; right: -21px;}

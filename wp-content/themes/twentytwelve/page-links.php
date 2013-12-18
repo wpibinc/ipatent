@@ -30,7 +30,6 @@ get_header(); ?>
 					$current_name = $category->cat_name;
 			?>
 			<div class="left-div">
-				<h1 class="entry-title-hide"><?php the_title(); $title = the_title('', '', false);?></h1>
 				<div class="left-header"><span>More <?php echo $current_name;?>:</span></div>
 					<div class="inner-left-div">
 						<ul class="left-menu">

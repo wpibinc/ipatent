@@ -10,15 +10,6 @@
  * @since Twenty Twelve 1.0
  */
 ?>
-		<?php if(!(is_page_template('page-home.php'))){?> 
-		<div class="breadcrumbs">
-		    <?php if(function_exists('bcn_display'))
-		    {
-		    	global  $bcn;
-		    	echo $bcn;
-		    }?>
-		</div>
-		<?php }?>
 
 	</div><!-- #main .wrapper -->
 	
@@ -69,7 +60,14 @@
 		
 	</div>
 </footer><!-- #colophon -->
-		
+<script>
+$(function() {
+	   $('li.menu-item').click(function() {
+	      window.location.href = $('a', this).attr('href');
+	      return false;
+	   });
+	});
+		</script>
 <?php wp_footer(); ?>
   
 </body>

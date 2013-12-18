@@ -20,10 +20,8 @@ get_header();
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 			<div class="right">
-				<header class="entry-header">
-					<h1 class="entry-title"><?php the_title(); $title = the_title('', '', false);?></h1>
-				</header>
-				<div class="right-header"><span><?php echo(types_render_field("degrees")); ?></span></div>
+				<div class="right-header"><?php the_title(); $title = the_title('', '', false);?></div>
+				<span><?php echo(types_render_field("degrees")); ?></span>
 				<div class="right-img">
 					<?php 
 						$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "fullsize");

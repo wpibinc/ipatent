@@ -150,7 +150,7 @@
 		 echo '</p>';
 		 ?>
 			 <div class="header_container_div">
-			 	<div id="home-top-inner">	The Right Move on the IP Chessboard</div>
+			 	<!-- <div id="home-top-inner">	The Right Move on the IP Chessboard</div> -->
 			 				 <div class="clearfix"></div>
 			 <div  class="port-ip" >
 				 <p>My IP Portfolio</p>
