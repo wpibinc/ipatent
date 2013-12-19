@@ -64,5 +64,5 @@ T-------------------------------------------------------------------------------
 
 Task #28
 1. Go to Appearance > Widgets
-2. Edit content in 'Text' widget that exist in 'Home' box 
+2. Edit content in 'Text' widget that exist in 'Home' box ('<b>The Right Move on the IP Chessboard</b>')
 T-----------------------------------------------------------------------------------------
