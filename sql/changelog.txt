@@ -60,3 +60,9 @@ T-----------------------------------------
 Task #15
 1. Go to Languages > Language switcher options > (drop down) 'Choose where to display the language switcher widget'
 T-----------------------------------------------------------------------------------------
+
+
+Task #28
+1. Go to Appearance > Widgets
+2. Edit content in 'Text' widget that exist in 'Home' box 
+T-----------------------------------------------------------------------------------------
