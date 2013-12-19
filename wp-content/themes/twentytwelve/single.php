@@ -24,10 +24,8 @@ get_header(); ?>
 		<div id="content" role="main">
 				
 			<div class="right" style="">
-				<header class="entry-header" <?php $style=($current_name=="Links")? 'margin-top:33px;' : "";  ?> style="<?php echo $style;?>">
-					<h1 class="entry-title"><?php the_title(); $title = the_title('', '', false);?></h1>
-				</header>
-				<div class="right-header" <?php $style=($current_name=="Links")? 'display:none;' : "";  ?> style="<?php echo $style;?>"><span><?php $pfx_date = get_the_date( 'd.m.Y' ); echo $pfx_date;?></span></div>
+				<div class="right-header" <?php $style=($current_name=="Links")? 'display:none;' : "";  ?> style="<?php echo $style;?>"><?php the_title(); $title = the_title('', '', false);?></div>
+				<span><?php $pfx_date = get_the_date( 'd.m.Y' ); echo $pfx_date;?></span>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 					<?php //comments_template( '', true ); ?>
@@ -36,7 +34,7 @@ get_header(); ?>
 			
 			<div class="left-div">
 
-				<h1 class="entry-title-hide"><?php the_title(); $title = the_title('', '', false);?></h1>
+				
 				<div class="left-header"><span>More <?php echo $current_name;?>:</span></div>
 					<div class="inner-left-div">
 						<ul class="left-menu">
