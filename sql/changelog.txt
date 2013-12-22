@@ -53,16 +53,31 @@ Limit image upload size
 P---------------------
 
 Task #6
-1. Create new page with patents-template.
-2. Update the menu with the new page data
-T-----------------------------------------
+1. Create new page with patents-page template:
+Name: Patents
+Content:
+<ul>
+		<li>
+<a href="http://ipatent.co.il/?page_id=640">Biotech</a></li>
+	<li><a href="#">Software</a></li>
+	<li><a href="http://ipatent.co.il/?page_id=313">Pharma</a></li>
+	<li><a href="#">Medical Devices</a></li>
+	<li><a href="#">Physics</a></li>
+	<li><a href="#">Hi-Tech</a></li>
+</ul>
+2. Update the menu with the new page data, update links accordingly
+TP----------------------------------------
 
 Task #15
-1. Go to Languages > Language switcher options > (drop down) 'Choose where to display the language switcher widget'
-T-----------------------------------------------------------------------------------------
-
+1. Go to Languages > Language switcher options > (drop down) 'Choose where to display the language switcher widget': -none-
+TP---------------------------------------------------------------------------------------
 
 Task #28
 1. Go to Appearance > Widgets
-2. Edit content in 'Text' widget that exist in 'Home' box ('<b>The Right Move on the IP Chessboard</b>')
+2. Edit content in 'Text' widget that exist in 'Home' box 
 T-----------------------------------------------------------------------------------------
+
+Anti spam in forms
+1. In each form, insert an Website field with class ge-hide-field. Then go to Form Settings and set submit button to appear
+only if field="http://"
+TP----------------------------------------------------------------------------------------

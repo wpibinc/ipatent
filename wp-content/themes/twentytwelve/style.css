@@ -2234,3 +2234,7 @@ padding-top: 6px;}
 .searchbox input[type="text"]{
 	width: 152px;
 }
+
+.ge-hide-field {
+display: none;
+}
