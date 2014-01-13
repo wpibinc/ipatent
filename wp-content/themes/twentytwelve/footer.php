@@ -14,7 +14,7 @@
 	</div><!-- #main .wrapper -->
 	
 </div><!-- #page -->
-<div class="block push"></div>
+
 <footer id="colophon" role="contentinfo" class="block">
 
 	<div class="footer-icons">
@@ -50,14 +50,16 @@
 	</div>
 	<div style="clear:both;"></div>
 	<div class="footer-rights">
-		
-		<span>All Rights Reserved, EHRLICH & FENSTER | <a href="#">Terms and Conditions</a></span>
+	<div style="margin: 0 auto; width: 940px; height: 25px; font-size: 11px;" >
+		<div class="right">
+		<span style="float: left;" >All Rights Reserved, EHRLICH & FENSTER | <a href="#">Terms and Conditions</a></span>
 		<span class="footer-rights-social">
 			<a href="http://linkedin.com" class="linkedin social"></a>
 			<a href="http://facebook.com" class="facebook social"></a>
 			<a href="http://twitter.com" class="twitter social"></a>
 		</span>
-		
+		</div>
+	</div>
 	</div>
 </footer><!-- #colophon -->
 <script>

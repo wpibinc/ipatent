@@ -16,7 +16,7 @@
 get_header('home'); ?>
 <div id="home">
 	<div id="primary" class="site-content" style="left:0;">
-		<div id="content" role="main">
+		<div id="content" role="main" style="padding-top: 18px;">
 			<div class="right">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>

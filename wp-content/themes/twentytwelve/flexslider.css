@@ -26,7 +26,7 @@
 	left: 0%;
 	height: 100%;
 }
-.flex-caption img{left:auto !important;padding-left: 31px;}
+.flex-caption img{left:auto !important;padding-left: 18px;}
 .flex-pauseplay span {text-transform: capitalize;}
 
 /* Clearfix for the .slides element */
