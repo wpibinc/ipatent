@@ -107,6 +107,7 @@ $bcn =  bcn_display(true);
 </head>
 
 <body <?php body_class(); ?>>
+<div id="wrap">
 <div style="width:100%">
 	<header class="block">
 	<div id="nav-div">

@@ -92,6 +92,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="wrap">
 <section class="container">
 <header class="block">
 <div id="nav-div">

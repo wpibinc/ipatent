@@ -14,9 +14,9 @@
 	</div><!-- #main .wrapper -->
 	
 </div><!-- #page -->
-
+</section><!-- #container -->
+</div><!-- #wrap -->
 <footer id="colophon" role="contentinfo" class="block">
-
 	<div class="footer-icons">
 		<?php 
 		
@@ -42,11 +42,7 @@
 					<?php 
 					endwhile;
 			endif;
-		
-		
-			
 		?>
-		
 	</div>
 	<div style="clear:both;"></div>
 	<div class="footer-rights">
@@ -71,6 +67,5 @@ $(function() {
 	});
 		</script>
 <?php wp_footer(); ?>
-  
 </body>
 </html>
