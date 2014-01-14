@@ -53,9 +53,9 @@ get_header(); ?>
 									while ($category_query->have_posts()) : 
 										$category_query->the_post();
 										$temp_title = the_title('', '', false);
-										$class = "";
+										$class = "itm";
 										if($temp_title==$title)
-											$class="current";
+											$class="itm current";
 										echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-services'>$temp_title </a></li>";
 									endwhile;
 								

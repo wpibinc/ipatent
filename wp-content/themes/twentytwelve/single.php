@@ -55,12 +55,14 @@ get_header(); ?>
 										$category_query->the_post();
 										$temp_title = the_title('', '', false);
 										$class="";
-										if($temp_title==$title)
-											$class="current";
+										if($temp_title==$title){
+											$class="itm current";
+										      $display="display:list-item";
+										      }
 										else
-											$class="";
+											$class="itm";
 										//$temp_title = (strlen($temp_title) > 33) ? substr($temp_title, 0, 33) . '...' : $temp_title;
-										echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-news'>  $temp_title</a></li>";
+										echo "<li class='$class' style='$display'><a href=". get_permalink($post->ID)." class='a-news'>  $temp_title</a></li>";
 										//echo "<br/>";
 									endwhile;
 								

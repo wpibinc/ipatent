@@ -87,14 +87,14 @@ get_header(); ?>
 						<?php $my_query = new WP_Query(array( 'meta_key' => '_wp_page_template', 'meta_value' => 'page-team.php','cat' => $cat, 'orderby' => 'menu_order title', 'order' => 'ASC')); ?>
 
 						<?php if($my_query->have_posts()) {?>
-						<br /><br />		
-						<div class="left-header"><span><?php echo get_the_category_by_ID($cat)."&nbsp;";_e('Team','twentytwelve');?> </span></div>
+								
+						<div class="left-header" style="margin-top: 50px;"><span><?php echo get_the_category_by_ID($cat)."&nbsp;";_e('Team','twentytwelve');?> </span></div>
 								
 									
                 					<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
                     				<?php 
                     					$temp_title = the_title('', '', false);
-                    					echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-services'>".$temp_title ."</a></li>"; 
+                    					echo "<li class='itm $class' style='padding-left:5px;'><a href=". get_permalink($post->ID)." class='a-services'>".$temp_title ."</a></li>"; 
                     				?>	
                 					<?php endwhile; ?>
                 					<?php } ?>			

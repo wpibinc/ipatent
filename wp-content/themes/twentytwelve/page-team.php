@@ -36,19 +36,19 @@ get_header();
 					</a>
 					<!-- details under the image -->
 					<div class="right-details">
-						<span>Tel: 073-7919199</span>
-						<span>Fax: 073-7919100</span>
-						<?php if (types_render_field( "email")) {?><span><img src="/wp-content/themes/twentytwelve/images/email.gif" />&nbsp;&nbsp;&nbsp; <a href="<?php echo "mailto:"; echo(get_post_meta($post->ID, "wpcf-email",true)); echo "@ipatent.co.il"; ?>" target="_blank"><?php echo(get_post_meta($post->ID, "wpcf-email",true)); echo "@ipatent.co.il"; ?></a> </span><?php } ?>
+						<div class="lbl">Tel:<span style="padding-left: 11px;">073-7919199</span></div>
+						<div class="lbl">Fax:<span>073-7919100</span></div>
+						<?php if (types_render_field( "email")) {?><div><img src="/wp-content/themes/twentytwelve/images/email.gif" />&nbsp;&nbsp;&nbsp; <a href="<?php echo "mailto:"; echo(get_post_meta($post->ID, "wpcf-email",true)); echo "@ipatent.co.il"; ?>" target="_blank"><?php echo(get_post_meta($post->ID, "wpcf-email",true)); echo "@ipatent.co.il"; ?></a> </div><?php } ?>
 						<?php if (types_render_field( "linkedln")) {?><a><span><img src="/wp-content/themes/twentytwelve/images/linkedin.gif" />&nbsp;&nbsp;&nbsp;<?php echo(types_render_field( "linkedln")); ?></span></a><?php } ?>
 						<?php if (types_render_field( "practice-areas")) {?><div class="practice-area">
-							<span class="ptitle">Practice areas</span>
+							<p class="ptitle">Practice areas</p>
 							<?php echo(types_render_field( "practice-areas")); ?>
 						</div>
 						<?php } ?>
 					</div>
 				</div>
 				<div class="right-text" style="float:left;width:400px;">
-					<div style="margin:0px 0 0 20px;word-break:break-word;padding: 0px 5px 0px 0px" class="resume-text">
+					<div style="margin:0px 0 0 15px;word-break:break-word;padding: 0px 5px 0px 0px" class="resume-text">
 					<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 					<?php endwhile; // end of the loop. ?>
@@ -115,9 +115,10 @@ get_header();
 										$category_query->the_post();
 										$temp_title = the_title('', '', false);
 										if($temp_title==$title)
-											$class="current";
+											$class="itm current";
+										
 										else
-											$class="";
+											$class="itm";
 										echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-services'>$temp_title </a></li>";
 									endwhile;
 								
