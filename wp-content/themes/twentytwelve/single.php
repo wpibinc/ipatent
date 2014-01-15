@@ -16,10 +16,16 @@ $category = end(get_the_category());
 $current_name = $category->cat_name;
 if($current_name=="footer_logos")
 	header("Location:index.php");
-get_header(); ?>
-<?php 
-					
+get_header(); 
+if ($category->slug=="articles-and-publications") $menu = "194";
+if ($category->slug=="links") $menu = "379";
 ?>
+
+<script>
+   $(document).ready(function() {
+		$(".menu-item-<?php echo $menu;?>").addClass("current-menu-parent");
+	});
+</script>
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 				

@@ -19,7 +19,6 @@ get_header(); ?>
 		<div id="content" role="main">
 			<div class="right">
 				<div class="right-header"><?php the_title(); ?></div>
-				<span>You can also contact us via the form below:</span>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 					<?php //comments_template( '', true ); ?>

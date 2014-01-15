@@ -20,25 +20,18 @@ if($current_name=="footer_logos")
 get_header(); ?>
 
 <script>
-
-
-   $(document).ready(	function()
-						{
-							   $(".date-clicked").click( function(event) 
-									   									{	
-								   											event.preventDefault();													
-								   											id=$(this).attr("id");
-																			//alert(id);
-																			
-																			if ($("."+id+'-post').is(":hidden")) 
-																				$("."+id+'-post').slideDown("slow");
-																			else 
-																				$("."+id+'-post').hide();
-										   								}
-									      				);
-			   							
-						}
-			    );
+   $(document).ready(function() {
+	   $(".date-clicked").click( function(event) 
+		{	
+			event.preventDefault();													
+			id=$(this).attr("id");
+			if ($("."+id+'-post').is(":hidden")) 
+				$("."+id+'-post').slideDown("slow");
+			else 
+				$("."+id+'-post').hide();
+		});
+		$(".menu-item-object-category").addClass("current-menu-parent");
+	});
 </script>
 
 
