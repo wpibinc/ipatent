@@ -13,8 +13,9 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header(); 
-					$category = get_category_by_slug(get_post_meta(get_the_ID(),"wpcf-main-team",true));
+					get_header();
+					if (isset($_GET['dep'])) $category = get_category_by_slug($_GET['dep']);
+					else $category = get_category_by_slug(get_post_meta(get_the_ID(),"wpcf-main-team",true));
 					$current_name = $category->cat_name;
 ?>
 	<div id="primary" class="site-content">
@@ -119,7 +120,7 @@ get_header();
 										
 										else
 											$class="itm";
-										echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-services'>$temp_title </a></li>";
+										echo "<li class='$class'><a href=". add_query_arg('dep',$category->slug,get_permalink($post->ID)) ." class='a-services'>$temp_title </a></li>";
 									endwhile;
 								
 								endif;
