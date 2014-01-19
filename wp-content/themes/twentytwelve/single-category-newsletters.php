@@ -21,10 +21,16 @@ get_header(); ?>
 
 <script>
    $(document).ready(function() {
+	   var curr = $('.left-menu li.current a').attr('class');
+	   currid = curr.slice(-5); 
+
+		id=$('.date-clicked.current').attr("id");
+			$("."+id+'-post').show();
+
 	   $(".date-clicked").click( function(event) 
 		{	
 			event.preventDefault();													
-			id=$(this).attr("id");
+			var id=$(this).attr("id");
 			if ($("."+id+'-post').is(":hidden")) 
 				$("."+id+'-post').slideDown("slow");
 			else 
@@ -85,7 +91,7 @@ get_header(); ?>
 										{	
 											$temp_date=$post_date . '-' . $post_date_year;
 											$flag_take_date=0;
-											echo "<a href='' class='date-clicked' id='$temp_date'>$post_date $post_date_year</a><br/>";
+											echo "<a href='' class='date-clicked $class' id='$temp_date'>$post_date $post_date_year</a><br/>";
 										}
 										
 										

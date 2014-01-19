@@ -68,7 +68,10 @@
 <script>
 			$(document).ready(function(){
 				//Examples of how to assign the ColorBox event to elements
-				$(".group1").colorbox({rel:'group1'});
+				$(".group1").colorbox({rel:'group1', onComplete: function(){
+	                var title = $('.cboxIframe')[0].contentWindow.document.title;
+	                $('#cboxTitle').text(title);
+	            }});
 				$(".group2").colorbox({rel:'group2', transition:"fade"});
 				$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
 				$(".group4").colorbox({rel:'group4', slideshow:true});
