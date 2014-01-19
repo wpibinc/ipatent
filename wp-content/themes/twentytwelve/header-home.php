@@ -47,7 +47,7 @@
 
 <style>
 .slide{
-    width: 2560px;
+    width: 100%;
 height: 495px;
 background-repeat: no-repeat;
 background-position: center;
@@ -70,6 +70,8 @@ background-position: center;
 ?>
 #slide-<?php echo $i; ?>{
     background-image: url("<?php $img = wp_get_attachment_image_src( $attachment->ID, 'full' ); echo $img[0]; ?>");
+    background-repeat: no-repeat;
+background-position: center;
 }
 							
 <?php 

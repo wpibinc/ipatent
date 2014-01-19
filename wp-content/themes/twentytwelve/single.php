@@ -30,8 +30,8 @@ if ($category->slug=="links") $menu = "379";
 		<div id="content" role="main">
 				
 			<div class="right" style="">
-				<div class="right-header" <?php $style=($current_name=="Links")? 'display:none;' : "";  ?> style="<?php echo $style;?>"><?php the_title(); $title = the_title('', '', false);?></div>
-				<span><?php $pfx_date = get_the_date( 'd.m.Y' ); echo $pfx_date;?></span>
+				<div class="right-header" ><?php the_title(); $title = the_title('', '', false);?></div>
+				<span <?php $style=($current_name=="Links")? 'display:none;' : "";  ?> style="<?php echo $style;?>"><?php $pfx_date = get_the_date( 'd.m.Y' ); echo $pfx_date;?></span>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 					<?php //comments_template( '', true ); ?>
