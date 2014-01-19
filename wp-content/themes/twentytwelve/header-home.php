@@ -44,8 +44,65 @@
 <!-- color-box -->
 <link href="<?php echo get_template_directory_uri(); ?>/colorbox.css" rel="stylesheet" type="text/css"/>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.colorbox.js" type="text/javascript"></script>
+
+<style>
+.slide{
+    width: 2560px;
+height: 495px;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+<?php 
+		    	
+		    		if ( have_posts() ) : while ( have_posts() ) : the_post();
+	
+					$args = array(
+							'post_type' => 'attachment',
+							'numberposts' => -1,
+							'post_status' => null,
+							'post_parent' => $post->ID
+					);
+	                $i=1;
+					$attachments = get_posts( $args );
+					if ( $attachments ) {
+						foreach ( $attachments as $attachment ) {
+?>
+#slide-<?php echo $i; ?>{
+    background-image: url("<?php $img = wp_get_attachment_image_src( $attachment->ID, 'full' ); echo $img[0]; ?>");
+}
+							
+<?php 
+$i++;						
+}
+					}
+	
+	 				endwhile; endif;
+	 				
+	 			?>
+</style>
 <script>
 			$(document).ready(function(){
+
+		        i = 1;
+		        setInterval(function(){
+		            if(i <= <?php echo $i; ?>){
+		            
+		                $('#slide-'+i).fadeOut(1300, function() {
+    			                i++;
+    			                if(i >= <?php echo $i; ?>){
+        			                i = 1;
+        			            }
+    		                    $(this).attr("id","slide-"+i);
+		                    }).fadeIn( 1300 );
+		                }
+		                else{
+		                	i=1;
+		                }
+		        }, 4000);
+
+
+				
 				//Examples of how to assign the ColorBox event to elements
 				$(".group1").colorbox({rel:'group1'});
 				$(".group2").colorbox({rel:'group2', transition:"fade"});
@@ -53,7 +110,7 @@
 				$(".group4").colorbox({rel:'group4', slideshow:true});
 				$(".ajax").colorbox();
 				$(".youtube").colorbox({iframe:true, innerWidth:425, innerHeight:344});
-				$(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
+				$(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409}) ;
 				$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
 				$(".inline").colorbox({inline:true, width:"50%"});
 				$(".callbacks").colorbox({
@@ -82,7 +139,7 @@
 <!-- Hook up the FlexSlider -->
 		<script type="text/javascript">
 			$(window).load(function() {
-				$('.flexslider').flexslider();
+				
 			});
 		</script>
 <!-- flex slider ends -->
@@ -109,37 +166,7 @@
 	
 		 
 		<div class="flexslider" >
-		    <ul class="slides">
-		    	
-		    	<?php 
-		    	
-		    		if ( have_posts() ) : while ( have_posts() ) : the_post();
-	
-					$args = array(
-							'post_type' => 'attachment',
-							'numberposts' => -1,
-							'post_status' => null,
-							'post_parent' => $post->ID
-					);
-	
-					$attachments = get_posts( $args );
-					if ( $attachments ) {
-						foreach ( $attachments as $attachment ) {
-							echo '<li>';
-							echo wp_get_attachment_image( $attachment->ID, 'full' );
-							//echo '<p class="flex-caption">';
-								
-							//echo '<span><img src="'; echo get_template_directory_uri(); echo '/images/Logo.png" style="width:auto;"></span>';
-							//echo apply_filters( 'the_title', $attachment->post_title );
-							echo '</p>';
-							echo '</li>';
-						}
-					}
-	
-	 				endwhile; endif;
-	 				
-	 			?>
-		    </ul>
+		   <div class="slide" id="slide-1"></div>
 		    	
 		 </div>
 		 <div class="main_total_top_holder">
