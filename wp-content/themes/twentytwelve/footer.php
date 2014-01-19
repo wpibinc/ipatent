@@ -17,7 +17,8 @@
 </section><!-- #container -->
 </div><!-- #wrap -->
 <footer id="colophon" role="contentinfo" class="block">
-	<div class="footer-icons">
+<div class="wrapper">
+	<div class="footer-icons right">
 		<?php 
 		
 			$category_query_args = array(
@@ -43,6 +44,7 @@
 					endwhile;
 			endif;
 		?>
+	</div>
 	</div>
 	<div style="clear:both;"></div>
 	<div class="footer-rights">
