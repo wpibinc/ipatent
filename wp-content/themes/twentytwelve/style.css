@@ -71,7 +71,7 @@ html, body {
 
 body {
 	/*font-family: Alef !important;*/
-	font-family: verdana !important;
+	font-family: verdana, Arial !important;
 }
 
 .container {
@@ -909,7 +909,7 @@ article.sticky .featured-post {
 .mu_register p {
 	margin: 0 0 24px;
 	margin: 0 0 1.714285714rem;
-	margin: 30px 0 -17px;
+	margin: 30px 0 0px;
 	line-height:22px;
 	font-size: 13px;
 	text-align: justify;
@@ -936,7 +936,8 @@ article.sticky .featured-post {
 .entry-content ul,
 .comment-content ul,
 .mu_register ul {
-	list-style: disc inside;
+	list-style: disc ;
+	padding-left: 16px;
 }
 .entry-content ol,
 .comment-content ol {
