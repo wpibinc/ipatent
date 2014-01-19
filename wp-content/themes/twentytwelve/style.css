@@ -2077,7 +2077,7 @@ position: relative;
 .right-header , .left-header,.left-text-header{padding:0px 5px; border-top:1px solid;border-bottom:1px solid;line-height:25px;color:#666; font-size: 16px; font-weight: bold;}
 .right-details{/*border:1px solid red;*/clear:both;font-size:13px; width:203px; padding: 0px 5px;margin-top: 15px;}
 .right-details div{display: block;padding:5px 0;width:100%;word-break:break-all;}
-.right-details a{text-decoration:none;color:#666;}
+.right-details a{text-decoration:none;color:#666; vertical-align: middle;}
 .right-details a:hover{text-decoration:underline;cursor:pointer;}
 .practice-area{/*border:1px solid red;*/margin:13px 0;}
 .a-news{text-decoration: none;width:100%;display: block; }
