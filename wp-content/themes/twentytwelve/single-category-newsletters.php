@@ -48,7 +48,7 @@ get_header(); ?>
 		<div id="content" role="main">
 				
 			<div class="right" style="">
-				<div class="right-header" <?php $style=($current_name=="Links")? 'display:none;' : "";  ?> style="<?php echo $style;?>"><?php the_title(); $title = the_title('', '', false);?></div>
+				<div class="right-header" <?php $style=($current_name=="Links")? 'display:none;' : "";  ?> style="<?php echo $style;?>" title="<?php the_title(); $title = the_title('', '', false);?>"><?php the_title(); $title = the_title('', '', false);?></div>
 				<span><?php $pfx_date = get_the_date( 'd.m.Y' ); echo $pfx_date;?></span>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>

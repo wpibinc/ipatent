@@ -39,7 +39,7 @@
 					<div class="right-details">
 						<div class="lbl">Tel:<span style="padding-left: 11px;">073-7919199</span></div>
 						<div class="lbl">Fax:<span>073-7919100</span></div>
-                        <?php if (types_render_field( "email")) {?><div><img src="/wp-content/themes/twentytwelve/images/email.gif" style="vertical-align: middle;"/>&nbsp;&nbsp;&nbsp;<a href="<?php echo "mailto:"; echo(get_post_meta($post->ID, "wpcf-email",true)); echo "@ipatent.co.il"; ?>" target="_blank"><?php echo(get_post_meta($post->ID, "wpcf-email",true)); echo "@ipatent.co.il"; ?></a></div><?php } ?>
+                        <?php if (types_render_field( "email")) {?><div class="lbl">Mail:<a href="<?php echo "mailto:"; echo(get_post_meta($post->ID, "wpcf-email",true)); echo "@ipatent.co.il"; ?>" target="_blank"><?php echo(get_post_meta($post->ID, "wpcf-email",true)); echo "@ipatent.co.il"; ?></a></div><?php } ?>
 						<?php if (types_render_field( "linkedln")) {?><a><span><img src="/wp-content/themes/twentytwelve/images/linkedin.gif" />&nbsp;&nbsp;&nbsp;<?php echo(types_render_field( "linkedln")); ?></span></a><?php } ?>
 						<?php if (types_render_field( "practice-areas")) {?><div class="practice-area">
 							<p class="ptitle">Practice areas</p>
