@@ -24,7 +24,7 @@ get_header(); ?>
 					<?php //comments_template( '', true ); ?>
 				<?php endwhile; // end of the loop. ?>
 			</div>
-			<div class="left-div" style="margin-top: 66px;">
+			<div class="left-div" style="margin-top: 70px;">
 					<?php if(the_title("","",false)!="About" && the_title("","",false)!="Sitemap" ):?>
 					
 						<div class="inner-left-div">
