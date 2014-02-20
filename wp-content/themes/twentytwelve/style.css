@@ -2022,11 +2022,14 @@ overflow: hidden;
 position: relative;
 }
 .left-header{
-	margin-bottom: 41px;
 	width: 295px;
 }
+.left-header,
 .page-template-page-team-php .left-header{
-		margin-bottom: 38px;
+		margin-bottom: 37px;
+}
+.single  .left-header{
+	margin-bottom: 40px;
 }
 
 .inner-left-div{padding: 0px 5px;margin:14px 0px;}
@@ -2224,10 +2227,13 @@ text-decoration:underline;
 		padding-top: 0px;
 }
 .left-menu .page_item:first-of-type,
-a.date-clicked:first-of-type,
 .itm:first-of-type{
 	line-height: 22px;
 	padding-bottom: 5px;
+}
+a.date-clicked:first-of-type{
+		line-height: 18px;
+			padding-bottom: 5px;
 }
 .itm{
 line-height: 33px;
@@ -2237,7 +2243,7 @@ line-height: 33px;
 	padding-left: 8px;
 }
 .right-header+span{
-margin-top: -34px;
+margin-top: -30px;
 margin-bottom: 15px;
 padding: 0px 5px;
 display: block;
