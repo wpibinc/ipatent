@@ -44,7 +44,6 @@
 <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.gif" type="image/x-icon" />
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.gif" type="image/x-icon" />
 <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/facebookshare.jpg" />
-<meta name="viewport" content="width=device-width" />
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <title><?php wp_title( '|', true, 'right' );?></title>
