@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms version="1.6.3.1.1">
+	<form labelPlacement="top_label" useCurrentUserAsAuthor="1">
+		<title><![CDATA[Satisfaction Survey]]></title>
+		<descriptionPlacement><![CDATA[below]]></descriptionPlacement>
+		<button type="text">
+			<text><![CDATA[ ]]></text>
+		</button>
+		<fields>
+			<field id="6" isRequired="1" size="medium" type="text">
+				<label><![CDATA[Full name]]></label>
+			</field>
+			<field id="7" size="medium" type="text">
+				<label><![CDATA[Company]]></label>
+			</field>
+			<field id="8" isRequired="1" size="medium" type="email">
+				<label><![CDATA[Email]]></label>
+			</field>
+			<field id="9" size="medium" type="text">
+				<label><![CDATA[Phone]]></label>
+			</field>
+			<field id="11" size="medium" type="section" displayOnly="1">
+				<description><![CDATA[Please rank the following from 1-5, 1 being the lowest score and 5 being the highest:]]></description>
+			</field>
+			<field id="1" isRequired="1" size="medium" type="radio">
+				<cssClass><![CDATA[left-side]]></cssClass>
+				<label><![CDATA[Professional services by the Patent Attorneys]]></label>
+				<choices>
+					<choice>
+						<text><![CDATA[1]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[2]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[3]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[4]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[5]]></text>
+					</choice>
+				</choices>
+			</field>
+			<field id="2" isRequired="1" size="medium" type="radio">
+				<cssClass><![CDATA[left-side]]></cssClass>
+				<label><![CDATA[Professional services by the Paralegals]]></label>
+				<choices>
+					<choice>
+						<text><![CDATA[1]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[2]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[3]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[4]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[5]]></text>
+					</choice>
+				</choices>
+			</field>
+			<field id="3" isRequired="1" size="medium" type="radio">
+				<cssClass><![CDATA[left-side]]></cssClass>
+				<label><![CDATA[Services by the Accounting Department]]></label>
+				<choices>
+					<choice>
+						<text><![CDATA[1]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[2]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[3]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[4]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[5]]></text>
+					</choice>
+				</choices>
+			</field>
+			<field id="4" isRequired="1" size="medium" type="radio">
+				<cssClass><![CDATA[left-side]]></cssClass>
+				<label><![CDATA[General Response time to your requirements]]></label>
+				<choices>
+					<choice>
+						<text><![CDATA[1]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[2]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[3]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[4]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[5]]></text>
+					</choice>
+				</choices>
+			</field>
+			<field id="5" isRequired="1" size="medium" type="radio">
+				<cssClass><![CDATA[left-side]]></cssClass>
+				<label><![CDATA[General level of service at Ehrlich & Fenster]]></label>
+				<choices>
+					<choice>
+						<text><![CDATA[1]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[2]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[3]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[4]]></text>
+					</choice>
+					<choice>
+						<text><![CDATA[5]]></text>
+					</choice>
+				</choices>
+			</field>
+			<field id="10" size="medium" type="textarea">
+				<label><![CDATA[Remarks]]></label>
+			</field>
+		</fields>
+		<confirmation type="message">
+			<message><![CDATA[ Thank you for completing our satisfaction survey questionnaire.]]></message>
+		</confirmation>
+		<cssClass><![CDATA[site_form]]></cssClass>
+	</form>
+</forms>
