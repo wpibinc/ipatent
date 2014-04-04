@@ -1978,7 +1978,7 @@ float: right;
 .site_form .gform_button {margin-top: 9px;}
 .site_form .gfield_radio li {display: inline-block; margin-right: 12px !important;}
 
-#field_2_2{width:51%;float:right;/*border:1px solid;*/}
+#field_2_2{width:100%;float:right;/*border:1px solid;*/}
 #field_2_1, #field_2_3{width:100%;/*border:1px solid;*/}
 #field_2_4{margin:0 0 0 0px;}
 #field_2_2 .ginput_container{
