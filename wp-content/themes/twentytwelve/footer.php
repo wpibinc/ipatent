@@ -54,7 +54,7 @@
 		<span class="footer-rights-social">
 			<a href="https://www.linkedin.com/company/ehrlich-&-fenster-patent-attorneys" target="_blank" class="linkedin social"></a>
 			<a href="https://www.facebook.com/EhrlichFenster" target="_blank" class="facebook social"></a>
-			<a href="http://twitter.com" class="twitter social"></a>
+			<!-- <a href="http://twitter.com" class="twitter social"></a> -->
 		</span>
 		</div>
 	</div>
