@@ -52,8 +52,8 @@
 		<div class="right">
 		<span style="float: left;" >All Rights Reserved, EHRLICH & FENSTER | <a href="#">Terms and Conditions</a></span>
 		<span class="footer-rights-social">
-			<a href="http://linkedin.com" class="linkedin social"></a>
-			<a href="http://facebook.com" class="facebook social"></a>
+			<a href="https://www.linkedin.com/company/ehrlich-&-fenster-patent-attorneys" target="_blank" class="linkedin social"></a>
+			<a href="https://www.facebook.com/EhrlichFenster" target="_blank" class="facebook social"></a>
 			<a href="http://twitter.com" class="twitter social"></a>
 		</span>
 		</div>
