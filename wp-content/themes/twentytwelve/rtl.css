@@ -514,6 +514,22 @@ article.format-link .entry-content {
 
 /*.entry-content*/
 
+.main-navigation li ul {
+	margin-right:-14px;
+}
+
+.sub-menu li {
+	float:right;
+}
+
+.main-navigation ul.nav-menu {
+	text-align:right;
+}
+
+.searchbox {
+	float:left;
+}
+
 #searchform input[type="submit"] {
 	border-right:1px solid #bbb;
 	left:30px;
