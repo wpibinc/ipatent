@@ -114,6 +114,11 @@ $bcn =  bcn_display(true);
 	<header class="block">
 	<div id="nav-div">
 			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<div class="mobile-block">
+					<img src=" <?php echo get_template_directory_uri() . '/images/Logo.png'; ?>">
+					<div class="open-mobile-menu"></div>
+					<div class="clearfix"></div>
+				</div>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 			</nav>
 	</div>

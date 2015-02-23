@@ -17,17 +17,17 @@ get_header('home'); ?>
 <div id="home">
 	<div id="primary" class="site-content" style="left:0;">
 		<div id="content" role="main">
+			<div class="left-div">
+				<div class="inner-left-div">
+					<?php dynamic_sidebar("home"); ?>
+				</div>
+			</div>
 			<div class="right">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 					<?php //comments_template( '', true ); ?>
 				<?php endwhile; // end of the loop. ?>
 			</div>
-			<div class="left-div">
-					<div class="inner-left-div">
-						<?php dynamic_sidebar("home"); ?>
-					</div>	
-			</div>	
 		</div><!-- #content -->
 	</div><!-- #primary -->
 </div><!--  #home -->

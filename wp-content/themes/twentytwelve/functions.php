@@ -231,6 +231,7 @@ function twentytwelve_scripts_styles() {
 	 * Loads the Internet Explorer specific stylesheet.
 	 */
 	wp_enqueue_style( 'twentytwelve-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentytwelve-style' ), '20121010' );
+	wp_enqueue_style( 'responsive-style', get_template_directory_uri() . '/css/responsive.css', array( 'twentytwelve-style' ) );
 	$wp_styles->add_data( 'twentytwelve-ie', 'conditional', 'lt IE 9' );
 }
 add_action( 'wp_enqueue_scripts', 'twentytwelve_scripts_styles' );
@@ -538,7 +539,7 @@ function add_search_box_secondary_menu($items, $args) {
 		$searchform = ob_get_contents();
 		ob_end_clean();
 
-		$items .= '<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://my.ipatent.co.il" target="_blank" style="color:red">My IP Portfolio</a></li>';
+		$items .= '<li class="menu-item menu-item-type-custom menu-item-object-custom user-portfolio"><a href="http://my.ipatent.co.il" target="_blank" style="color:red">My IP Portfolio</a></li>';
 		$items .= '<li class="searchbox">' . $searchform . '</li>';
 		$items .= '<li class="socials">			<a href="http://linkedin.com" class="linkedin social"></a>
 			<a href="http://facebook.com" class="facebook social"></a>

@@ -16,20 +16,25 @@
 </div><!-- #page -->
 </section><!-- #container -->
 </div><!-- #wrap -->
+<div class="mobile-searchform">
+	<div class="mobile-searchform-wrapper">
+		<?php get_search_form(); ?>
+	</div>
+</div>
 <footer id="colophon" role="contentinfo" class="block">
 <div class="wrapper">
 	<div class="footer-icons right">
-		<?php 
-		
+		<?php
+
 			$category_query_args = array(
 					'category_name' => "footer_logos",
 					'orderby' => 'date',
 					'order' => 'ASC',
 					'posts_per_page' => -1
 			);
-			
+
 			$category_query = new WP_Query( $category_query_args );
-			
+
 			if ( $category_query->have_posts() ) :
 					while ($category_query->have_posts()) :
 					$category_query->the_post();
@@ -40,7 +45,7 @@
 					$image_height=$imgsrc[2]/2;
 					?>
 					<a href="<?php echo(the_excerpt_rss()); ?>" target="_blank"><div class="footer-logo-div" style="background-image:url(<?php echo $imgsrc[0];?>);width:<?php echo $imgsrc[1]."px";?>;height:<?php echo $image_height."px";?>;"></div></a>
-					<?php 
+					<?php
 					endwhile;
 			endif;
 		?>
