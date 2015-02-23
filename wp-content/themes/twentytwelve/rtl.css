@@ -1,41 +1,94 @@
 /*
 Theme Name: Twenty Twelve
-Description: Adds support for languages written in a Right To Left (RTL) direction.
-It's easy, just a matter of overwriting all the horizontal positioning attributes
-of your CSS stylesheet in a separate stylesheet file named rtl.css.
+Theme URI: http://wordpress.org/extend/themes/twentytwelve
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Description: The 2012 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background.
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, gray, white, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: twentytwelve
 
-See http://codex.wordpress.org/Right_to_Left_Language_Support
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
 */
+/* =Notes
+--------------------------------------------------------------
+This stylesheet uses rem values with a pixel fallback. The rem
+values (and line heights) are calculated using two variables:
 
+$rembase:     14;
+$line-height: 24;
 
-body {
-	direction: rtl;
-	unicode-bidi: embed;
-}
+---------- Examples
+
+* Use a pixel value with a rem fallback for font-size, padding, margins, etc.
+	padding: 5px 0;
+	padding: 0.357142857rem 0; (5 / $rembase)
+
+* Set a font-size and then set a line-height based on the font-size
+	font-size: 16px
+	font-size: 1.142857143rem; (16 / $rembase)
+	line-height: 1.5; ($line-height / 16)
+
+---------- Vertical spacing
+
+Vertical spacing between most elements should use 24px or 48px
+to maintain vertical rhythm:
+
+.my-new-div */
+
+/* =Reset
+-------------------------------------------------------------- */
+
+/*src: url(/wp-content/themes/twentytwelve/font/Alef/Alef-Webfont/Alef-Regular.woff);*/
+
 caption,
 th,
 td {
 	text-align: right;
 }
 
+/* Clearing floats */
+
 /* =Repeatable patterns
 -------------------------------------------------------------- */
+/* Small headers */
+
+/* Shared Post Format styling */
+
+/* Form fields, general styles first */
+
+/* Reset non-text input types */
+
+/* Buttons */
+
+/* Responsive images */
+
+/* Make sure videos and embeds fit their containers */
 
 /* Images */
-.site-content .gallery-columns-4 .gallery-item {
-	padding-left: 2%;
-	padding-right: 0;
+.alignright {
+	float: right;
 }
-.site-content .gallery-columns-5 .gallery-item {
-	padding-left: 2%;
-	padding-right: 0;
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	margin-right: auto;
+	margin-left: auto;
 }
 
 /* Navigation */
+
 .nav-previous,
 .previous-image {
 	float: right;
 }
+
 .nav-next,
 .next-image {
 	float: left;
@@ -43,80 +96,130 @@ td {
 }
 
 /* Author profiles */
-.author-avatar {
-	float: right;
+
+/* =Basic structure
+-------------------------------------------------------------- */
+/* Body, links, basics */
+
+/* Assistive text */
+
+.main-navigation .assistive-text:hover,
+.main-navigation .assistive-text:active,
+.main-navigation .assistive-text:focus {
+	right: 5px;
+	left: auto;
 }
-.author-description {
-	float: right;
-	margin-right: 15px;
-	margin-right: 1.071428571rem;
+
+/* Page structure */
+
+/* Header */
+
+/* Navigation Menu */
+
+#home-top-inner {
+	float:left;
+}
+
+/* Banner */
+
+/* Sidebar */
+
+.widget-area .textwidget li {
+	margin-right: 36px;
+	margin-right: 2.571428571rem;
 	margin-left: auto;
 }
 
+/* Footer */
 
-/* =Main Content
------------------------------------------------ */
-
-.comment-content ol,
-.comment-content ul {
-	margin: 0 24px 0 0;
-	margin: 0 1.714285714rem 0 0;
-}
-
-
-/* =Basic post styling
+/* =Main content and comment content
 -------------------------------------------------------------- */
 
-.entry-content li,
-.comment-content li {
-	margin: 0 24px 0 0;
-	margin: 0 1.714285714rem 0 0;
+.entry-content ul,
+.comment-content ul,
+.mu_register ul {
+	padding-right: 16px;
+	padding-left: 0;
 }
+
+.comment-content li,
+.mu_register li {
+	margin: 0 36px 0 0;
+	margin: 0 2.571428571rem 0 0;
+}
+
+img.alignright {
+	margin: 12px 0 12px 24px;
+	margin: 0.857142857rem 0 0.857142857rem 1.714285714rem;
+}
+
+img.alignleft {
+	margin: 12px 24px 12px 0;
+	margin: 0.857142857rem 1.714285714rem 0.857142857rem 0;
+}
+
 .entry-content td,
 .comment-content td {
 	padding: 6px 0 6px 10px;
 }
 
+/* =Archives
+-------------------------------------------------------------- */
 
-/* Aside posts */
+/* =Single image attachment view
+-------------------------------------------------------------- */
+
+/* =Aside post format
+-------------------------------------------------------------- */
+
 article.format-aside .aside {
 	border-right: 22px solid #a8bfe8;
 	border-left: none;
 }
 
+/* =Post formats
+-------------------------------------------------------------- */
+/* Image posts */
+
 /* Link posts */
 article.format-link header {
 	float: left;
 }
+
 article.format-link .entry-content {
 	float: right;
 }
 
+/* Quote posts */
+
 /* Status posts */
+
 .format-status .entry-header img {
 	float: right;
 	margin-left: 21px;
 	margin-left: 1.5rem;
-	margin-right: 0;
+	margin-right: auto;
 }
 
-
-/* =Comment styling
+/* =Comments
 -------------------------------------------------------------- */
 
 .comments-area article header img {
 	float: right;
 }
+
 .comments-area article header cite,
 .comments-area article header time {
 	margin-right: 85px;
 	margin-right: 6.071428571rem;
 	margin-left: auto;
 }
+
 .comments-area article header h4 {
 	left: 0;
 	right: auto;
 }
+
 .comments-area li.bypostauthor cite span {
 	margin-right: 5px;
 	margin-right: 0.357142857rem;
@@ -124,19 +227,14 @@ article.format-link .entry-content {
 }
 
 /* Comment form */
+
 #respond h3#reply-title #cancel-comment-reply-link {
 	margin-right: 10px;
 	margin-right: 0.714285714rem;
 	margin-left: auto;
 }
-label ~ span.required {
-	float: right;
-	margin: -18px -16px 0 0;
-	margin: -1.285714286rem -1.142857143rem 0 0;
-}
 
-
-/* =Front page template styling
+/* =Front page template
 -------------------------------------------------------------- */
 
 .template-front-page .widget-area .widget_text img {
@@ -145,8 +243,7 @@ label ~ span.required {
 	margin: 0.571428571rem 0 0.571428571rem 1.714285714rem;
 }
 
-
-/* =Widget styling
+/* =Widgets
 -------------------------------------------------------------- */
 
 .widget-area .widget ul ul {
@@ -154,22 +251,20 @@ label ~ span.required {
 	margin-right: 0.857142857rem;
 	margin-left: auto;
 }
-.widget-area .textwidget li {
-	margin-left: auto;
-	margin-right: 36px;
-	margin-right: 2.571428571rem;
-}
+
 .widget_recent_entries .post-date,
 .widget_rss .rss-date {
 	margin-right: 12px;
 	margin-right: 0.857142857rem;
 	margin-left: auto;
 }
+
 #wp-calendar th,
 #wp-calendar td,
 #wp-calendar caption {
 	text-align: right;
 }
+
 #wp-calendar #next {
 	padding-left: 24px;
 	padding-left: 1.714285714rem;
@@ -177,61 +272,432 @@ label ~ span.required {
 	padding-right: 0;
 }
 
+.widget_twitter .timesince {
+	text-align: left;
+}
+
+/* =Plugins
+----------------------------------------------- */
+
 /* =Media queries
 -------------------------------------------------------------- */
 
 /* Minimum width of 600 pixels. */
-@media screen and (min-width: 600px) {
-	.site-content,
-	.template-front-page.has-post-thumbnail article {
-		float: right;
-	}
-	.widget-area,
-	.entry-page-image {
-		float: left;
-	}
-	.site-header h1,
-	.site-header h2 {
-		text-align: right;
-	}
-	.template-front-page .widget-area .widget_text img {
-		float: right;
-		margin: 8px 0 8px 24px;
-	}
-	.template-front-page .widget-area .widget,
-	.template-front-page.two-sidebars .widget-area .front-widgets {
-		float: right;
-	}
-	.template-front-page .widget-area .widget:nth-child(odd) {
-		clear: left;
-	}
-	.template-front-page .widget-area .widget:nth-child(even),
-	.template-front-page.two-sidebars .widget-area .front-widgets + .front-widgets {
-		float: left;
-		margin: 0 24px 0;
-		margin: 0 1.714285714rem 0;
-	}
-	.main-navigation ul.nav-menu,
- 	.main-navigation div.nav-menu > ul {
-		text-align: right;
-	}
-	.main-navigation li {
-		margin-left: 40px;
-		margin-left: 2.857142857rem;
-		margin-right: auto;
-	}
-	.main-navigation li ul ul {
-		margin-right: 0;
-		right: 100%;
-		left: auto;
-	}
-	.main-navigation ul li:hover > ul {
-		border-right: 0;
-		border-left: none;
-	}
-	.commentlist .children {
-		margin-right: 48px;
-		margin-right: 3.428571429rem;
-		margin-left: auto;
-	}
+@media screen and (min-width: 575px) {
+
+article.format-link .entry-content {
+	float: right;
 }
+
+/* Quote posts */
+
+/* Status posts */
+
+.format-status .entry-header img {
+	float: right;
+	margin-left: 21px;
+	margin-left: 1.5rem;
+	margin-right: auto;
+}
+
+/* =Comments
+-------------------------------------------------------------- */
+
+.comments-area article header img {
+	float: right;
+}
+
+.comments-area article header cite,
+.comments-area article header time {
+	margin-right: 85px;
+	margin-right: 6.071428571rem;
+	margin-left: auto;
+}
+
+.comments-area article header h4 {
+	left: 0;
+	right: auto;
+}
+
+.comments-area li.bypostauthor cite span {
+	margin-right: 5px;
+	margin-right: 0.357142857rem;
+	margin-left: auto;
+}
+
+/* Comment form */
+
+#respond h3#reply-title #cancel-comment-reply-link {
+	margin-right: 10px;
+	margin-right: 0.714285714rem;
+	margin-left: auto;
+}
+
+/* =Front page template
+-------------------------------------------------------------- */
+
+.template-front-page .widget-area .widget_text img {
+	float: right;
+	margin: 8px 0 8px 24px;
+	margin: 0.571428571rem 0 0.571428571rem 1.714285714rem;
+}
+
+/* =Widgets
+-------------------------------------------------------------- */
+
+.widget-area .widget ul ul {
+	margin-right: 12px;
+	margin-right: 0.857142857rem;
+	margin-left: auto;
+}
+
+.widget_recent_entries .post-date,
+.widget_rss .rss-date {
+	margin-right: 12px;
+	margin-right: 0.857142857rem;
+	margin-left: auto;
+}
+
+#wp-calendar th,
+#wp-calendar td,
+#wp-calendar caption {
+	text-align: right;
+}
+
+#wp-calendar #next {
+	padding-left: 24px;
+	padding-left: 1.714285714rem;
+	text-align: left;
+	padding-right: 0;
+}
+
+.widget_twitter .timesince {
+	text-align: left;
+}
+
+/* =Plugins
+----------------------------------------------- */
+
+}
+
+/* Minimum width of 960 pixels. */
+@media screen and (min-width: 960px) {
+
+}
+
+.site-header {
+	text-align: right;
+}
+
+/* =Print
+----------------------------------------------- */
+
+@media print {
+
+.widget_twitter .timesince {
+	text-align: left;
+}
+
+/* =Plugins
+----------------------------------------------- */
+
+/* =Media queries
+-------------------------------------------------------------- */
+
+/* Minimum width of 600 pixels. */
+@media screen and (min-width: 575px) {
+
+article.format-link .entry-content {
+	float: right;
+}
+
+/* Quote posts */
+
+/* Status posts */
+
+.format-status .entry-header img {
+	float: right;
+	margin-left: 21px;
+	margin-left: 1.5rem;
+	margin-right: auto;
+}
+
+/* =Comments
+-------------------------------------------------------------- */
+
+.comments-area article header img {
+	float: right;
+}
+
+.comments-area article header cite,
+.comments-area article header time {
+	margin-right: 85px;
+	margin-right: 6.071428571rem;
+	margin-left: auto;
+}
+
+.comments-area article header h4 {
+	left: 0;
+	right: auto;
+}
+
+.comments-area li.bypostauthor cite span {
+	margin-right: 5px;
+	margin-right: 0.357142857rem;
+	margin-left: auto;
+}
+
+/* Comment form */
+
+#respond h3#reply-title #cancel-comment-reply-link {
+	margin-right: 10px;
+	margin-right: 0.714285714rem;
+	margin-left: auto;
+}
+
+/* =Front page template
+-------------------------------------------------------------- */
+
+.template-front-page .widget-area .widget_text img {
+	float: right;
+	margin: 8px 0 8px 24px;
+	margin: 0.571428571rem 0 0.571428571rem 1.714285714rem;
+}
+
+/* =Widgets
+-------------------------------------------------------------- */
+
+.widget-area .widget ul ul {
+	margin-right: 12px;
+	margin-right: 0.857142857rem;
+	margin-left: auto;
+}
+
+.widget_recent_entries .post-date,
+.widget_rss .rss-date {
+	margin-right: 12px;
+	margin-right: 0.857142857rem;
+	margin-left: auto;
+}
+
+#wp-calendar th,
+#wp-calendar td,
+#wp-calendar caption {
+	text-align: right;
+}
+
+#wp-calendar #next {
+	padding-left: 24px;
+	padding-left: 1.714285714rem;
+	text-align: left;
+	padding-right: 0;
+}
+
+.widget_twitter .timesince {
+	text-align: left;
+}
+
+/* =Plugins
+----------------------------------------------- */
+
+}
+
+
+
+/* Minimum width of 960 pixels. */
+@media screen and (min-width: 960px) 
+.site-header {
+	text-align: right;
+}
+
+}
+
+/*.entry-content*/
+
+#searchform input[type="submit"] {
+	border-right:1px solid #bbb;
+	left:30px;
+	right: auto;
+	border-left: none;
+}
+
+#searchform input[type="submit"]:hover {
+	border-right:1px solid #bbb;
+	border-left: none;
+}
+
+/* gravity form*/
+
+.gform_wrapper textarea.large {
+	padding-left:2px !important;
+	padding-right: 0;
+}
+
+.gform_wrapper .top_label .gfield_label {
+	float:right;
+}
+
+.ginput_container {
+	float:right;
+	margin:5px 17px 0 0;
+}
+
+#field_1_5 {
+	float:right;
+	padding:0 8px 0 0;
+}
+
+.ginput_container {
+	margin: 0px 0px 0 2px;
+	float: left;
+}
+
+.ginput_container input {
+	padding-left:0px !important;
+	padding-right:0px !important;
+}
+
+/*#field_1_5 input*/
+
+*/
+
+#gform_submit_button_1, #gform_submit_button_2, .site_form .gform_button {
+	float:left;
+}
+
+.site_form .right-side .ginput_container {
+	float: right;
+}
+
+.site_form .gfield_radio li {
+	margin-left: 12px !important;
+	margin-right: auto;
+}
+
+#field_2_2 {
+	float:left;
+}
+
+#field_2_4 {
+	margin:0 0px 0 0;
+}
+
+#gform_submit_button_2 {
+	float:left;
+}
+
+.bottom-contact-div {
+	margin-right: 110px;
+	margin-left: auto;
+}
+
+.right {
+	float:left;
+}
+
+.left {
+	margin-right: 30px;
+	float: left;
+	margin-left: auto;
+}
+
+.right-div {
+	float:right;
+}
+
+.left-header span , .right-header span {
+	margin:0 0px 0 0;
+}
+
+/* .footer-icons*/
+
+*/
+.footer-logo-div:first-of-type {
+	margin-right: 0px;
+	margin-left: auto;
+}
+
+.footer-logo-div:last-of-type {
+	margin-left: 0px;
+	margin-right: auto;
+}
+
+.footer-logo-div {
+	float:right;
+}
+
+.left-img {
+	float:right;
+}
+
+.left-text-header1 {
+	margin:38px 15px 0 0;
+	padding-right:5px;
+	padding-left: 0;
+}
+
+.left-details a {
+	padding-right: 6.5px;
+	padding-left: 0;
+}
+
+.main-navigation li a.social {
+	float: right;
+}
+
+.main-navigation li.socials {
+	padding:0 60px 0 0;
+	margin-left: 0;
+	margin-right: auto;
+}
+
+a.social {
+	float: right;
+}
+
+a.social-contact {
+	float: right;
+}
+
+.footer-lefts-social {
+	float:left;
+}
+
+.left-details .lbl span {
+	padding-right: 8px;
+	padding-left: 0;
+}
+
+#field_1_6 {
+	margin-right:0px;
+	margin-left: auto;
+}
+
+.port-ip {
+	float: left;
+}
+
+.gform_wrapper .gfield_required {
+	margin-right: 4px;
+	margin-left: auto;
+}
+
+.port-ip input[type="submit"] {
+	text-align: left;
+	float: left;
+}
+
+.port-ip p {
+	text-align: left;
+}
+
+.port-ip label {
+	float: right;
+}
+
+.port-ip input[type="text"], .port-ip input[type="password"] {
+	float: left;
+}
+
+
+/* Generated by the RTLer - http://wordpress.org/extend/plugins/rtler/ */
