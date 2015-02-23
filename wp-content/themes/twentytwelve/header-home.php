@@ -119,8 +119,36 @@ $i++;
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.flexslider.js" type="text/javascript"></script>
 <!-- Hook up the FlexSlider -->
 		<script type="text/javascript">
-			$(window).load(function() {
-				
+			$(document).ready(function() {
+				$("#my-arrow").on("click", function () {
+					$("#my-form").trigger("submit");
+				});
+				$("#my-form").on("submit", function(e) {
+					$.ajax({
+						type: "POST",
+						url: "http://my.ipatent.co.il/handlers/login.php",
+						cache: false,
+						async: false,
+						data: {
+							cmd: "login",
+							uname: jQuery("input[name='uname']").val(),
+							upass:  jQuery("input[name='upass']").val()
+						}
+					}).done(function(data) {
+						if((data != null) && (data.length > 0)) {
+							var resp = eval ("(" + data + ")");
+							if(resp.status == "OK") {
+								return;
+							} else {
+								$('#my-errors').text('Authentication failure');
+								e.preventDefault();
+							}
+						} else {
+							$('#my-errors').text("Bad response from Server");
+							e.preventDefault();
+						}
+					});
+				});
 			});
 		</script>
 <!-- flex slider ends -->
@@ -163,22 +191,31 @@ $i++;
 			 				 <div class="clearfix"></div>
 			 <div  class="port-ip" >
 				 <p>My IP Portfolio</p>
-				 <form action="http://my.ipatent.co.il"  method="POST"  target="_blank">
+				 <form action="http://my.ipatent.co.il/handlers/login.php"  method="POST"  target="_blank" id="my-form">
 				 <div class="inpts">
 				 	<label for="uname">User Name</label>
+				 	<input type="hidden" name="cmd" value="login" />
+				 	<input type="hidden" name="redirect" value="http://my.ipatent.co.il/" />
 				 	<input class=""  type="text" name="uname" />
 				 	<label for="pass">Password</label>
 				 	<input class=""  type="password" name="upass" />
 				 					 	 <div class="clearfix"></div>
 				 	</div>
 				 	<div class="inpts">
+					<span id="my-errors"  style="
+						font-family: sans-serif;
+						color: red;
+						float: left;
+						margin-top: 3px;
+						margin-left: 5px;
+					"></span>
 <span style="
     font-family: sans-serif;
     color: red;
     float: right;
     margin-top: 3px;
     margin-left: 5px;
-">►</span>
+" id="my-arrow">►</span>
 				 	<input type="submit"  name="sub"  value="Log In"></input>
 				 	 <div class="clearfix"></div>
 				 	</div>

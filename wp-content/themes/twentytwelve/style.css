@@ -2346,3 +2346,7 @@ padding-top: 6px;}
 .ge-hide-field {
 display: none;
 }
+
+.previous-image, .next-image, .single-attachment .entry-title {
+	display: none;
+}
