@@ -22,7 +22,7 @@ define('DB_NAME', 'ipatent_wmg');
 define('DB_USER', 'ipatent_wmg');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'M45nv2qA');
+define('DB_PASSWORD', 'Tes45Ipat');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
