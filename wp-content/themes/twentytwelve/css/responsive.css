@@ -356,6 +356,7 @@
     /********* Home Content **********/
     #main{
         width: 100%;
+        padding-top: 20px;
     }
     .home #content {
         height: auto;
@@ -365,7 +366,8 @@
         width: 100%;
         float: none;
     }
-    .home .left-div .textwidget {
+    .home .left-div .textwidget, .about-right .right-header {
+        height: auto;
         font-size: 35px;
         line-height: normal;
         border-top: solid 1px #666;
@@ -378,10 +380,20 @@
         float: none;
         margin-left: 0;
     }
-    .home .right p{
+    .home .right p, .about-right .entry-content p {
         font-size: 20px;
     }
+    /*************** About Page ***************/
 
+    .top-div{
+        display: none;
+    }
+
+    .about-left{
+        display: none;
+    }
+
+/*********** Footer ************/
     footer{
         display: none;
     }

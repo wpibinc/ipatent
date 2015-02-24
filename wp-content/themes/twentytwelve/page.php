@@ -17,14 +17,14 @@ get_header(); ?>
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
-			<div class="right">
+			<div class="right about-right">
 					<div class="right-header" title="<?php the_title(); $title = the_title('', '', false);?>"><?php the_title(); $title = the_title('', '', false);?></div>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 					<?php //comments_template( '', true ); ?>
 				<?php endwhile; // end of the loop. ?>
 			</div>
-			<div class="left-div" style="margin-top: 70px;">
+			<div class="left-div about-left" style="margin-top: 70px;">
 					<?php if(the_title("","",false)!="About" && the_title("","",false)!="Sitemap" ):?>
 					
 						<div class="inner-left-div">

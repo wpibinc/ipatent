@@ -110,18 +110,17 @@ $bcn =  bcn_display(true);
 
 <body <?php body_class(); ?>>
 <div id="wrap">
-<div style="width:100%">
 	<header class="block">
-	<div id="nav-div">
+		<div id="nav-div">
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<div class="mobile-block">
 					<img src=" <?php echo get_template_directory_uri() . '/images/Logo.png'; ?>">
 					<div class="open-mobile-menu"></div>
 					<div class="clearfix"></div>
 				</div>
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 			</nav>
-	</div>
+		</div>
 	</header>
 	<?php 
 	
@@ -130,7 +129,6 @@ $bcn =  bcn_display(true);
 	   <div class="main_total_top_holder" style="top:108px;">
 		 <p class="flex-caption"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="לדף הביח"><img src="http://www.ipatent.co.il/wp-content/themes/twentytwelve/images/Logo.png" style="width:280px;"></a> </span></p></div>
 	</div>
-</div>
 <section class="container">
 
 
