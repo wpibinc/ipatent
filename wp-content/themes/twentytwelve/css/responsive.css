@@ -1,5 +1,10 @@
 /* Minimum width of 600 pixels. */
 @media screen and (min-width: 960px) {
+
+    .services-left .left-mobile-header{
+        display: none;
+    }
+
     .author-avatar {
         float: left;
         margin-top: 8px;
@@ -366,7 +371,7 @@
         width: 100%;
         float: none;
     }
-    .home .left-div .textwidget, .about-right .right-header {
+    .home .left-div .textwidget, .about-right .right-header, .services-left .left-mobile-header {
         height: auto;
         font-size: 35px;
         line-height: normal;
@@ -393,11 +398,45 @@
         display: none;
     }
 
-/*********** Footer ************/
+    /*************** Services Page ***************/
+
+    .services-left .left-text-header{
+        margin-bottom: 10px;
+    }
+    .mobile-accordion .left-text-header{
+        padding: 19px 90px 15px 21px;
+        background: url("../images/mobile_accoridon_arrow.png") right 32px center no-repeat, #49423e;
+        border: none;
+        border-radius: 7px;
+        color: #FFFFFF;
+        font-size: 20px;
+        line-height: normal;
+
+    }
+    .mobile-accordion .left-text-header:hover{
+        cursor: pointer;
+    }
+    .mobile-accordion .left-menu{
+        display: none;
+    }
+    .services-right{
+        border-top: solid 1px #49423e;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+    .services-right .right-header{
+        display: none;
+    }
+    .services-right article{
+        padding: 0;
+    }
+    /*********** Footer ************/
     footer{
         display: none;
     }
     .mobile-searchform{
         display: block;
     }
+
+
 }
