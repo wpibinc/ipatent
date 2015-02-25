@@ -65,7 +65,7 @@ $title = the_title('', '', false);
 			<div class="right team-page-right">
 				<div class="right-header"><?php the_title(); ?></div>
 				<div class="clearfix"></div>
-				<span><?php echo(types_render_field("degrees")); ?></span>
+				<div><?php echo(types_render_field("degrees")); ?></div>
 				<div class="right-img">
 					<?php 
 						$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "fullsize");

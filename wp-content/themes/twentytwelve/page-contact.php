@@ -15,7 +15,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
+	<div id="primary" class="site-content contact-page">
 		<div id="content" role="main">
 			<div class="right">
 				<div class="right-header"><?php the_title(); ?></div>
@@ -25,9 +25,13 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 			</div>
 			<div class="left-div">
-				<div class="left-header"><span>Our Offices:</span></div>
+				<div class="right-header left-mobile-header">
+					Our Offices:
+				</div>
+				<div class="left-text-header"><span>Our Offices:</span></div>
 					<div class="inner-left-div">
 						<?php dynamic_sidebar("contact"); ?>
+
 					</div>	
 			</div>	
 		</div><!-- #content -->

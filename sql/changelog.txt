@@ -81,3 +81,14 @@ Anti spam in forms
 1. In each form, insert an Website field with class ge-hide-field. Then go to Form Settings and set submit button to appear
 only if field="http://"
 TP----------------------------------------------------------------------------------------
+
+-- 25.02.2015
+-- For contact page responsive design
+--- Appearance -> Widgets -> Contact
+ add class "map" for the tag "p" which wrapps the map
+ append this HTML:
+ <a class="waze-button" href="waze://?q=The Rogovin-Tidhar Tower, 15th floor, 11 Menachem Begin Road, 52681 Ramat-Gan, Israel">Connect to Waze</a>
+
+ --- Forms -> Edit forms -> Contact
+
+Add class "gplaceholder" for all fields

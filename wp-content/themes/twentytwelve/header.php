@@ -45,7 +45,7 @@
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.gif" type="image/x-icon" />
 <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/facebookshare.jpg" />
 <meta http-equiv="X-UA-Compatible" content="IE=9">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?php wp_title( '|', true, 'right' );?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
