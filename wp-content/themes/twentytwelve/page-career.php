@@ -15,13 +15,16 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
+	<div id="primary" class="site-content jobs-page">
 		<div id="content" role="main">
 			<div class="right">
 				<header class="entry-header">
 					<h1 class="entry-title"></h1>
 				</header>
-				<div class="right-header"><?php the_title(); ?></div>
+				<div class="right-header left-mobile-header">
+					<?php echo $post->post_name;?>
+				</div>
+				<div class="right-header desctop-header"><?php the_title(); ?></div>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 					<?php //comments_template( '', true ); ?>

@@ -254,25 +254,33 @@
         margin-bottom: 0;
         box-shadow: none;
     }
-    #gform_1 .gfield_label{
+    #gform_1 .gfield_label, #gform_2 .gfield_label{
         display: inline-block !important;
     }
     #gform_1 input::-webkit-input-placeholder,
-    #gform_1 textarea::-webkit-input-placeholder{
+    #gform_1 textarea::-webkit-input-placeholder,
+    #gform_2 input::-webkit-input-placeholder,
+    #gform_2 textarea::-webkit-input-placeholder{
         color: transparent;
     }
     #gform_1 input:-moz-placeholder,
-    #gform_1 textarea:-moz-placeholder{
+    #gform_1 textarea:-moz-placeholder,
+    #gform_2 input:-moz-placeholder,
+    #gform_2 textarea:-moz-placeholder{
         color: transparent;
     }
 
     #gform_1 input::-moz-placeholder,
-    #gform_1 textarea::-moz-placeholder{
+    #gform_1 textarea::-moz-placeholder,
+    #gform_2 input::-moz-placeholder,
+    #gform_2 textarea::-moz-placeholder{
         color: transparent;
     }
 
     #gform_1 input:-ms-input-placeholder,
-    #gform_1 textarea:-ms-input-placeholder{
+    #gform_1 textarea:-ms-input-placeholder,
+    #gform_2 input::-moz-placeholder,
+    #gform_2 textarea::-moz-placeholder{
         color: transparent;
     }
     .waze-button{
@@ -292,7 +300,7 @@
     .main-navigation .nav-menu .sub-menu .menu-item .sub-menu,
     .main-navigation .nav-menu >  .menu-item > .sub-menu,
     .services-right .right-header, .mobile-accordion .left-menu,
-    .top-div, .about-left, footer{
+    .top-div, .about-left, footer, .contact-page .left-div .map, .contact-page .left-text-header{
         display: none;
     }
     #nav-div{
@@ -391,7 +399,9 @@
         height: auto;
         width: 100%;
     }
-    .left-div{
+    .left-div, .right,.team-page-right .right-img,
+    .team-page-right .right-text, #gform_1 .ginput_container,
+    #gform_2 .ginput_container{
         width: 100%;
         float: none;
     }
@@ -413,18 +423,28 @@
         margin-bottom: 20px;
     }
     .right{
-        width: 100%;
-        float: none;
         margin-left: 0;
     }
     .home .right p, .about-right .entry-content p, .team-page-right,
     .team-page-right p,
-    .team-page-right .right-details div
-    {
+    .team-page-right .right-details div,
+    .mobile-accordion .left-text-header,
+    #gform_1 input[type="text"], #gform_1 textarea,
+    #gform_2 input[type="text"], #gform_2 textarea,
+    .contact-page .inner-left-div p,
+    .contact-page .inner-left-div .lbl,
+    .contact-page .bottom-contact-div p,
+    .jobs-page .desctop-header,
+    .jobs-page .entry-content p,
+    #gform_2 .gfield_label{
         font-size: 20px;
         line-height: normal;
     }
 
+    .contact-page .gform_wrapper div.charleft,
+    .jobs-page .gform_wrapper div.charleft{
+        font-size: 14px;
+    }
 
     /*************** Services Page ***************/
 
@@ -435,8 +455,6 @@
         border: none;
         border-radius: 7px;
         color: #FFFFFF;
-        font-size: 20px;
-        line-height: normal;
     }
     .mobile-accordion .left-text-header:hover{
         cursor: pointer;
@@ -454,11 +472,7 @@
 
     /*************** Team Page ***************/
 
-.team-page-right .right-img,
-.team-page-right .right-text{
-    float: none;
-    width: 100%;
-}
+
     .team-page-right .right-text div{
         margin-left: 0 !important;
     }
@@ -487,66 +501,67 @@
 
     /*************** Contact Page ***************/
 
-    .contact-page .left-div .map, .contact-page .left-text-header{
-        display: none;
-    }
     #gform_1{
         padding: 0 8%;
     }
-    #gform_1 .ginput_container{
-        width: 100%;
-        float: none;
-    }
+
     #gform_1 .bottom-contact-div{
         margin-left: 0;
     }
-    #gform_1 input[type="text"], #gform_1 textarea{
+    #gform_1 input[type="text"], #gform_1 textarea,
+    #gform_2 input[type="text"], #gform_2 textarea{
         box-sizing: border-box;
         border: solid 1px #49423e;
         border-radius: 7px;
         padding: 10px !important;
-        font-size: 20px;
     }
-    #gform_1 input[type="text"],#gform_1 input[type="submit"]{
+    #gform_1 input[type="text"], #gform_1 input[type="submit"],
+    #gform_2 input[type="text"], #gform_2 input[type="submit"]{
         height: 64px;
         margin-bottom: 15px;
     }
-    #gform_1 input[type="submit"], .waze-button{
+    #gform_1 input[type="submit"], #gform_2 input[type="submit"], .waze-button{
         background: #49423e;
         width: 100%;
         float: none;
         border-radius: 32px;
         border: none;
     }
-    #gform_1 input[type="submit"]{
+    #gform_1 input[type="submit"],#gform_2 input[type="submit"]{
         background: url("../images/contact_mobile_text.png") center no-repeat, #49423e;
     }
     #gform_1 input::-webkit-input-placeholder,
-    #gform_1 textarea::-webkit-input-placeholder{
+    #gform_1 textarea::-webkit-input-placeholder,
+    #gform_2 input::-webkit-input-placeholder,
+    #gform_2 textarea::-webkit-input-placeholder{
         color: #49423e;
         text-align: center;
     }
     #gform_1 input:-moz-placeholder,
-    #gform_1 textarea:-moz-placeholder{
+    #gform_1 textarea:-moz-placeholder,
+    #gform_2 input::-webkit-input-placeholder,
+    #gform_2 textarea::-webkit-input-placeholder{
         color: #49423e;
         text-align: center;
     }
 
     #gform_1 input::-moz-placeholder,
-    #gform_1 textarea::-moz-placeholder{
+    #gform_1 textarea::-moz-placeholder,
+    #gform_2 input::-webkit-input-placeholder,
+    #gform_2 textarea::-webkit-input-placeholder{
         color: #49423e;
         text-align: center;
     }
 
     #gform_1 input:-ms-input-placeholder,
-    #gform_1 textarea:-ms-input-placeholder{
+    #gform_1 textarea:-ms-input-placeholder,
+    #gform_2 input::-webkit-input-placeholder,
+    #gform_2 textarea::-webkit-input-placeholder{
         color: #49423e;
         text-align: center;
     }
     .contact-page .inner-left-div p,
     .contact-page .inner-left-div .lbl{
-        font-size: 20px;
-        line-height: normal;
         margin-bottom: 5px;
     }
     .waze-button{
@@ -561,6 +576,25 @@
     .waze-button:hover{
         color: #FFFFFF;
     }
+
+    /*************** Jobs Page ***************/
+
+    .jobs-page .left-mobile-header{
+        margin-bottom: 0;
+    }
+    .jobs-page .desctop-header{
+        font-weight: normal;
+        border-top: none;
+    }
+
+    #field_2_5{
+        width: auto !important;
+    }
+    #gform_2 .gfield_label{
+        display: block;
+    }
+
+
     /*********** Footer ************/
 
     .mobile-searchform{
