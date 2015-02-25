@@ -1816,6 +1816,7 @@ position: relative;
 .left-menu li a:hover{text-decoration: underline;}
 .left-menu li a:after{/*content:" >";*/}
 .right-img{margin:5px 0;float:left;}
+.right-text{float:left;width:400px;}
 .right-text-header1{margin:38px 0 0 15px;height:25px;border-top:1px solid;border-bottom:1px solid;line-height:25px;font-weight: bold;font-size: 15px;padding-left:5px;}
 .left-text-header,
 .right-header{

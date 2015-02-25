@@ -13,15 +13,58 @@
  * @since Twenty Twelve 1.0
  */
 
-					get_header();
-					if (isset($_GET['dep'])) $category = get_category_by_slug($_GET['dep']);
-					else $category = get_category_by_slug(get_post_meta(get_the_ID(),"wpcf-main-team",true));
-					$current_name = $category->cat_name;
+get_header();
+if (isset($_GET['dep'])) $category = get_category_by_slug($_GET['dep']);
+else $category = get_category_by_slug(get_post_meta(get_the_ID(), "wpcf-main-team", true));
+$current_name = $category->cat_name;
+$title = the_title('', '', false);
 ?>
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
-			<div class="right">
-				<div class="right-header"><?php the_title(); $title = the_title('', '', false);?></div>
+			<div class="left-div">
+				<div class="right-header left-mobile-header">
+					<?php echo $current_name;?> Team
+				</div>
+				<div class="right-div-entry-title"></div>
+				<?php if ($category) {?>
+					<div class="mobile-accordion">
+					<div class="left-text-header"><span><?php echo $current_name;?> Team</span></div>
+						<ul class="left-menu">
+							<?php
+
+							$category_query_args = array(
+								'cat' => $category->term_id,
+								'meta_key' => '_wp_page_template',
+								'meta_value' => 'page-team.php',
+								'orderby' => 'menu_order',
+								'order' => 'DESC'
+							);
+
+							$category_query = new WP_Query( $category_query_args );
+
+							if ( $category_query->have_posts() ) {
+
+								while ($category_query->have_posts()) :
+									$category_query->the_post();
+									$temp_title = the_title('', '', false);
+									if ($temp_title == $title)
+										$class = "itm current";
+
+									else
+										$class = "itm";
+									echo "<li class='$class'><a href=" . add_query_arg('dep', $category->slug, get_permalink($post->ID)) . " class='a-services'>$temp_title </a></li>";
+								endwhile;
+
+							}
+							wp_reset_query();
+							?>
+						</ul>
+					</div>
+				<?php } ?>
+			</div>
+			<div class="right team-page-right">
+				<div class="right-header"><?php the_title(); ?></div>
+				<div class="clearfix"></div>
 				<span><?php echo(types_render_field("degrees")); ?></span>
 				<div class="right-img">
 					<?php 
@@ -37,7 +80,7 @@
 					</a>
 					<!-- details under the image -->
 					<div class="right-details">
-						<div class="lbl">Tel:<span style="padding-left: 11px;">073-7919199</span></div>
+						<div class="lbl phone-block">Tel:<span style="padding-left: 11px;">073-7919199</span></div>
 						<div class="lbl">Fax:<span>073-7919100</span></div>
                         <?php if (types_render_field( "email")) {?><div class="lbl">Mail:<a href="<?php echo "mailto:"; echo(get_post_meta($post->ID, "wpcf-email",true)); echo "@ipatent.co.il"; ?>" target="_blank"><?php echo(get_post_meta($post->ID, "wpcf-email",true)); echo "@ipatent.co.il"; ?></a></div><?php } ?>
 						<?php if (types_render_field( "linkedln")) {?><a><span><img src="/wp-content/themes/twentytwelve/images/linkedin.gif" />&nbsp;&nbsp;&nbsp;<?php echo(types_render_field( "linkedln")); ?></span></a><?php } ?>
@@ -47,8 +90,9 @@
 						</div>
 						<?php } ?>
 					</div>
+					<div class="clearfix"></div>
 				</div>
-				<div class="right-text" style="float:left;width:400px;">
+				<div class="right-text">
 					<div style="margin:0px 0 0 15px;word-break:break-word;padding: 0px 5px 0px 0px" class="resume-text">
 					<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
@@ -91,46 +135,7 @@
 					<?php }?>
 				</div>				
 			</div>
-			<div class="left-div">
-				<div class="right-div-entry-title"></div>
-				<?php if ($category) {?>
-				<div class="left-header"><span><?php echo $current_name;?> Team</span></div>
-					<div class="inner-left-div">
-					
-						<ul class="left-menu">
-						<?php
-						
-								$category_query_args = array(
-    								'cat' => $category->term_id,
-									'meta_key' => '_wp_page_template', 
-									'meta_value' => 'page-team.php',
-									'orderby' => 'menu_order', 
-									'order' => 'DESC'
-								);
 
-								$category_query = new WP_Query( $category_query_args );
-								
-								if ( $category_query->have_posts() ) : 
-									
-									while ($category_query->have_posts()) : 
-										$category_query->the_post();
-										$temp_title = the_title('', '', false);
-										if($temp_title==$title)
-											$class="itm current";
-										
-										else
-											$class="itm";
-										echo "<li class='$class'><a href=". add_query_arg('dep',$category->slug,get_permalink($post->ID)) ." class='a-services'>$temp_title </a></li>";
-									endwhile;
-								
-								endif;
-								
-						?>
-						</ul>
-					
-					</div>
-			<?php } ?>	
-			</div>	
 			
 		</div><!-- #content -->
 	</div><!-- #primary -->

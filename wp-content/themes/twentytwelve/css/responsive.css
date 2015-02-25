@@ -1,7 +1,7 @@
 /* Minimum width of 600 pixels. */
 @media screen and (min-width: 960px) {
 
-    .services-left .left-mobile-header{
+    .left-mobile-header{
         display: none;
     }
 
@@ -262,7 +262,13 @@
         padding-bottom: 70px;
     }
 
-    .flex-caption, .main-navigation .user-portfolio, #home-top-div .main_total_top_holder, .main-navigation .searchbox{
+    .flex-caption, .main-navigation .user-portfolio,
+    #home-top-div .main_total_top_holder, .main-navigation .searchbox,
+    .main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul,
+    .main-navigation .nav-menu .sub-menu .menu-item .sub-menu,
+    .main-navigation .nav-menu >  .menu-item > .sub-menu,
+    .services-right .right-header, .mobile-accordion .left-menu,
+    .top-div, .about-left, footer{
         display: none;
     }
     #nav-div{
@@ -300,9 +306,7 @@
         height: auto !important;
     }
 
-
     .main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
-        display: none;
         position: absolute;
         top: 100%;
         z-index: 100;
@@ -330,7 +334,6 @@
         color: #b5ada5;
     }
     .main-navigation .nav-menu >  .menu-item > .sub-menu {
-        display: none;
         margin: 0;
         padding: 0;
         width: 100%;
@@ -350,9 +353,6 @@
     .main-navigation .nav-menu .sub-menu .menu-item a:hover{
         color: #252322;
     }
-    .main-navigation .nav-menu .sub-menu .menu-item .sub-menu{
-        display: none;
-    }
     #home-top-div{
         margin-top: -150px;
     }
@@ -371,39 +371,41 @@
         width: 100%;
         float: none;
     }
-    .home .left-div .textwidget, .about-right .right-header, .services-left .left-mobile-header {
+    .home .left-div .textwidget, .right-header, .left-mobile-header,
+    .team-page-right .right-text-header1{
         height: auto;
-        font-size: 35px;
         line-height: normal;
         border-top: solid 1px #666;
         border-bottom: solid 1px #666;
         padding-top: 15px;
         padding-bottom: 15px;
     }
+    .home .left-div .textwidget, .right-header, .left-mobile-header,
+    .team-page-right{
+        font-size: 35px;
+    }
+    .right-text-header1{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
     .right{
         width: 100%;
         float: none;
         margin-left: 0;
     }
-    .home .right p, .about-right .entry-content p {
+    .home .right p, .about-right .entry-content p, .team-page-right,
+    .team-page-right p,
+    .team-page-right .right-details div
+    {
         font-size: 20px;
-    }
-    /*************** About Page ***************/
-
-    .top-div{
-        display: none;
+        line-height: normal;
     }
 
-    .about-left{
-        display: none;
-    }
 
     /*************** Services Page ***************/
 
-    .services-left .left-text-header{
-        margin-bottom: 10px;
-    }
     .mobile-accordion .left-text-header{
+        margin-bottom: 10px;
         padding: 19px 90px 15px 21px;
         background: url("../images/mobile_accoridon_arrow.png") right 32px center no-repeat, #49423e;
         border: none;
@@ -411,32 +413,74 @@
         color: #FFFFFF;
         font-size: 20px;
         line-height: normal;
-
     }
     .mobile-accordion .left-text-header:hover{
         cursor: pointer;
     }
-    .mobile-accordion .left-menu{
-        display: none;
-    }
+
     .services-right{
         border-top: solid 1px #49423e;
         margin-top: 20px;
         padding-top: 20px;
     }
-    .services-right .right-header{
-        display: none;
-    }
+
     .services-right article{
         padding: 0;
     }
-    /*********** Footer ************/
-    footer{
-        display: none;
+
+    /*************** Team Page ***************/
+
+.team-page-right .right-img,
+.team-page-right .right-text{
+    float: none;
+    width: 100%;
+}
+    .team-page-right .right-text div{
+        margin-left: 0 !important;
     }
+.team-page-right .right-header{
+    font-size: 25px;
+}
+.team-page-right .group1{
+    display: block;
+    float: left;
+    width: 215px;
+}
+    .team-page-right .right-details{
+        box-sizing: border-box;
+        padding-left: 300px;
+        width: 100%;
+        clear: none;
+    }
+    .phone-block span{
+        margin-left: 10px;
+        padding: 2px 11px !important;
+        display: inline-block;
+        background-color: #565656;
+        border-radius: 7px;
+        color: #FFFFFF;
+    }
+
+    /*********** Footer ************/
+
     .mobile-searchform{
         display: block;
     }
 
 
+}
+@media screen and (max-width: 600px) {
+    .team-page-right .right-details{
+        padding-left: 230px;
+
+    }
+}
+@media screen and (max-width: 530px) {
+    .team-page-right .group1{
+        float: none;
+        width: 100%;
+    }
+    .team-page-right .right-details{
+        padding-left: 0;
+    }
 }
