@@ -51,7 +51,7 @@ get_header(); ?>
 					<?php _e('Newsletter', 'twentytwelve'); ?>
 				</div>
 				<div class="mobile-accordion">
-					<div class="left-text-header"><span>More <?php echo $current_name;?>:</span></div>
+					<div class="left-text-header">More <?php echo $current_name;?>:</div>
 						<ul class="left-menu">
 						<?php
 								$flag_take_date=1;

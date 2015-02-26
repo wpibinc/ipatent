@@ -28,7 +28,7 @@ $title = the_title('', '', false);
 				<div class="right-div-entry-title"></div>
 				<?php if ($category) {?>
 					<div class="mobile-accordion">
-					<div class="left-text-header"><span><?php echo $current_name;?> Team</span></div>
+					<div class="left-text-header"><?php echo $current_name;?> Team</div>
 						<ul class="left-menu">
 							<?php
 
