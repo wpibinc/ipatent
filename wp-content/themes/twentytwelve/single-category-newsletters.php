@@ -15,6 +15,7 @@
 
 $category = end(get_the_category());
 $current_name = $category->cat_name;
+$title = the_title('', '', false);
 if($current_name=="footer_logos")
 	header("Location:index.php");
 get_header(); ?>
@@ -22,7 +23,7 @@ get_header(); ?>
 <script>
    $(document).ready(function() {
 	   var curr = $('.left-menu li.current a').attr('class');
-	   currid = curr.slice(-5); 
+//	       currid = curr.slice(-5);
 
 		id=$('.date-clicked.current').attr("id");
 			$("."+id+'-post').show();
@@ -40,25 +41,17 @@ get_header(); ?>
 	});
 </script>
 
-
-<?php 
-					
-?>
-	<div id="primary" class="site-content">
+	<div id="primary" class="site-content newsletter-page">
 		<div id="content" role="main">
 				
-			<div class="right" style="">
-				<div class="right-header" <?php $style=($current_name=="Links")? 'display:none;' : "";  ?> style="<?php echo $style;?>" title="<?php the_title(); $title = the_title('', '', false);?>"><?php the_title(); $title = the_title('', '', false);?></div>
-				<span><?php $pfx_date = get_the_date( 'd.m.Y' ); echo $pfx_date;?></span>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'content', 'page' ); ?>
-					<?php //comments_template( '', true ); ?>
-				<?php endwhile; // end of the loop. ?>
-			</div>
+
 			
 			<div class="left-div">
-				<div class="left-header"><span>More <?php echo $current_name;?>:</span></div>
-					<div class="inner-left-div">
+				<div class="right-header left-mobile-header">
+					<?php _e('Newsletter', 'twentytwelve'); ?>
+				</div>
+				<div class="mobile-accordion">
+					<div class="left-text-header"><span>More <?php echo $current_name;?>:</span></div>
 						<ul class="left-menu">
 						<?php
 								$flag_take_date=1;
@@ -101,12 +94,19 @@ get_header(); ?>
 									endwhile;
 								
 								endif;
-								
+								wp_reset_query();
 						?>
 						</ul>
-					</div>	
-			</div>	
-			
+					</div>
+			</div>
+			<div class="right">
+				<div class="right-header" <?php $style=($current_name=="Links")? 'display:none;' : "";  ?> style="<?php echo $style;?>" title="<?php the_title(); ?>"><?php the_title(); ?></div>
+				<span class="newsletter-date"><?php $pfx_date = get_the_date( 'd.m.Y' ); echo $pfx_date;?></span>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php get_template_part( 'content', 'page' ); ?>
+					<?php //comments_template( '', true ); ?>
+				<?php endwhile; // end of the loop. ?>
+			</div>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

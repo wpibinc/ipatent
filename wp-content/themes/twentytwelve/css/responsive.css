@@ -300,8 +300,26 @@
     .main-navigation .nav-menu .sub-menu .menu-item .sub-menu,
     .main-navigation .nav-menu >  .menu-item > .sub-menu,
     .services-right .right-header, .mobile-accordion .left-menu,
-    .top-div, .about-left, footer, .contact-page .left-div .map, .contact-page .left-text-header{
+    .top-div, .about-left, footer, .contact-page .left-div .map, .contact-page .left-text-header,
+    .mobile-hide{
         display: none;
+    }
+    .home .right p, .about-right .entry-content p, .team-page-right,
+    .team-page-right p,
+    .team-page-right .right-details div,
+    .mobile-accordion .left-text-header,
+    #gform_1 input[type="text"], #gform_1 textarea,
+    #gform_2 input[type="text"], #gform_2 textarea,
+    .contact-page .inner-left-div p,
+    .contact-page .inner-left-div .lbl,
+    .contact-page .bottom-contact-div p,
+    .jobs-page .desctop-header,
+    .jobs-page .entry-content p,
+    #gform_2 .gfield_label,
+    .newsletter-date,
+    .newsletter-page .entry-content p{
+        font-size: 20px;
+        line-height: normal;
     }
     #nav-div{
         position: relative;
@@ -425,21 +443,7 @@
     .right{
         margin-left: 0;
     }
-    .home .right p, .about-right .entry-content p, .team-page-right,
-    .team-page-right p,
-    .team-page-right .right-details div,
-    .mobile-accordion .left-text-header,
-    #gform_1 input[type="text"], #gform_1 textarea,
-    #gform_2 input[type="text"], #gform_2 textarea,
-    .contact-page .inner-left-div p,
-    .contact-page .inner-left-div .lbl,
-    .contact-page .bottom-contact-div p,
-    .jobs-page .desctop-header,
-    .jobs-page .entry-content p,
-    #gform_2 .gfield_label{
-        font-size: 20px;
-        line-height: normal;
-    }
+
 
     .contact-page .gform_wrapper div.charleft,
     .jobs-page .gform_wrapper div.charleft{
@@ -449,7 +453,7 @@
     /*************** Services Page ***************/
 
     .mobile-accordion .left-text-header{
-        margin-bottom: 10px;
+        margin-bottom: 25px;
         padding: 19px 90px 15px 21px;
         background: url("../images/mobile_accoridon_arrow.png") right 32px center no-repeat, #49423e;
         border: none;
@@ -594,13 +598,19 @@
         display: block;
     }
 
+    /*************** Newsletter Page ***************/
 
+    .newsletter-page .right .right-header{
+        font-size: 20px;
+        white-space: normal;
+        line-height: 27px;
+        font-weight: bold;
+    }
     /*********** Footer ************/
 
     .mobile-searchform{
         display: block;
     }
-
 
 }
 @media screen and (max-width: 600px) {

@@ -92,3 +92,16 @@ TP------------------------------------------------------------------------------
  --- Forms -> Edit forms -> Contact
 
 Add class "gplaceholder" for all fields
+
+-- For jobs page responsive design
+
+ --- Forms -> Edit forms -> Career
+
+Add class "gplaceholder" for all fields
+
+-- 26.02.2015
+-- For newsletter page responsive design
+
+ To add a "mobile-hide" class for the titles and texts in the post body which should be hidden.
+for example, on the page "/revised-uspto-patent-eligibility-101-guidance/"
+there's a title "REVISED USPTO PATENT ELIGIBILITY (101) GUIDANCE".
