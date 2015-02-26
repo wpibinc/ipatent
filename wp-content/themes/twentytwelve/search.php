@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="site-content">
+	<section id="primary" class="site-content search-page">
 		<div id="content" role="main">
 
 		<?php

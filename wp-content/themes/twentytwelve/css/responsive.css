@@ -317,7 +317,7 @@
     .jobs-page .entry-content p,
     #gform_2 .gfield_label,
     .newsletter-date,
-    .newsletter-page .entry-content p{
+    .newsletter-page .entry-content p,.search-page .entry-summary p, .search-page .navigation a{
         font-size: 20px;
         line-height: normal;
     }
@@ -424,7 +424,7 @@
         float: none;
     }
     .home .left-div .textwidget, .right-header, .left-mobile-header,
-    .team-page-right .right-text-header1{
+    .team-page-right .right-text-header1, .search-page .page-title{
         height: auto;
         line-height: normal;
         border-top: solid 1px #666;
@@ -433,7 +433,7 @@
         padding-bottom: 15px;
     }
     .home .left-div .textwidget, .right-header, .left-mobile-header,
-    .team-page-right{
+    .team-page-right, .search-page .page-title{
         font-size: 35px;
     }
     .right-text-header1{
@@ -443,7 +443,6 @@
     .right{
         margin-left: 0;
     }
-
 
     .contact-page .gform_wrapper div.charleft,
     .jobs-page .gform_wrapper div.charleft{
@@ -480,14 +479,14 @@
     .team-page-right .right-text div{
         margin-left: 0 !important;
     }
-.team-page-right .right-header{
-    font-size: 25px;
-}
-.team-page-right .group1{
-    display: block;
-    float: left;
-    width: 215px;
-}
+    .team-page-right .right-header{
+        font-size: 25px;
+    }
+    .team-page-right .group1{
+        display: block;
+        float: left;
+        width: 215px;
+    }
     .team-page-right .right-details{
         box-sizing: border-box;
         padding-left: 300px;
@@ -606,11 +605,30 @@
         line-height: 27px;
         font-weight: bold;
     }
+
+    /*************** Search Page ***************/
+
+    .search-page .page-header{
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    .search-page .page-title span{
+        display: block;
+        font-size: 26px;
+        font-weight: normal;
+    }
+
+    .search-page .entry-header a{
+        font-size: 22px;
+        font-weight: bold;
+    }
+
     /*********** Footer ************/
 
     .mobile-searchform{
         display: block;
     }
+
 
 }
 @media screen and (max-width: 600px) {
