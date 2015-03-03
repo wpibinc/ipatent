@@ -33,8 +33,7 @@ $(document).ready(function(){
 
 	});
 
-	$('.open-mobile-menu').on('click', function (e) {
-
+	$('.open-mobile-menu-ico').on('click', function (e) {
 		e.stopPropagation();
 		e.preventDefault();
 
@@ -46,7 +45,7 @@ $(document).ready(function(){
 
 		e.stopPropagation();
 
-		if(!$(e.target).hasClass('open-mobile-menu') && !$(e.target).parent().hasClass('menu-item')){
+		if(!$(e.target).hasClass('open-mobile-menu-ico') && !$(e.target).parent().hasClass('menu-item')){
 			$('.main-navigation .active').each(function () {
 				$(this).slideUp();
 				$(this).removeClass('active');

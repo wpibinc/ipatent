@@ -335,20 +335,20 @@
         display: block;
         position: relative;
 }
-    .main-navigation .mobile-block img{
+    .main-navigation .mobile-block .mobile-logo{
         float: left;
         margin-left: 5px;
         max-width: 265px;
-        width: 60%;
+        width: 40%;
     }
     .main-navigation .mobile-block .open-mobile-menu{
         float: right;
-        height: 95px;
-        width: 95px;
-        border: solid 1px #fff;
-        border-radius: 50%;
+        max-width: 95px;
+        width: 17%;
         margin-right: 17px;
-        background: url("../images/open-mobile-ico.png") center no-repeat;
+    }
+    .main-navigation .mobile-block .open-mobile-menu img{
+        width: 100%;
     }
     .main-navigation .mobile-block .open-mobile-menu:hover{
         cursor: pointer;
