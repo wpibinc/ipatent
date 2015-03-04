@@ -165,7 +165,7 @@ $i++;
 <div id="nav-div">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="mobile-block">
-				<img class="mobile-logo" src=" <?php echo get_template_directory_uri() . '/images/Logo.png'; ?>">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="mobile-logo" src=" <?php echo get_template_directory_uri() . '/images/Logo.png'; ?>"></a>
 				<div class="open-mobile-menu"><img class="open-mobile-menu-ico" src="<?php echo get_template_directory_uri() . '/images/open-mobile-ico.png' ?>"></div>
 				<div class="clearfix"></div>
 			</div>
@@ -199,11 +199,11 @@ $i++;
 				 <p>My IP Portfolio</p>
 				 <form action="http://my.ipatent.co.il/handlers/login.php"  method="POST"  target="_blank" id="my-form">
 				 <div class="inpts">
-				 	<label for="uname">User Name</label>
+				 	<label for="uname"><?php if (ICL_LANGUAGE_CODE=='he') {?>שם משתמש<?php } else {?>User Name<?php }?></label>
 				 	<input type="hidden" name="cmd" value="login" />
 				 	<input type="hidden" name="redirect" value="http://my.ipatent.co.il/" />
 				 	<input class=""  type="text" name="uname" />
-				 	<label for="pass">Password</label>
+				 	<label for="pass"><?php if (ICL_LANGUAGE_CODE=='he') {?>סיסמה<?php } else {?>Password<?php }?></label>
 				 	<input class=""  type="password" name="upass" />
 				 					 	 <div class="clearfix"></div>
 				 	</div>
@@ -222,7 +222,7 @@ $i++;
     margin-top: 3px;
     margin-left: 5px;
 " id="my-arrow">►</span>
-				 	<input type="submit"  name="sub"  value="Log In"></input>
+				 	<input type="submit"  name="sub"  value=<?php if (ICL_LANGUAGE_CODE=='he') {?>"התחברות"<?php } else {?>"Log In"<?php }?>></input>
 				 	 <div class="clearfix"></div>
 				 	</div>
 				 </form>
