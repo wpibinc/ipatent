@@ -105,3 +105,9 @@ Add class "gplaceholder" for all fields
  To add a "mobile-hide" class for the titles and texts in the post body which should be hidden.
 for example, on the page "/revised-uspto-patent-eligibility-101-guidance/"
 there's a title "REVISED USPTO PATENT ELIGIBILITY (101) GUIDANCE".
+
+-- 4.03.2015
+Appearance -> Widgets
+Contact Sidebar:
+replace: <span style="padding-left: 13px;">+972-73-7919199</span>
+with: <span style="padding-left: 13px;"><a href="tel:+972737919199">+972-73-7919199</a></span>

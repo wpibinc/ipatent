@@ -321,6 +321,7 @@
     .newsletter-page .entry-content p,.search-page .entry-summary p, .search-page .navigation a{
         font-size: 20px;
         line-height: normal;
+        white-space: normal;
     }
     #nav-div{
         position: relative;
@@ -503,9 +504,13 @@
         display: inline-block;
         background-color: #565656;
         border-radius: 7px;
+    }
+    .phone-block span a{
         color: #FFFFFF;
     }
-
+    .phone-block span a:hover{
+        text-decoration: none;
+    }
     /*************** Contact Page ***************/
 
     #gform_1, #gform_2{
