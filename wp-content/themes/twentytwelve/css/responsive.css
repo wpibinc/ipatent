@@ -436,6 +436,7 @@
     .home .left-div .textwidget, .right-header, .left-mobile-header,
     .team-page-right, .search-page .page-title{
         font-size: 35px;
+        white-space: normal;
     }
     .right-text-header1{
         font-size: 25px;
@@ -453,12 +454,14 @@
     /*************** Services Page ***************/
 
     .mobile-accordion .left-text-header{
+        height: auto;
         margin-bottom: 25px;
         padding: 19px 90px 15px 21px;
         background: url("../images/mobile_accoridon_arrow.png") right 32px center no-repeat, #49423e;
         border: none;
         border-radius: 7px;
         color: #FFFFFF;
+        white-space: normal;
     }
     .mobile-accordion .left-text-header:hover{
         cursor: pointer;
