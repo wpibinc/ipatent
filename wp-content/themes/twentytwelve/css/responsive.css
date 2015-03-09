@@ -322,6 +322,7 @@
         font-size: 20px;
         line-height: normal;
         white-space: normal;
+        word-break: normal;
     }
     #nav-div{
         position: relative;
@@ -458,7 +459,10 @@
         height: auto;
         margin-bottom: 25px;
         padding: 19px 90px 15px 21px;
-        background: url("../images/mobile_accoridon_arrow.png") right 32px center no-repeat, #49423e;
+        background-image: url("../images/mobile_accoridon_arrow.png");
+        background-repeat: no-repeat;
+        background-position: right 32px center;
+        background-color: #49423e;
         border: none;
         border-radius: 7px;
         color: #FFFFFF;
