@@ -461,6 +461,7 @@
         padding: 19px 90px 15px 21px;
         background-image: url("../images/mobile_accoridon_arrow.png");
         background-repeat: no-repeat;
+        background-position: right center;
         background-position: right 32px center;
         background-color: #49423e;
         border: none;
