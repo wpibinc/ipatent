@@ -505,16 +505,20 @@
     }
     .phone-block span{
         margin-left: 10px;
-        padding: 2px 11px !important;
+        padding: 2px 0px !important;
         display: inline-block;
         background-color: #565656;
         border-radius: 7px;
     }
     .phone-block span a{
+        padding: 0 6.5px;
         color: #FFFFFF;
     }
     .phone-block span a:hover{
         text-decoration: none;
+    }
+    .site-content .team-page-right article{
+        padding: 0;
     }
     /*************** Contact Page ***************/
 
