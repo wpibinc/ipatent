@@ -629,7 +629,16 @@ height: 100%;
 width: 100%;
 margin: auto;
 }
-
+.slide{
+	width: 100%;
+	height: 495px;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+}
+.slide img{
+	display: none;
+}
 #home-top-inner {
     color: #fff;
     float:right;

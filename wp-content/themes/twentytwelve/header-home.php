@@ -47,82 +47,46 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.colorbox.js" type="text/javascript"></script>
 
 <style>
+
+
+<?php
+ $args = array(
+			 'post_type' => 'attachment',
+			 'numberposts' => 1,
+			 'post_status' => null,
+			 'post_parent' => $post->ID
+		 );
+		 $i=1;
+		 $attachment = get_posts( $args );
+		 $attachment = $attachment[0];
+		  $img = wp_get_attachment_image_src( $attachment->ID, 'full' );
+?>
 .slide{
-    width: 100%;
-height: 495px;
-background-repeat: no-repeat;
-background-position: center;
+   background-image: url("<?php echo $img[0]; ?>");
+    background-repeat: no-repeat;
+	background-position: center;
 }
 
-<?php 
-		    	
-		    		if ( have_posts() ) : while ( have_posts() ) : the_post();
-	
-					$args = array(
-							'post_type' => 'attachment',
-							'numberposts' => -1,
-							'post_status' => null,
-							'post_parent' => $post->ID
-					);
-	                $i=1;
-					$attachments = get_posts( $args );
-					if ( $attachments ) {
-						foreach ( $attachments as $attachment ) {
-?>
-#slide-<?php echo $i; ?>{
-    background-image: url("<?php $img = wp_get_attachment_image_src( $attachment->ID, 'full' ); echo $img[0]; ?>");
-    background-repeat: no-repeat;
-background-position: center;
-}
-							
-<?php 
-$i++;						
-}
-					}
-	
-	 				endwhile; endif;
-	 				
-	 			?>
 </style>
 <script>
-
-	function resizeSlider(){
-
-		if( $(document).width() < 960) {
-
-			$('.slide').height($('body').width() / 4);
-
-		}else{
-
-			$('.slide').height('');
-
-		}
-	}
 			$(document).ready(function(){
 
-				resizeSlider();
-
-				$(window).on('resize', function(){
-
-					resizeSlider();
-
-				});
-		        i = 1;
-		        setInterval(function(){
-		            if(i <= <?php echo $i; ?>){
-		            
-		                $('#slide-'+i).fadeOut(1300, function() {
-    			                i++;
-    			                if(i >= <?php echo $i; ?>){
-        			                i = 1;
-        			            }
-    		                    $(this).attr("id","slide-"+i);
-		                    }).fadeIn( 1300 );
-		                }
-		                else{
-		                	i=1;
-		                }
-		        }, 4000);
+//		        i = 1;
+//		        setInterval(function(){
+//		            if(i <= <?php //echo $i; ?>//){
+//
+//		                $('#slide-'+i).fadeOut(1300, function() {
+//    			                i++;
+//    			                if(i >= <?php //echo $i; ?>//){
+//        			                i = 1;
+//        			            }
+//    		                    $(this).attr("id","slide-"+i);
+//		                    }).fadeIn( 1300 );
+//		                }
+//		                else{
+//		                	i=1;
+//		                }
+//		        }, 4000);
 
 
 
@@ -199,9 +163,11 @@ $i++;
 ?>
 <div id="home-top-div">
 	
-		 
+
 		<div class="flexslider" >
-		   <div class="slide" id="slide-1"></div>
+		   <div class="slide">
+				<img src="<?php echo $img[0]; ?>">
+		   </div>
 		    	
 		 </div>
 		 <div class="main_total_top_holder">
