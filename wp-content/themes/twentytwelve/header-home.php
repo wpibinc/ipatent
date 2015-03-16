@@ -90,7 +90,7 @@ $i++;
 
 		if( $(document).width() < 960) {
 
-			$('.slide').height($('body').width() / 3);
+			$('.slide').height($('body').width() / 4);
 
 		}else{
 
