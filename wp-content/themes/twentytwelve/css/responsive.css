@@ -406,8 +406,9 @@
     .main-navigation .nav-menu .sub-menu .menu-item a:hover{
         color: #252322;
     }
-    #home-top-div{
-        margin-top: -150px;
+    #home-top-div .slide{
+        background-size: 100% 100%;
+
     }
 
 

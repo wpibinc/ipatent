@@ -85,8 +85,28 @@ $i++;
 	 			?>
 </style>
 <script>
+
+	function resizeSlider(){
+
+		if( $(document).width() < 960) {
+
+			$('.slide').height($('body').width() / 3);
+
+		}else{
+
+			$('.slide').height('');
+
+		}
+	}
 			$(document).ready(function(){
 
+				resizeSlider();
+
+				$(window).on('resize', function(){
+
+					resizeSlider();
+
+				});
 		        i = 1;
 		        setInterval(function(){
 		            if(i <= <?php echo $i; ?>){
