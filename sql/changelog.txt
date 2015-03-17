@@ -111,3 +111,31 @@ Appearance -> Widgets
 Contact Sidebar:
 replace: <span style="padding-left: 13px;">+972-73-7919199</span>
 with: <span style="padding-left: 13px;"><a href="tel:+972737919199">+972-73-7919199</a></span>
+
+-- 17.03.2015
+Appearance -> Widgets -> Contact Sidebar/
+insert this above map:
+<div class="mobile-accordion">
+<div class="left-text-header">
+Payment details
+</div>
+<div class="left-menu">
+<p>
+<b>G. E. EHRLICH (1995) LTD.</b>
+<br/>
+ID. 512199522
+<br/>
+Payment by check or bank transfer to:
+<br/>
+<b>Bank</b> Leumi
+<br/>
+<b>Branch</b> Habursa Ramat Gan # 743
+<br/>
+<b>Account No.</b> 65400/83
+<br/>
+<b>SWIFT</b>: LumiilitXXX
+<br/>
+<b>IBAN:</b> IL410107430000006540083
+</p>
+</div>
+</div>

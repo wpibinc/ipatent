@@ -293,7 +293,9 @@
     #wrap{
         padding-bottom: 70px;
     }
-
+    .contact-page .mobile-accordion .left-text-header{
+        display: block;
+    }
     .flex-caption, .main-navigation .user-portfolio,
     #home-top-div .main_total_top_holder, .main-navigation .searchbox,
     .main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul,
