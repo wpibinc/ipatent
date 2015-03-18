@@ -13,14 +13,17 @@ function accordion(selector){
 
 $(window).on('resize', function(){
 	if($(this).width() > 950){
-		$('.mobile-accordion .left-menu').removeAttr('style');
+		if(!$('.mobile-accordion').hasClass('desktop-accordion')){
+
+			$('.mobile-accordion .left-menu').removeAttr('style');
+		}
 	}
 });
 
 $(document).ready(function(){
 
 	$('.mobile-accordion .left-text-header').on('click', function () {
-		if ($(window).width() <= 960) {
+		if ($(window).width() <= 960 || $(this).closest('.mobile-accordion').hasClass('desktop-accordion')) {
 
 			$(this).toggleClass('active');
 

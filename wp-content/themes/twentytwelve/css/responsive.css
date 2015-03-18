@@ -286,6 +286,12 @@
     .waze-button{
         display: none;
     }
+    .mobile-accordion.desktop-accordion .left-text-header:hover{
+        cursor: pointer;
+    }
+    .mobile-accordion.desktop-accordion .left-menu{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 960px) {
