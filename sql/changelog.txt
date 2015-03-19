@@ -139,3 +139,7 @@ Payment by check or bank transfer to:
 </p>
 </div>
 </div>
+-- 19.03.2015
+Appearance -> Widgets -> Contact Sidebar/
+replace: <div class="mobile-accordion">
+with: <div class="mobile-accordion desktop-accordion">
