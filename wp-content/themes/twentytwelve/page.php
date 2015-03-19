@@ -25,7 +25,7 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 			</div>
 			<div class="left-div about-left" style="margin-top: 70px;">
-					<?php if(the_title("","",false)!="About" && the_title("","",false)!="Sitemap" ):?>
+					<?php if(the_title("","",false)!="About" && the_title("","",false)!="אודות" && the_title("","",false)!="Sitemap" ):?>
 					
 						<div class="inner-left-div">
 
