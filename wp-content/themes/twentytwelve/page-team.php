@@ -28,7 +28,7 @@ $title = the_title('', '', false);
 				<div class="right-div-entry-title"></div>
 				<?php if ($category) {?>
 					<div class="mobile-accordion">
-					<div class="left-text-header"><?php echo $current_name;?> Team</div>
+					<div class="left-text-header"><?php if (ICL_LANGUAGE_CODE=='he') {?>צוות <?php echo $current_name;} else {echo $current_name;?> Team<?php }?></div>
 						<ul class="left-menu">
 							<?php
 
@@ -80,9 +80,9 @@ $title = the_title('', '', false);
 					</a>
 					<!-- details under the image -->
 					<div class="right-details">
-						<div class="lbl phone-block">Tel:<span style="padding-left: 11px;"><a href="tel:0737919199">073-7919199</a></span></div>
-						<div class="lbl">Fax:<span>073-7919100</span></div>
-                        <?php if (types_render_field( "email")) {?><div class="lbl">Mail:<a href="<?php echo "mailto:"; echo(get_post_meta($post->ID, "wpcf-email",true)); echo "@ipatent.co.il"; ?>" target="_blank"><?php echo(get_post_meta($post->ID, "wpcf-email",true)); echo "@ipatent.co.il"; ?></a></div><?php } ?>
+						<div class="lbl phone-block"><?php if (ICL_LANGUAGE_CODE=='he') {?>טלפון:<?php } else {?>Tel:<?php }?><span style="padding-left: 11px;"><a href="tel:0737919199">073-7919199</a></span></div>
+						<div class="lbl"><?php if (ICL_LANGUAGE_CODE=='he') {?>פקס:<?php } else {?>Fax:<?php }?><span>073-7919100</span></div>
+                        <?php if (types_render_field( "email")) {?><div class="lbl"><?php if (ICL_LANGUAGE_CODE=='he') {?>מייל:<?php } else {?>Mail:<?php }?><a href="<?php echo "mailto:"; echo(get_post_meta($post->ID, "wpcf-email",true)); echo "@ipatent.co.il"; ?>" target="_blank"><?php echo(get_post_meta($post->ID, "wpcf-email",true)); echo "@ipatent.co.il"; ?></a></div><?php } ?>
 						<?php if (types_render_field( "linkedln")) {?><a><span><img src="/wp-content/themes/twentytwelve/images/linkedin.gif" />&nbsp;&nbsp;&nbsp;<?php echo(types_render_field( "linkedln")); ?></span></a><?php } ?>
 						<?php if (types_render_field( "practice-areas")) {?><div class="practice-area">
 							<p class="ptitle">Practice areas</p>
@@ -100,37 +100,37 @@ $title = the_title('', '', false);
 					</div>
 					
 					<?php if(types_render_field("experience_field")!=""){?>
-					<div class="right-text-header1">Experience & Background</div>
+					<div class="right-text-header1"><?php if (ICL_LANGUAGE_CODE=='he') {?>נסיון ורקע<?php } else {?>Experience & Background<?php }?></div>
 					<div style="margin:0px 0 0 20px;word-break:break-word;padding: 0px 5px 0px 0px" class="resume-text">
 						<?php echo(types_render_field("experience_field")); ?>
 					</div>
 					<?php }?>
 					
-					<div class="right-text-header1">Resume</div>
+					<div class="right-text-header1"><?php if (ICL_LANGUAGE_CODE=='he') {?>קורות חיים<?php } else {?>Resume<?php }?></div>
 					<div style="margin:0px 0 0 20px;word-break:break-word;padding: 0px 5px 0px 0px " class="resume-text"><?php echo(types_render_field("resume_field")); ?></div>
 					
 					<?php if(types_render_field("education_field")!=""){?>
-					<div class="right-text-header1">Education</div>
+					<div class="right-text-header1"><?php if (ICL_LANGUAGE_CODE=='he') {?>השכלה<?php } else {?>Education<?php }?></div>
 					<div style="margin:0px 0 0 20px;word-break:break-word;padding: 0px 5px 0px 0px " class="resume-text"><?php echo(types_render_field("education_field")); ?></div>
 					<?php }?>
 					
 					<?php if(types_render_field("academic_awards")!=""){?>
-					<div class="right-text-header1">Academic Awards</div>
+					<div class="right-text-header1"><?php if (ICL_LANGUAGE_CODE=='he') {?>פרסים אקדמיים<?php } else {?>Academic Awards<?php }?></div>
 					<div style="margin:0px 0 0 20px;word-break:break-word;padding: 0px 5px 0px 0px " class="resume-text"><?php echo(types_render_field("academic_awards")); ?></div>
 					<?php }?>
 					
 					<?php if(types_render_field("rankings_recognitions")!=""){?>
-					<div class="right-text-header1">Rankings & Recognitions</div>
+					<div class="right-text-header1"><?php if (ICL_LANGUAGE_CODE=='he') {?>דירוגים והכרות<?php } else {?>Rankings & Recognitions<?php }?></div>
 					<div style="margin:0px 0 0 20px;word-break:break-word;padding: 0px 5px 0px 0px " class="resume-text"><?php echo(types_render_field("rankings_recognitions")); ?></div>
 					<?php }?>
 					
 					<?php if(types_render_field("voluntary_activities")!=""){?>		
-					<div class="right-text-header1">Voluntary Activities</div>
+					<div class="right-text-header1"><?php if (ICL_LANGUAGE_CODE=='he') {?>פעילויות התנדבותיות<?php } else {?>Voluntary Activities<?php }?></div>
 					<div style="margin:0px 0 0 20px;word-break:break-word;padding: 0px 5px 0px 0px " class="resume-text"><?php echo(types_render_field("voluntary_activities")); ?></div>
 					<?php }?>
 					
 					<?php if(types_render_field("admissions")!=""){?>	
-					<div class="right-text-header1">Admissions</div>
+					<div class="right-text-header1"><?php if (ICL_LANGUAGE_CODE=='he') {?>קבלות<?php } else {?>Admissions<?php }?></div>
 					<div style="margin:0px 0 0 20px;word-break:break-word;padding: 0px 5px 0px 0px " class="resume-text"><?php echo(types_render_field("admissions")); ?></div>
 					<?php }?>
 				</div>				

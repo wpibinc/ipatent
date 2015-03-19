@@ -26,9 +26,9 @@ get_header(); ?>
 			</div>
 			<div class="left-div">
 				<div class="right-header left-mobile-header">
-					Our Offices:
+					<?php if (ICL_LANGUAGE_CODE=='he') {?>המשרדים שלנו:<?php } else {?>Our Offices:<?php }?>
 				</div>
-				<div class="left-text-header"><span>Our Offices:</span></div>
+				<div class="left-text-header"><span><?php if (ICL_LANGUAGE_CODE=='he') {?>המשרדים שלנו:<?php } else {?>Our Offices:<?php }?></span></div>
 					<div class="inner-left-div">
 						<?php dynamic_sidebar("contact"); ?>
 

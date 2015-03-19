@@ -65,10 +65,13 @@ get_header(); ?>
 					if($title==$titlenamer){
 						$children = str_replace('<li>','<li class="current">', $children);
 					}
+					
+					if (ICL_LANGUAGE_CODE=='he') $services='שירותים נוספים';  
+						else $services='More Services';
 
 					if ($children && $id) {
 						echo '<div class="mobile-accordion">';
-							echo '<div class="left-text-header">' . __('More Services','twentytwelve') . '</div>';
+							echo '<div class="left-text-header">' . $services . '</div>';
 							echo '<ul class="left-menu">';
 								echo $children;
 							echo '</ul>';
