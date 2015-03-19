@@ -46,11 +46,11 @@ get_header(); ?>
 				// Show the default message to everyone else.
 			?>
 				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentytwelve' ); ?></h1>
+					<h1 class="entry-title"><?php if (ICL_LANGUAGE_CODE=='he') {?>'דבר לא נמצא'<?php } else {_e( 'Nothing Found', 'twentytwelve' );}?></h1>
 				</header>
 
 				<div class="entry-content">
-					<p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'twentytwelve' ); ?></p>
+					<p><?php if (ICL_LANGUAGE_CODE=='he') {?>'התנצלותנו, אבל לא נמצאו תוצאות. אולי חיפוש יעזור במציאת פוסט קשור'<?php } else {_e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'twentytwelve' );}?></p>
 					<?php get_search_form(); ?>
 				</div><!-- .entry-content -->
 			<?php endif; // end current_user_can() check ?>
