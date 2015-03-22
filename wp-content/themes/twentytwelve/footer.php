@@ -10,12 +10,17 @@
  * @since Twenty Twelve 1.0
  */
 ?>
-
+		
 	</div><!-- #main .wrapper -->
-	
+	<div id="back-to-top-container">
+		<a class="back-to-top" href="#">
+			Back to Top
+		</a>
+	</div>
 </div><!-- #page -->
 </section><!-- #container -->
 </div><!-- #wrap -->
+
 <div class="mobile-searchform">
 	<div class="mobile-searchform-wrapper">
 		<?php get_search_form(); ?>
@@ -84,6 +89,22 @@ $(function() {
 	      window.location.href = $('a', this).attr('href');
 	      return false;
 	   });
+
+	   var offset = 250;
+	    var duration = 300;
+	    jQuery(window).scroll(function() {
+	        if (jQuery(this).scrollTop() > offset) {
+	            jQuery('.back-to-top').fadeIn(duration);
+	        } else {
+	            jQuery('.back-to-top').fadeOut(duration);
+	        }
+	    });
+
+	    jQuery('.back-to-top').click(function(event) {
+	        event.preventDefault();
+	        jQuery('html, body').animate({scrollTop: 0}, duration);
+	        return false;
+	    });
 	});
 		</script>
 <?php wp_footer(); ?>

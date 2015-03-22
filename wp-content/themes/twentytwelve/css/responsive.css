@@ -1,7 +1,7 @@
 /* Minimum width of 600 pixels. */
 @media screen and (min-width: 960px) {
 
-    .left-mobile-header{
+    .left-mobile-header, #back-to-top-container {
         display: none;
     }
 
@@ -295,7 +295,24 @@
 }
 
 @media screen and (max-width: 960px) {
-
+	#back-to-top-container {
+		margin-top: 5px;
+		border-top: 1px solid #ccc;
+		padding-top: 6px;
+		width: 100%;
+		text-align: center;
+	}
+	.back-to-top {
+		margin: 0;
+		right: 0;
+		width: 70px;
+		height: 70px;
+		text-decoration: none;
+		width: 100%;
+		font-size: 20px;
+		color: #bbb !important;
+	}
+	
     #wrap{
         padding-bottom: 70px;
     }
@@ -365,7 +382,9 @@
     }
     header.block, header.block #nav-div{
         height: auto !important;
-    }
+    
+        /* position: fixed; */
+}
 
     .main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
         position: absolute;
@@ -380,7 +399,7 @@
     .main-navigation .nav-menu .menu-item {
         padding: 0;
         margin-top: 0;
-        font-size: 20px;
+        font-size: 16px;
         position: relative;
     }
     .main-navigation .nav-menu .menu-item a{
@@ -450,7 +469,7 @@
     }
     .home .left-div .textwidget, .right-header, .left-mobile-header,
     .team-page-right, .search-page .page-title{
-        font-size: 35px;
+        font-size: 25px;
         white-space: normal;
     }
     .right-text-header1{
