@@ -535,18 +535,16 @@
         width: 100%;
         clear: none;
     }
-    .phone-block span{
-        margin-left: 10px;
-        padding: 2px 0px !important;
-        display: inline-block;
-        background-color: #565656;
-        border-radius: 7px;
+    .phone-block a,
+    .mail-block a{
+        color: #0000ff;
+        text-decoration: underline;
     }
-    .phone-block span a{
-        padding: 0 6.5px;
-        color: #FFFFFF;
+    .phone-block a{
+        padding-left: 3px;
     }
-    .phone-block span a:hover{
+    .phone-block a:hover,
+    .mail-block a:hover{
         text-decoration: none;
     }
     .site-content .team-page-right article{
