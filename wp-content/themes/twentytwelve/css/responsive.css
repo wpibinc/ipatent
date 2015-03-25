@@ -302,6 +302,9 @@
 		width: 100%;
 		text-align: center;
 	}
+    .home #back-to-top-container{
+        display: none;
+    }
 	.back-to-top {
 		margin: 0;
 		right: 0;
