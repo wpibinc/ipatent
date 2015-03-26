@@ -60,7 +60,7 @@
 	<div class="footer-rights">
 	<div style="margin: 0 auto; width: 940px; height: 25px; font-size: 11px;" >
 		<div class="right">
-		<span style="float: left;" >All Rights Reserved, EHRLICH & FENSTER | <a href="#">Terms and Conditions</a></span>
+		<span style="float: left;" ><?php if (ICL_LANGUAGE_CODE=='he') {?>כל הזכויות שמורות, ארליך ופנסטר |<?php } else {?>All Rights Reserved, EHRLICH & FENSTER | <?php }?><a href="#"><?php if (ICL_LANGUAGE_CODE=='he') {?>תקנון ותנאים<?php } else {?>Terms and Conditions <?php }?></a></span>
 		<span class="footer-rights-social">
 			<a href="https://www.linkedin.com/company/ehrlich-&-fenster-patent-attorneys" target="_blank" class="linkedin social"></a>
 			<a href="https://www.facebook.com/EhrlichFenster" target="_blank" class="facebook social"></a>
