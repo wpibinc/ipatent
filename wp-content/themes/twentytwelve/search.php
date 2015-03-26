@@ -17,7 +17,7 @@ get_header(); ?>
 		 if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title"><?php if (ICL_LANGUAGE_CODE=='he') {?>printf( __( 'תוצאות חיפוש עבור: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' );<?php } else {?>printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' );<?php }?></h1>
 			</header>
 
 			<?php twentytwelve_content_nav( 'nav-above' ); ?>
