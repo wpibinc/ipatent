@@ -30,7 +30,7 @@ get_header(); ?>
 					$current_name = $category->cat_name;
 			?>
 			<div class="left-div">
-				<div class="left-header"><span>More <?php echo $current_name;?>:</span></div>
+				<div class="left-header"><span><?php if (ICL_LANGUAGE_CODE=='he') {?>עוד <?php } else {?>More <?php }?><?php echo $current_name;?>:</span></div>
 					<div class="inner-left-div">
 						<ul class="left-menu">
 						<?php
