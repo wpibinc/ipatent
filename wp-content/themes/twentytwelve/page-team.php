@@ -80,7 +80,7 @@ $title = the_title('', '', false);
 					</a>
 					<!-- details under the image -->
 					<div class="right-details">
-						<div class="lbl phone-block" <?php if (get_post_meta($post->ID, "wpcf-phone",true)=='-'){?>style='display:none'<?php }?>><?php if (ICL_LANGUAGE_CODE=='he') {?>טלפון:<?php } else {?>Tel:<?php }?><span style="padding-left: 11px;"><a href="tel:0737919199">073-7919199</a></span></div>
+						<div class="lbl phone-block" <?php if (get_post_meta($post->ID, "wpcf-phone",true)=='-'){?>style='display:none'<?php }?>><?php if (ICL_LANGUAGE_CODE=='he') {?>טלפון:<?php } else {?>Tel:<?php }?><span style="padding-left: 6px;"><a href="tel:0737919199">073-7919199</a></span></div>
 						<div class="lbl" <?php if (get_post_meta($post->ID, "wpcf-fax",true)=='-'){?>style='display:none'<?php }?>><?php if (ICL_LANGUAGE_CODE=='he') {?>פקס:<?php } else {?>Fax:<?php }?><span>073-7919100</span></div>
                         <?php if (types_render_field( "email")) {?><div class="lbl mail-block" <?php if (get_post_meta($post->ID, "wpcf-email",true)=='-'){?>style='display:none'<?php }?>><?php if (ICL_LANGUAGE_CODE=='he') {?>מייל:<?php } else {?>Mail:<?php }?><a href="<?php echo "mailto:"; echo(get_post_meta($post->ID, "wpcf-email",true)); echo "@ipatent.co.il"; ?>" target="_blank"><?php echo(get_post_meta($post->ID, "wpcf-email",true)); echo "@ipatent.co.il"; ?></a></div><?php } ?>
 						<?php if (types_render_field( "linkedln")) {?><a><span><img src="/wp-content/themes/twentytwelve/images/linkedin.gif" />&nbsp;&nbsp;&nbsp;<?php echo(types_render_field( "linkedln")); ?></span></a><?php } ?>
