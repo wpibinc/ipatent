@@ -12,7 +12,6 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
-
 get_header(); ?>
 
 	<div id="primary" class="site-content">
@@ -110,7 +109,7 @@ get_header(); ?>
 
 			</div>
 			<div class="right services-right">
-				<div class="right-header"><?php the_title(); $title = the_title('', '', false);?></div>
+				<div class="right-header"><?php echo $title;?></div>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 					<?php //comments_template( '', true ); ?>
