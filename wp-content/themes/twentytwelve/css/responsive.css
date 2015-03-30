@@ -1,3 +1,5 @@
+
+
 /* Minimum width of 600 pixels. */
 @media screen and (min-width: 960px) {
 
@@ -295,6 +297,47 @@
 }
 
 @media screen and (max-width: 960px) {
+    .main-navigation li.searchbox{
+        margin-top: 0;
+    }
+    .mobile-searchform,
+    .mobile-searchform *{
+        box-sizing: border-box;
+    }
+    .mobile-searchform{
+        bottom: 0;
+        width: 100%;
+        background-color: #636466;
+        padding: 5px;
+    }
+    .mobile-searchform-wrapper{
+        position: relative;
+        border: solid 2px #cccdcf;
+    }
+    .mobile-searchform-wrapper #s{
+        width: 100%;
+        height: 32px;
+        border: none;
+        background: transparent;
+        padding: 0 45px 0 10px;
+        outline: none;
+        font-size: 24px;
+        color: #cccdcf;
+    }
+    .mobile-searchform-wrapper #searchform input[type="submit"]{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: auto;
+        float: right;
+        height: 32px;
+        width: 50px;
+        background: url("../images/mobile-search-ico.jpg") center no-repeat !important;
+        border: none;
+        outline: none;
+    }
+
 	#back-to-top-container {
 		margin-top: 5px;
 		border-top: 1px solid #ccc;
@@ -323,7 +366,7 @@
         display: block;
     }
     .flex-caption, .main-navigation .user-portfolio,
-    #home-top-div .main_total_top_holder, .main-navigation .searchbox,
+    #home-top-div .main_total_top_holder,
     .main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul,
     .main-navigation .nav-menu .sub-menu .menu-item .sub-menu,
     .main-navigation .nav-menu >  .menu-item > .sub-menu,

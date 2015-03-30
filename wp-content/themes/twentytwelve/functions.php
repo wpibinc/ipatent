@@ -540,7 +540,9 @@ function add_search_box_secondary_menu($items, $args) {
 		ob_end_clean();
 
 		$items .= '<li class="menu-item menu-item-type-custom menu-item-object-custom user-portfolio"><a href="http://my.ipatent.co.il" target="_blank" style="color:red">My IP Portfolio</a></li>';
-		$items .= '<li class="searchbox">' . $searchform . '</li>';
+		$items .= '<li class="searchbox menu-item">
+					<div class="mobile-searchform">
+<div class="mobile-searchform-wrapper">' . $searchform . '</div></div></li>';
 		$items .= '<li class="socials">			<a href="http://linkedin.com" class="linkedin social"></a>
 			<a href="http://facebook.com" class="facebook social"></a>
 			<a href="http://twitter.com" class="twitter social"></a></li>';

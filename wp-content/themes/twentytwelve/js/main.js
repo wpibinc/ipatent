@@ -48,7 +48,7 @@ $(document).ready(function(){
 
 		e.stopPropagation();
 
-		if(!$(e.target).hasClass('open-mobile-menu-ico') && !$(e.target).parent().hasClass('menu-item')){
+		if(!$(e.target).hasClass('open-mobile-menu-ico') && !$(e.target).closest('li').hasClass('menu-item')){
 			$('.main-navigation .active').each(function () {
 				$(this).slideUp();
 				$(this).removeClass('active');
