@@ -517,7 +517,7 @@
     }
     .home .left-div .textwidget, .right-header, .left-mobile-header,
     .team-page-right, .search-page .page-title{
-        font-size: 25px;
+        font-size: 20px;
         white-space: normal;
     }
     .right-text-header1{
@@ -569,9 +569,7 @@
     .team-page-right .right-text div{
         margin-left: 0 !important;
     }
-    .team-page-right .right-header{
-        font-size: 25px;
-    }
+
     .team-page-right .group1{
         display: block;
         float: left;
@@ -736,7 +734,6 @@
 @media screen and (max-width: 530px) {
     .team-page-right .group1{
         float: none;
-        width: 100%;
     }
     .team-page-right .right-details{
         padding-left: 0;
