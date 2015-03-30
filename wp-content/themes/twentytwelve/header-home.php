@@ -166,7 +166,6 @@
 
 		<div class="flexslider" >
 		   <div class="slide">
-				<img src="<?php echo $img[0]; ?>">
 		   </div>
 		    	
 		 </div>

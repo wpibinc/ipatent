@@ -481,7 +481,8 @@
         color: #252322;
     }
     #home-top-div .slide{
-        height: auto !important;
+        height: 240px;
+        background-size: cover;
     }
     #home-top-div .slide img{
         display: block;
