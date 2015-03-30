@@ -297,18 +297,18 @@
 }
 
 @media screen and (max-width: 960px) {
-    .main-navigation li.searchbox{
+    .main-navigation .nav-menu li.searchbox{
         margin-top: 0;
+        padding: 5px;
     }
     .mobile-searchform,
     .mobile-searchform *{
         box-sizing: border-box;
     }
     .mobile-searchform{
-        bottom: 0;
         width: 100%;
         background-color: #636466;
-        padding: 5px;
+        /*padding: 5px;*/
     }
     .mobile-searchform-wrapper{
         position: relative;
@@ -332,7 +332,7 @@
         bottom: auto;
         float: right;
         height: 32px;
-        width: 50px;
+        width: 40px;
         background: url("../images/mobile-search-ico.jpg") center no-repeat !important;
         border: none;
         outline: none;
@@ -345,9 +345,11 @@
 		width: 100%;
 		text-align: center;
 	}
-    .home #back-to-top-container{
-        display: none;
+    .home #back-to-top-container,
+    .home .back-to-top{
+        display: none !important;
     }
+
 	.back-to-top {
 		margin: 0;
 		right: 0;
