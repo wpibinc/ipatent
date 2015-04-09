@@ -297,6 +297,11 @@
 }
 
 @media screen and (max-width: 960px) {
+
+    .container{
+        padding-bottom: 0;
+    }
+
     .main-navigation .nav-menu li.searchbox{
         margin-top: 0;
         padding: 5px;
@@ -308,7 +313,6 @@
     .mobile-searchform{
         width: 100%;
         background-color: #636466;
-        /*padding: 5px;*/
     }
     .mobile-searchform-wrapper{
         position: relative;
@@ -360,10 +364,7 @@
 		font-size: 20px;
 		color: #bbb !important;
 	}
-	
-    #wrap{
-        padding-bottom: 70px;
-    }
+
     .contact-page .mobile-accordion .left-text-header{
         display: block;
     }
@@ -483,8 +484,8 @@
         color: #252322;
     }
     #home-top-div .slide{
-        height: 240px;
         background-size: cover;
+        height: 100%;
     }
     #home-top-div .slide img{
         display: block;

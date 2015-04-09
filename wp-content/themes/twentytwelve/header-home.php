@@ -16,7 +16,7 @@
 <html class="ie ie8" <?php language_attributes(); ?>>
 <![endif]-->
 <!--[if !(IE 7) | !(IE 8)  ]><!-->
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="home-page">
 <!--<![endif]-->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,6 +69,21 @@
 
 </style>
 <script>
+	function resizeHomeTopImage(){
+
+		var windowVar = $(window),
+			topImageCont = $('#home-top-div');
+
+		if (windowVar.width() < 960) {
+
+			topImageCont.css('height', windowVar.height() / 2);
+
+		}else{
+
+			topImageCont.removeAttr('style')
+
+		}
+	}
 			$(document).ready(function(){
 
 //		        i = 1;
@@ -95,6 +110,11 @@
 					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
 					return false;
 				});
+
+				$(window).on('resize', function () {
+					resizeHomeTopImage();
+				});
+				resizeHomeTopImage()
 			});
 		</script>
 <!-- color-box ends -->
