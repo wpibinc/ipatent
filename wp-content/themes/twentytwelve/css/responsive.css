@@ -402,7 +402,8 @@
         text-align: left;
     }
     .right-header{
-        margin-bottom: 25px;
+        margin-bottom: 10px;
+        /*margin-bottom: 25px;*/
     }
     #nav-div{
         position: relative;
@@ -544,7 +545,8 @@
 
     .mobile-accordion .left-text-header{
         height: auto;
-        margin-bottom: 25px;
+        /*margin-bottom: 25px;*/
+        margin-bottom: 10px;
         padding: 19px 90px 15px 21px;
         background-image: url("../images/mobile_accoridon_arrow.png");
         background-repeat: no-repeat;
