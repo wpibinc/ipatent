@@ -401,6 +401,9 @@
     .entry-content p, .entry-summary p, .comment-content p, .mu_register p{
         text-align: left;
     }
+    .right-header{
+        margin-bottom: 25px;
+    }
     #nav-div{
         position: relative;
         z-index: 100;
