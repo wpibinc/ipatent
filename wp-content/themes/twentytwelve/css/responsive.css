@@ -398,6 +398,9 @@
         white-space: normal;
         word-break: normal;
     }
+    .entry-content p, .entry-summary p, .comment-content p, .mu_register p{
+        text-align: left;
+    }
     #nav-div{
         position: relative;
         z-index: 100;
@@ -432,9 +435,7 @@
     }
     header.block, header.block #nav-div{
         height: auto !important;
-    
-        /* position: fixed; */
-}
+    }
 
     .main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
         position: absolute;
