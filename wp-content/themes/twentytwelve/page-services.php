@@ -88,7 +88,7 @@ get_header(); ?>
 				$my_query = new WP_Query(array( 'meta_key' => '_wp_page_template', 'meta_value' => 'page-team.php','cat' => $cat, 'orderby' => 'menu_order title', 'order' => 'ASC'));
 				if($my_query->have_posts()):?>
 					<div class="mobile-accordion">
-						<div class="left-text-header" style="margin-top: 50px;">
+						<div class="left-text-header">
 							<?php echo get_the_category_by_ID($cat) . "&nbsp;";
 								_e('Team', 'twentytwelve'); ?>
 						</div>

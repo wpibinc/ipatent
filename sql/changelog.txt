@@ -87,7 +87,7 @@ TP------------------------------------------------------------------------------
 --- Appearance -> Widgets -> Contact
  add class "map" for the tag "p" which wrapps the map
  append this HTML:
- <a class="waze-button" href="waze://?q=The Rogovin-Tidhar Tower, 15th floor, 11 Menachem Begin Road, 52681 Ramat-Gan, Israel">Connect to Waze</a>
+ <a class="waze-button" href="waze://?ll=32.08637,34.8002&navigate=yes">Connect to Waze</a>
 
  --- Forms -> Edit forms -> Contact
 
