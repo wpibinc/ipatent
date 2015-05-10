@@ -129,6 +129,7 @@
 					$("#my-form").trigger("submit");
 				});
 				$("#my-form").on("submit", function(e) {
+					e.preventDefault();
 					$.ajax({
 						type: "POST",
 						url: "https://my.ipatent.co.il/handlers/login.php",
@@ -202,7 +203,7 @@
 			 				 <div class="clearfix"></div>
 			 <div  class="port-ip" >
 				 <p>My IP Portfolio</p>
-				 <form action="http://my.ipatent.co.il/handlers/login.php"  method="POST"  target="_blank" id="my-form">
+				 <form action="https://my.ipatent.co.il/handlers/login.php"  method="POST"  target="_blank" id="my-form">
 				 <div class="inpts">
 				 	<label for="uname"><?php if (ICL_LANGUAGE_CODE=='he') {?>שם משתמש<?php } else {?>User Name<?php }?></label>
 				 	<input type="hidden" name="cmd" value="login" />
