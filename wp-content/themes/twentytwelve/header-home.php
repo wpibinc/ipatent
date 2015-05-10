@@ -131,7 +131,7 @@
 				$("#my-form").on("submit", function(e) {
 					$.ajax({
 						type: "POST",
-						url: "http://my.ipatent.co.il/handlers/login.php",
+						url: "https://my.ipatent.co.il/handlers/login.php",
 						cache: false,
 						async: false,
 						data: {
