@@ -129,7 +129,6 @@
 					$("#my-form").trigger("submit");
 				});
 				$("#my-form").on("submit", function(e) {
-					e.preventDefault();
 					$.ajax({
 						type: "POST",
 						url: "https://my.ipatent.co.il/handlers/login.php",
