@@ -60,6 +60,7 @@
 			<a href="https://www.linkedin.com/company/ehrlich-&-fenster-patent-attorneys" target="_blank" class="linkedin social"></a>
 			<a href="https://www.facebook.com/EhrlichFenster" target="_blank" class="facebook social"></a>
 			<a href="https://twitter.com/EhrlichFenster" target="_blank" class="twitter social"></a>
+            <a href="<?php bloginfo('rss2_url') ?>" target="_blank" class="rss_link"></a>
 		</span>
 		</div>
 	</div>
