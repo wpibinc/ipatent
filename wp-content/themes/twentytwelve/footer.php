@@ -12,6 +12,12 @@
 ?>
 		
 	</div><!-- #main .wrapper -->
+    <div class="social-icon-container">
+        <a href="https://www.linkedin.com/company/ehrlich-&-fenster-patent-attorneys" target="_blank" class="linkedin-social-icon"></a>
+        <a href="https://www.facebook.com/EhrlichFenster" target="_blank" class="facebook-social-icon"></a>
+        <a href="https://twitter.com/EhrlichFenster" target="_blank" class="twitter-social-icon"></a>
+        <a href="<?php bloginfo('rss2_url') ?>" target="_blank" class="rss_link-social-icon"></a>
+    </div>
 	<div id="back-to-top-container">
 		<a class="back-to-top" href="#">
 			Back to Top
