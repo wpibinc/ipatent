@@ -2121,8 +2121,3 @@ display: none;
 .previous-image, .next-image, .single-attachment .entry-title {
 	display: none;
 }
-
-.team-page-right .right-text {
-	float: right;
-	margin-top: -405px;
-}
