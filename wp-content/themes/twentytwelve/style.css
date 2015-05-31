@@ -1840,7 +1840,7 @@ overflow: hidden;}
 .right-header {
 	margin-bottom: 37px;
 }
-.right-details{/*border:1px solid red;*/clear:both;font-size:13px; width:203px; padding: 0px 5px;margin-top: 8px;}
+.right-details{/*border:1px solid red;*/clear:both;font-size:13px; width:203px; padding: 0px 5px;margin-top: 29px; float: right; margin-right:186px;}
 .right-details div{display: block;padding:0px 0;width:100%;word-break:break-all; line-height: 22px;}
 .right-details a{text-decoration:none;color:#666; padding-left: 6.5px;}
 .right-details a:hover{text-decoration:underline;cursor:pointer;}
