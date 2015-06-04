@@ -539,7 +539,7 @@ function add_search_box_secondary_menu($items, $args) {
 		$searchform = ob_get_contents();
 		ob_end_clean();
 
-		$items .= '<li class="menu-item menu-item-type-custom menu-item-object-custom user-portfolio"><a href="http://my.ipatent.co.il" target="_blank" style="color:red">My IP Portfolio</a></li>';
+		$items .= '<li class="menu-item menu-item-type-custom menu-item-object-custom user-portfolio"><a href="https://my.ipatent.co.il" target="_blank" style="color:red">My IP Portfolio</a></li>';
 		$items .= '<li class="searchbox menu-item">
 					<div class="mobile-searchform">
 <div class="mobile-searchform-wrapper">' . $searchform . '</div></div></li>';
