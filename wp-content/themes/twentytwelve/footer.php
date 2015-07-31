@@ -41,8 +41,9 @@
 
 			$category_query = new WP_Query( $category_query_args );
 
-			if ( $category_query->have_posts() ) :
-					while ($category_query->have_posts()) :
+			if ( $category_query->have_posts() ) : ?>
+                <ul class="logo-slider">
+					<?php while ($category_query->have_posts()) :
 					$category_query->the_post();
 					$temp_title = the_title('', '', false);
 					$category = end(get_the_category());
@@ -50,10 +51,11 @@
 					$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full");
 					$image_height=$imgsrc[2]/2;
 					?>
-					<a href="<?php echo(the_excerpt_rss()); ?>" target="_blank"><div class="footer-logo-div" style="background-image:url(<?php echo $imgsrc[0];?>);width:<?php echo $imgsrc[1]."px";?>;height:<?php echo $image_height."px";?>;"></div></a>
+					<li><a href="<?php echo(the_excerpt_rss()); ?>" target="_blank"><div class="footer-logo-div" style="background-image:url(<?php echo $imgsrc[0];?>);width:<?php echo $imgsrc[1]."px";?>;height:<?php echo $image_height."px";?>;"></div></a></li>
 					<?php
-					endwhile;
-			endif;
+					endwhile; ?>
+                </ul>
+			<?php endif;
 		?>
 	</div>
 	</div>

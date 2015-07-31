@@ -70,22 +70,31 @@ $(document).ready(function(){
 	});
 
 	$(".footer-logo-div").hover(function(){
-		
+
 			$(this).removeClass("grayscale");
-			},
+        },
 			function(){
 				$(this).addClass("grayscale");
-	
+
 	});
 		
 	$(".grayscale").hover(function(){
-		
+
 		$(this).removeClass("grayscale");
 		},
 		function(){
 			$(this).addClass("grayscale");
 
 });
-	
+    $('.logo-slider').bxSlider({
+        mode:'horizontal',
+        minSlides: 4,
+        maxSlides: 4,
+        slideWidth: 160,
+        useCSS: false,
+        ticker: true,
+        tickerHover: true,
+        speed: 50000
+    });
 		
 });
