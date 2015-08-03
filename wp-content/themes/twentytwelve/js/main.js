@@ -88,9 +88,9 @@ $(document).ready(function(){
 });
     $('.logo-slider').bxSlider({
         mode:'horizontal',
-        minSlides: 4,
-        maxSlides: 4,
-        slideWidth: 160,
+        minSlides: 3,
+        maxSlides: 3,
+        slideWidth: false,
         useCSS: false,
         ticker: true,
         tickerHover: true,
