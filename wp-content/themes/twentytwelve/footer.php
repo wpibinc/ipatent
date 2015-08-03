@@ -51,7 +51,7 @@
 					$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full");
 					$image_height=$imgsrc[2]/2;
 					?>
-					<li><a href="<?php echo(the_excerpt_rss()); ?>" target="_blank"><div class="footer-logo-div" style="background-image:url(<?php echo $imgsrc[0];?>);width:<?php echo $imgsrc[1]."px";?>;height:<?php echo $image_height."px";?>;"></div></a></li>
+					<li><a href="<?php echo(the_excerpt_rss()); ?>" target="_blank"><div class="footer-logo-div" style="background-image:url(<?php echo $imgsrc[0];?>);"></div></a></li>
 					<?php
 					endwhile; ?>
                 </ul>
