@@ -1796,10 +1796,6 @@ position: relative;
 	text-decoration: underline;
 }
 /* .footer-icons{width:940px;margin:0 auto;height:73px;} */
-.footer-icons .logo-slider li a {
-    display: inline-flex;
-    width: 100%;
-}
 .footer-icons .logo-slider li {
     text-align: center;
 }
@@ -1812,7 +1808,6 @@ position: relative;
 .footer-logo-div{
     float:left;
     margin:14px;
-    cursor: pointer;
 }
 .footer-logo-div img {
     max-height: 75px;
