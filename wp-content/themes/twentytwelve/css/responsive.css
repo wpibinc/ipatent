@@ -430,6 +430,7 @@
         line-height: normal;
         white-space: normal;
         word-break: normal;
+        text-align: justify;
     }
     .entry-content p, .entry-summary p, .comment-content p, .mu_register p{
         text-align: left;
