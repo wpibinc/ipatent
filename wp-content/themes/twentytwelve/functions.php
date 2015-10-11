@@ -602,5 +602,33 @@ function complete_version_removal() {
 }
 add_filter('the_generator', 'complete_version_removal');
 
-
+// Exclude footer logos single post view
+function exclude_post_by_category( $query ) {
+	$idObj = get_category_by_slug('footer_logos');
+	$excluded_category_ids = array($idObj->term_id);
+	if ( $query->is_main_query() ) {
+		if ( ( $query->is_home() || $query->is_category() || $query->is_archive() || $query->is_feed() ) || ( !is_admin() && $query->is_search() ) ) {
+			$query->set('category__not_in', $excluded_category_ids);
+		} else if ( $query->is_single() ) {
+			if ( ( $query->query_vars['p'] ) ) {
+				$page= $query->query_vars['p'];
+			} else if ( isset( $query->query_vars['name'] ) ) {
+				$page_slug = $query->query_vars['name'];
+				$post_type = 'post';
+				global $wpdb;
+				$page = $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE post_name = %s AND post_type= %s AND post_status = 'publish'", $page_slug, $post_type ) );
+			}
+			if ( $page ) {
+				$post_categories = wp_get_post_categories( $page );
+				foreach ($excluded_category_ids as $category_id ) {
+					if ( in_array( $category_id, $post_categories ) ) {
+						$query->set( 'p', -$category_id );
+						break;
+					}
+				}
+			}
+		}
+	}
+}
+add_action( 'pre_get_posts', 'exclude_post_by_category' );
 ?>
