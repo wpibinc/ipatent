@@ -34,6 +34,7 @@ $title = the_title('', '', false);
 
 							$category_query_args = array(
 								'cat' => $category->term_id,
+								'posts_per_page' => -1,
 								'meta_key' => '_wp_page_template',
 								'meta_value' => 'page-team.php',
 								'orderby' => 'menu_order',
