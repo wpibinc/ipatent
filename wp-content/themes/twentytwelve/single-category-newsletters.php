@@ -1,4 +1,3 @@
-
 <?php
 /**
  * The template for displaying all pages.
@@ -12,96 +11,54 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
-
 $category = end(get_the_category());
 $current_name = $category->cat_name;
-$title = the_title('', '', false);
 if($current_name=="footer_logos")
 	header("Location:index.php");
-get_header(); ?>
+get_header();
+if ($category->slug=="articles-and-publications") $menu = "194";
+if ($category->slug=="links") $menu = "379";
+
+$come_from_cat = (int)$_GET['cat_id'];
+$query_posts = get_posts( 'cat=' . $come_from_cat);
+$paginate_links = array();
+$url_sufix = '?cat_id=' . $come_from_cat;
+$find_next_link = false;
+foreach($query_posts as $query_post){
+
+	if($query_post->ID === $post->ID){
+
+		$find_next_link = true;
+
+	}elseif($query_post->ID !== $post->ID && !$find_next_link){
+
+		$paginate_links['prev']= array(
+			'href' => get_permalink($query_post->ID) . $url_sufix,
+			'title' => $query_post->post_title
+		);
+
+	}elseif($find_next_link){
+
+		$paginate_links['next']= array(
+			'href' => get_permalink($query_post->ID) . $url_sufix,
+			'title' => $query_post->post_title
+		);
+		break;
+
+	}
+}
+?>
 
 <script>
    $(document).ready(function() {
-	   var curr = $('.left-menu li.current a').attr('class');
-//	       currid = curr.slice(-5);
-
-		id=$('.date-clicked.current').attr("id");
-			$("."+id+'-post').show();
-
-	   $(".date-clicked").click( function(event) 
-		{	
-			event.preventDefault();													
-			var id=$(this).attr("id");
-			if ($("."+id+'-post').is(":hidden")) 
-				$("."+id+'-post').slideDown("slow");
-			else 
-				$("."+id+'-post').hide();
-		});
-		$(".menu-item-object-category").addClass("current-menu-parent");
+		$(".menu-item-<?php echo $menu;?>").addClass("current-menu-parent");
 	});
 </script>
-
-	<div id="primary" class="site-content newsletter-page">
+	<div id="primary" class="site-content">
 		<div id="content" role="main">
-				
-
-			
-			<div class="left-div">
-				<div class="right-header left-mobile-header">
-					<?php _e('Newsletter', 'twentytwelve'); ?>
-				</div>
-				<div class="mobile-accordion">
-					<div class="left-text-header">More <?php echo $current_name;?>:</div>
-						<ul class="left-menu">
-						<?php
-								$flag_take_date=1;
-								$category_query_args = array(
-    							'category_name' => "$current_name",
-								'orderby' => 'date', 
-								'order' => 'DESC',
-								'posts_per_page' => -1
-								);
-
-								$category_query = new WP_Query( $category_query_args );
-								
-								if ( $category_query->have_posts() ) : 
-									
-									while ($category_query->have_posts()) : 
-										$category_query->the_post();
-										$temp_title = the_title('', '', false);
-										$post_date=get_the_date("F");
-										$post_date_year=get_the_date("Y");
-										$class="";
-										if($temp_title==$title)
-											$class="current";
-										else
-											$class="";
-										
-										if($temp_date!=$post_date)
-											$flag_take_date=1;
-										
-										if($flag_take_date)
-										{	
-											$temp_date=$post_date . '-' . $post_date_year;
-											$flag_take_date=0;
-											echo "<a href='' class='date-clicked $class' id='$temp_date'>$post_date $post_date_year</a><br/>";
-										}
-										
-										
-										echo "<li class='$class $temp_date-post' style='display:none;'><a href=". get_permalink($post->ID)." class='a-news'> $temp_title</a></li>";
-										
-										//echo "<br/>";
-									endwhile;
-								
-								endif;
-								wp_reset_query();
-						?>
-						</ul>
-					</div>
-			</div>
-			<div class="right">
-				<div class="right-header" <?php $style=($current_name=="Links")? 'display:none;' : "";  ?> style="<?php echo $style;?>" title="<?php the_title(); ?>"><?php the_title(); ?></div>
-				<span class="newsletter-date"><?php $pfx_date = get_the_date( 'd.m.Y' ); echo $pfx_date;?></span>
+			<div style="">
+				<div class="right-header" title="<?php the_title(); $title = the_title('', '', false);?>"><?php the_title(); $title = the_title('', '', false);?></div>
+				<span <?php $style=($current_name=="Links")? 'display:none;' : "";  ?> style="<?php echo $style;?>"><?php $pfx_date = get_the_date( 'd.m.Y' ); echo $pfx_date;?></span>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 					<?php //comments_template( '', true ); ?>
@@ -109,5 +66,12 @@ get_header(); ?>
 			</div>
 		</div><!-- #content -->
 	</div><!-- #primary -->
-
+	<div class="clear"></div>
+	<div id="nav">
+		<?php
+        echo ($paginate_links['prev']) ? '<a href="' . $paginate_links['prev']['href'] . '" class="green-submit-btn">< ' . $paginate_links['prev']['title'] .'</a>' : '';
+        echo ($paginate_links['next'] && $paginate_links['prev']) ? ' <br /><br /> ' : '';
+        echo ($paginate_links['next']) ? '<a href="' . $paginate_links['next']['href'] . '" class="green-submit-btn alignright">' . $paginate_links['next']['title'] .' ></a>' : '';
+        ?>
+	</div>
 <?php get_footer(); ?>

@@ -85,11 +85,11 @@ body {
 .block {
 	/*display: table-row;*/
 	height: 45px !important;
-	
+
 }
 .push {
 	height: auto;
-	
+
 }
 
 
@@ -353,7 +353,7 @@ img[class*="align"],
 img[class*="wp-image-"],
 img[class*="attachment-"] {
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
-	
+
 }
 img.size-full,
 img.size-large,
@@ -362,8 +362,22 @@ img.wp-post-image {
 	max-width: 100%;
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
-img.wp-post-image{margin:0px 0;width:215px;height:318px;}
+img.wp-post-image {margin:0px 0;width:215px;height:318px;}
 
+.newsletter-thumb {
+	width: 25%;
+	display: inline-block;
+}
+.newsletter-thumb img.wp-post-image {
+	width: 100%;
+	height: auto;
+}
+.newsletter-excerpt {
+    width: 70%;
+    padding: 0 1%;
+    display: inline-block;
+    vertical-align: top;
+}
 /* Make sure videos and embeds fit their containers */
 embed,
 iframe,
@@ -624,7 +638,7 @@ height: 275px;
 }
 #home-top-div {
 	/*background:url(images/header_home_bg.jpg) no-repeat black;*/
-	
+
 height: 100%;
 width: 100%;
 margin: auto;
@@ -662,7 +676,7 @@ margin-top: 80px;
 	margin-top: 1.714285714rem;*/
 	text-align: center;
 	width:1004px;
-	
+
 	margin: auto;
 }
 .main-navigation .mobile-block{
@@ -772,25 +786,25 @@ background-repeat: no-repeat;
 background-position: center;
 }
 .img-1{
-	background-image:url("../twentytwelve/images/inner-pages-images-1___2560X275pix.jpg"); 
+	background-image:url("../twentytwelve/images/inner-pages-images-1___2560X275pix.jpg");
 }
 .img-2{
-	background-image:url("../twentytwelve/images/inner-pages-images-2___2560X275pix.jpg"); 
+	background-image:url("../twentytwelve/images/inner-pages-images-2___2560X275pix.jpg");
 }
 .img-3{
-	background-image:url("../twentytwelve/images/inner-pages-images-3___2560X275pix.jpg"); 
+	background-image:url("../twentytwelve/images/inner-pages-images-3___2560X275pix.jpg");
 }
 .img-4{
-	background-image:url("../twentytwelve/images/inner-pages-images-4___2560X275pix.jpg"); 
+	background-image:url("../twentytwelve/images/inner-pages-images-4___2560X275pix.jpg");
 }
 .img-5{
-	background-image:url("../twentytwelve/images/inner-pages-images-5___2560X275pix.jpg"); 
+	background-image:url("../twentytwelve/images/inner-pages-images-5___2560X275pix.jpg");
 }
 .img-6{
-	background-image:url("../twentytwelve/images/inner-pages-images-6___2560X275pix.jpg"); 
+	background-image:url("../twentytwelve/images/inner-pages-images-6___2560X275pix.jpg");
 }
 .img-7{
-	background-image:url("../twentytwelve/images/inner-pages-images-7___2560X275pix.jpg"); 
+	background-image:url("../twentytwelve/images/inner-pages-images-7___2560X275pix.jpg");
 }
 
 
@@ -1881,7 +1895,7 @@ li:first-child .a-news{border-top:none;}
 
 .main-navigation li a.social.facebook{
 	background-position:-20px 0px ;
-	
+
 }
 .main-navigation li a.social.twitter{
 	background-position:-41px 0px ;
@@ -1889,7 +1903,7 @@ li:first-child .a-news{border-top:none;}
 
 .main-navigation li.socials:hover{
 	background:none;
-	
+
 }
 .main-navigation li a.social.facebook:hover{background-position:-20px -16px ;}
 .main-navigation li a.social.twitter:hover{background-position:-41px -16px ;}
@@ -1943,7 +1957,7 @@ background:url(images/social_network_btn.gif) 0px 0px no-repeat;
 	height:16px;
 	display:none;
 	float: left;
-	margin-top: 6px;	
+	margin-top: 6px;
 }
 a.social-contact.facebook{
 	background-position:-20px 0px ;
@@ -1958,7 +1972,7 @@ a.social-contact.twitter:hover{background-position:-41px -16px;}
 
 .left-menu{
 	margin-bottom:15px;
-	
+
 }
 
 .page_item {
@@ -2095,7 +2109,7 @@ color: red !important;
 margin-left: 4px;
 }
 .gform_wrapper .top_label li{
-	
+
 }
 .port-ip .inpts{
 	margin-bottom: 4px
@@ -2106,9 +2120,9 @@ margin-left: 4px;
 }
 .port-ip input[type="submit"]{
     background:none!important;
-     border:none; 
+     border:none;
      padding:0!important;
-    
+
     /*optional*/
     font-family:verdana,arial,sans-serif; /*input has OS specific font-family*/
      color:#ccc;
