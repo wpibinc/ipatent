@@ -50,11 +50,11 @@ get_header(); ?>
 				<br />
 				<br />
 				<div class="newsletter-row">
+					<?php if( has_post_thumbnail() ): ?>
 					<div class="newsletter-thumb">
-						<?php if( has_post_thumbnail() ):
-							the_post_thumbnail();
-						endif; ?>
+					<?php the_post_thumbnail(); ?>
 					</div>
+					<?php endif; ?>
 					<div class="newsletter-excerpt">
 						<?php
 						$excerpt = get_the_excerpt();
