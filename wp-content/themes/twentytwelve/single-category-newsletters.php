@@ -19,7 +19,9 @@ get_header();
 if ($category->slug=="articles-and-publications") $menu = "194";
 if ($category->slug=="links") $menu = "379";
 
-$come_from_cat = (int)$_GET['cat_id'];
+$categories = get_the_category();
+$come_from_cat = $categories[0]->cat_ID;
+
 $query_posts = get_posts( 'cat=' . $come_from_cat);
 $paginate_links = array();
 $url_sufix = '?cat_id=' . $come_from_cat;
