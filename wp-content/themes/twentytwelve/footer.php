@@ -10,7 +10,7 @@
  * @since Twenty Twelve 1.0
  */
 ?>
-		
+
 	</div><!-- #main .wrapper -->
     <div class="social-icon-container">
         <a href="https://www.linkedin.com/company/ehrlich-&-fenster-patent-attorneys" target="_blank" class="linkedin-social-icon"></a>
@@ -65,10 +65,10 @@
 		<div class="right">
 		<span style="float: left;" ><?php if (ICL_LANGUAGE_CODE=='he') {?>כל הזכויות שמורות, ארליך ופנסטר |<?php } else {?>All Rights Reserved, EHRLICH & FENSTER | <?php }?><a href=<?php if (ICL_LANGUAGE_CODE=='he') {?>"http://www.ipatent.co.il/?page_id=1652"<?php } else {?>"http://www.ipatent.co.il/?page_id=1644"<?php }?>><?php if (ICL_LANGUAGE_CODE=='he') {?>תקנון ותנאים<?php } else {?>Disclaimer <?php }?></a></span>
 		<span class="footer-rights-social">
-			<a href="https://www.linkedin.com/company/ehrlich-&-fenster-patent-attorneys" target="_blank" class="linkedin social"></a>
-			<a href="https://www.facebook.com/EhrlichFenster" target="_blank" class="facebook social"></a>
-			<a href="https://twitter.com/EhrlichFenster" target="_blank" class="twitter social"></a>
-            <a href="<?php bloginfo('rss2_url') ?>" target="_blank" class="rss_link"></a>
+			<a href="https://www.linkedin.com/company/ehrlich-&-fenster-patent-attorneys" target="_blank" class="fa-social"><i class="fa fa-linkedin"></i></a>
+			<a href="https://www.facebook.com/EhrlichFenster" target="_blank" class="fa-social"><i class="fa fa-facebook"></i></a>
+			<a href="https://twitter.com/EhrlichFenster" target="_blank" class="fa-social"><i class="fa fa-twitter"></i></a>
+			<a href="<?php bloginfo('rss2_url') ?>" target="_blank" class="fa-social"><i class="fa fa-rss"></i></a>
 		</span>
 		</div>
 	</div>
