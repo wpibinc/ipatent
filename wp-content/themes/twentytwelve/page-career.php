@@ -1,4 +1,4 @@
-<?php /* Template name:career-page */ ?>  
+<?php /* Template name:career-page */ ?>
 <?php
 /**
  * The template for displaying all pages.
@@ -21,10 +21,10 @@ get_header(); ?>
 				<header class="entry-header">
 					<h1 class="entry-title"></h1>
 				</header>
-				<div class="right-header left-mobile-header">
+				<h1 class="right-header left-mobile-header">
 					<?php echo $post->post_name;?>
-				</div>
-				<div class="right-header desctop-header"><?php the_title(); ?></div>
+				</h1>
+				<h1 class="right-header desctop-header"><?php the_title(); ?></h1>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 					<?php //comments_template( '', true ); ?>
@@ -32,8 +32,8 @@ get_header(); ?>
 			</div>
 			<div class="left-div">
 				<?php $imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full");?>
-				<a class="group1" href="<?php echo $imgsrc[0];?>" title="" ><?php echo get_the_post_thumbnail();?> </a>			
-			</div>	
+				<a class="group1" href="<?php echo $imgsrc[0];?>" title="" ><?php echo get_the_post_thumbnail();?> </a>
+			</div>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

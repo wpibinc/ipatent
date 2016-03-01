@@ -1,4 +1,4 @@
-<?php /* Template name:jobs-page */ ?>  
+<?php /* Template name:jobs-page */ ?>
 <?php
 /**
  * The template for displaying all pages.
@@ -18,7 +18,7 @@ get_header(); ?>
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 			<div class="right">
-				<div class="right-header"><?php the_title(); ?></div>
+				<h1 class="right-header"><?php the_title(); ?></h1>
 				<span>You can also contact us via the form below:</span>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
@@ -30,8 +30,8 @@ get_header(); ?>
 				<div class="left-header"><span>Our Offices:</span></div>
 					<div class="inner-left-div">
 						<?php dynamic_sidebar("jobs"); ?>
-					</div>	
-			</div>	
+					</div>
+			</div>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

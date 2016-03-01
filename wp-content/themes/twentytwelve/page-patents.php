@@ -1,4 +1,4 @@
-<?php /* Template name:patents-page */ ?>  
+<?php /* Template name:patents-page */ ?>
 <?php
 /**
  * The template for displaying all pages.
@@ -18,13 +18,13 @@ get_header(); ?>
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 			<div class="right">
-				<div class="right-header"><?php the_title(); $title = the_title('', '', false);?></div>
+				<h1 class="right-header"><?php the_title(); $title = the_title('', '', false);?></h1>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 					<?php //comments_template( '', true ); ?>
 				<?php endwhile; // end of the loop. ?>
 			</div>
-				
+
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

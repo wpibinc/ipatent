@@ -1,4 +1,4 @@
-<?php /* Template name:services-page */ ?>  
+<?php /* Template name:services-page */ ?>
 <?php
 /**
  * The template for displaying all pages.
@@ -17,7 +17,7 @@ get_header(); ?>
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 			<div class="left-div services-left">
-				<div class="right-header left-mobile-header"><?php the_title(); $title = the_title('', '', false);?></div>
+				<h1 class="right-header left-mobile-header"><?php the_title(); $title = the_title('', '', false);?></h1>
 				<div class="right-div-entry-title"></div>
 				<?php
 				$id=$post->ID;
@@ -64,8 +64,8 @@ get_header(); ?>
 					if($title==$titlenamer){
 						$children = str_replace('<li>','<li class="current">', $children);
 					}
-					
-					if (ICL_LANGUAGE_CODE=='he') $services='שירותים נוספים';  
+
+					if (ICL_LANGUAGE_CODE=='he') $services='שירותים נוספים';
 						else $services='More Services';
 
 					if ($children && $id) {
@@ -109,7 +109,7 @@ get_header(); ?>
 
 			</div>
 			<div class="right services-right">
-				<div class="right-header"><?php echo $title;?></div>
+				<h1 class="right-header"><?php echo $title;?></h1>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 					<?php //comments_template( '', true ); ?>

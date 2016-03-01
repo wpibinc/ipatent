@@ -1,4 +1,4 @@
-<?php /* Template name:contact-page */ ?>  
+<?php /* Template name:contact-page */ ?>
 <?php
 /**
  * The template for displaying all pages.
@@ -18,7 +18,7 @@ get_header(); ?>
 	<div id="primary" class="site-content contact-page">
 		<div id="content" role="main">
 			<div class="right">
-				<div class="right-header"><?php the_title(); ?></div>
+				<h1 class="right-header"><?php the_title(); ?></h1>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 					<?php //comments_template( '', true ); ?>
@@ -32,8 +32,8 @@ get_header(); ?>
 					<div class="inner-left-div">
 						<?php dynamic_sidebar("contact"); ?>
 
-					</div>	
-			</div>	
+					</div>
+			</div>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

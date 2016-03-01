@@ -1,4 +1,4 @@
-<?php /* Template name:team-page */ ?>  
+<?php /* Template name:team-page */ ?>
 <?php
 /**
  * The template for displaying all pages.
@@ -22,9 +22,9 @@ $title = the_title('', '', false);
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 			<div class="left-div">
-				<div class="right-header left-mobile-header">
+				<h1 class="right-header left-mobile-header">
 					<?php echo $current_name;?> Team
-				</div>
+				</h1>
 				<div class="right-div-entry-title"></div>
 				<?php if ($category) {?>
 					<div class="mobile-accordion">
@@ -64,20 +64,20 @@ $title = the_title('', '', false);
 				<?php } ?>
 			</div>
 			<div class="right team-page-right">
-				<div class="right-header"><?php the_title(); ?></div>
+				<h1 class="right-header"><?php the_title(); ?></h1>
 				<div class="clearfix"></div>
 				<div><?php echo(types_render_field("degrees")); ?></div>
 				<div class="right-img">
-					<?php 
+					<?php
 						$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "fullsize");
 					?>
 					<a class="group1" href="<?php echo $imgsrc[0];?>" title="" >
-					
-						<?php 
+
+						<?php
 						$attr = array(
 								'class' => 'grayscale'
 						);
-						echo get_the_post_thumbnail($post->ID, array(215,318), $attr);?> 
+						echo get_the_post_thumbnail($post->ID, array(215,318), $attr);?>
 					</a>
 					<!-- details under the image -->
 									<div class="right-details">
@@ -99,45 +99,45 @@ $title = the_title('', '', false);
 					<?php get_template_part( 'content', 'page' ); ?>
 					<?php endwhile; // end of the loop. ?>
 					</div>
-					
+
 					<?php if(types_render_field("experience_field")!=""){?>
 					<div class="right-text-header1"><?php if (ICL_LANGUAGE_CODE=='he') {?>נסיון ורקע<?php } else {?>Experience & Background<?php }?></div>
 					<div style="margin:0px 0 0 20px;word-break:break-word;padding: 0px 5px 0px 0px" class="resume-text">
 						<?php echo(types_render_field("experience_field")); ?>
 					</div>
 					<?php }?>
-					
+
 					<div class="right-text-header1"><?php if (ICL_LANGUAGE_CODE=='he') {?>קורות חיים<?php } else {?>Resume<?php }?></div>
 					<div style="margin:0px 0 0 20px;word-break:break-word;padding: 0px 5px 0px 0px " class="resume-text"><?php echo(types_render_field("resume_field")); ?></div>
-					
+
 					<?php if(types_render_field("education_field")!=""){?>
 					<div class="right-text-header1"><?php if (ICL_LANGUAGE_CODE=='he') {?>השכלה<?php } else {?>Education<?php }?></div>
 					<div style="margin:0px 0 0 20px;word-break:break-word;padding: 0px 5px 0px 0px " class="resume-text"><?php echo(types_render_field("education_field")); ?></div>
 					<?php }?>
-					
+
 					<?php if(types_render_field("academic_awards")!=""){?>
 					<div class="right-text-header1"><?php if (ICL_LANGUAGE_CODE=='he') {?>פרסים אקדמיים<?php } else {?>Academic Awards<?php }?></div>
 					<div style="margin:0px 0 0 20px;word-break:break-word;padding: 0px 5px 0px 0px " class="resume-text"><?php echo(types_render_field("academic_awards")); ?></div>
 					<?php }?>
-					
+
 					<?php if(types_render_field("rankings_recognitions")!=""){?>
 					<div class="right-text-header1"><?php if (ICL_LANGUAGE_CODE=='he') {?>דירוגים והכרות<?php } else {?>Rankings & Recognitions<?php }?></div>
 					<div style="margin:0px 0 0 20px;word-break:break-word;padding: 0px 5px 0px 0px " class="resume-text"><?php echo(types_render_field("rankings_recognitions")); ?></div>
 					<?php }?>
-					
-					<?php if(types_render_field("voluntary_activities")!=""){?>		
+
+					<?php if(types_render_field("voluntary_activities")!=""){?>
 					<div class="right-text-header1"><?php if (ICL_LANGUAGE_CODE=='he') {?>פעילויות התנדבותיות<?php } else {?>Voluntary Activities<?php }?></div>
 					<div style="margin:0px 0 0 20px;word-break:break-word;padding: 0px 5px 0px 0px " class="resume-text"><?php echo(types_render_field("voluntary_activities")); ?></div>
 					<?php }?>
-					
-					<?php if(types_render_field("admissions")!=""){?>	
+
+					<?php if(types_render_field("admissions")!=""){?>
 					<div class="right-text-header1"><?php if (ICL_LANGUAGE_CODE=='he') {?>קבלות<?php } else {?>Admissions<?php }?></div>
 					<div style="margin:0px 0 0 20px;word-break:break-word;padding: 0px 5px 0px 0px " class="resume-text"><?php echo(types_render_field("admissions")); ?></div>
 					<?php }?>
-				</div>				
+				</div>
 			</div>
 
-			
+
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

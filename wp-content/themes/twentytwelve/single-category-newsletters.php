@@ -59,7 +59,7 @@ foreach($query_posts as $query_post){
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 			<div style="">
-				<div class="right-header" title="<?php the_title(); $title = the_title('', '', false);?>"><?php the_title(); $title = the_title('', '', false);?></div>
+				<h1 class="right-header" title="<?php the_title(); $title = the_title('', '', false);?>"><?php the_title(); $title = the_title('', '', false);?></h1>
 				<span <?php $style=($current_name=="Links")? 'display:none;' : "";  ?> style="<?php echo $style;?>"><?php $pfx_date = get_the_date( 'd.m.Y' ); echo $pfx_date;?></span>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>

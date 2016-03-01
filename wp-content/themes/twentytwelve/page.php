@@ -1,4 +1,4 @@
-<?php /* Template name:about-page */ ?>  
+<?php /* Template name:about-page */ ?>
 <?php
 /**
  * The template for displaying all pages.
@@ -18,7 +18,7 @@ get_header(); ?>
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 			<div class="right about-right">
-					<div class="right-header" title="<?php the_title(); $title = the_title('', '', false);?>"><?php the_title(); $title = the_title('', '', false);?></div>
+					<h1 class="right-header" title="<?php the_title(); $title = the_title('', '', false);?>"><?php the_title(); $title = the_title('', '', false);?></h1>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 					<?php //comments_template( '', true ); ?>
@@ -26,20 +26,20 @@ get_header(); ?>
 			</div>
 			<div class="left-div about-left" style="margin-top: 70px;">
 					<?php if(the_title("","",false)!="About" && the_title("","",false)!="אודות" && the_title("","",false)!="Sitemap" ):?>
-					
+
 						<div class="inner-left-div">
 
-						
+
 						<ul class="left-menu">
 						<?php
-						
+
 						$id=$post->post_parent;
 						wp_list_pages("depth=1&child_of=".$id ."&title_li=");
-						
-																
+
+
 						?>
 						</ul>
-						
+
 						<ul class="left-menu">
 						<?php
 								$category_query_args = array(
@@ -47,10 +47,10 @@ get_header(); ?>
 								);
 
 								$category_query = new WP_Query( $category_query_args );
-								
-								if ( $category_query->have_posts() ) : 
-									
-									while ($category_query->have_posts()) : 
+
+								if ( $category_query->have_posts() ) :
+
+									while ($category_query->have_posts()) :
 										$category_query->the_post();
 										$temp_title = the_title('', '', false);
 										$class = "itm";
@@ -58,27 +58,27 @@ get_header(); ?>
 											$class="itm current";
 										echo "<li class='$class'><a href=". get_permalink($post->ID)." class='a-services'>$temp_title </a></li>";
 									endwhile;
-								
+
 								endif;
-								
+
 						?>
 						</ul>
-					</div>	
-					
-					
-					
-					
-					<?php else:  
+					</div>
+
+
+
+
+					<?php else:
 						$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full");
 					?>
 					<a class="group1" href="<?php echo $imgsrc[0];?>" title="" >
-					
+
 						<?php echo get_the_post_thumbnail();
 						endif;
-						?> 
-					</a>				
+						?>
+					</a>
 				</div>
-			</div>	
+			</div>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
