@@ -30,15 +30,15 @@
 
 
 
-<meta name="keywords" content="<?php 
+<meta name="keywords" content="<?php
 		if ( is_home() )
 			echo ', Patent, Trademark, Patent Firm';
-		else	
+		else
 			wp_title( '|', true, 'right' ); echo ', Patent, Trademark, Patent Firm'; ?>"  />
-<meta name="description" content="<?php 
+<meta name="description" content="<?php
 		if ( is_home() )
 			echo 'Ehrlich & Fenster is a leading Israel based Patent Attorneys Firm. The Firm specializes in all matters concerning protection and prose- cution of Intellectual Property';
-		else	
+		else
 			wp_title( '|', true, 'right' ); echo 'Ehrlich & Fenster is a leading Israel based Patent Attorneys Firm. The Firm specializes in all matters concerning protection and prose- cution of Intellectual Property'; ?>" />
 
 <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.gif" type="image/x-icon" />
@@ -91,9 +91,9 @@
 
 				$('.non-retina').colorbox({rel:'group5', transition:'none'})
 				$('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
-				
+
 				//Example of preserving a JavaScript event for inline calls.
-				$("#click").click(function(){ 
+				$("#click").click(function(){
 					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
 					return false;
 				});
@@ -103,14 +103,23 @@
 
 
 
-<?php wp_head(); 
+<?php wp_head();
 global  $bcn;
 $bcn =  bcn_display(true);
-	
+
 ?>
 </head>
 
 <body <?php body_class(); ?>>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MSL7X3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MSL7X3');</script>
+<!-- End Google Tag Manager -->
 <div id="wrap">
 	<header class="block">
 		<div id="nav-div">
@@ -124,8 +133,8 @@ $bcn =  bcn_display(true);
 			</nav>
 		</div>
 	</header>
-	<?php 
-	
+	<?php
+
 	?>
 	<div class="top-div img-<?php echo rand(1, 7); ?>">
 	   <div class="main_total_top_holder" style="top:108px;">
@@ -138,11 +147,11 @@ $bcn =  bcn_display(true);
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 		<!--<hgroup>
-			 <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1> 
-			 <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2> 
+			 <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			 <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>-->
-	
-		
+
+
 		<?php $header_image = get_header_image();
 		if ( ! empty( $header_image ) ) : ?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
