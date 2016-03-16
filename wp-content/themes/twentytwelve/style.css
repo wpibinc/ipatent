@@ -1741,6 +1741,7 @@ float: right;
 
 #gform_submit_button_1, #gform_submit_button_2, .site_form .gform_button {width:139px;height:34px;background:url(images/send_form_btn.gif) top no-repeat;float:right;/*margin:0 47px;*/}
 #gform_submit_button_1:hover,#gform_submit_button_2:hover , .site_form .gform_button:hover {background:url(images/send_form_btn.gif) bottom no-repeat;}
+#gform_submit_button_1 {margin-top:-165px;}
 .gfield.gf_left_half .ginput_container div.charleft.ginput_counter {margin-top: -20px !important;margin-left: 5px !important;}
 .site_form .left-side .ginput_container {float: left;}
 .site_form .gform_button {margin-top: 9px;}
@@ -1852,6 +1853,7 @@ position: relative;
 
 .entry-content p:first-of-type{
 	margin-top: 0px;
+	padding-top: 50px;
 }
 .footer-rights{background-color:#49423E;color:white;height:41px;width:100%;text-align: center;}
 .footer-rights span{}
