@@ -6,7 +6,7 @@ add the category newsletter with the same slug name
 
 go to Appearnce->Menues
 Custom Links
-feed Url with this line: http://ipatent.co.il/?p=565 
+feed Url with this line: http://ipatent.co.il/?p=565
 feed Label with this line:Newsletter
 put it under the News tab
 
@@ -20,8 +20,8 @@ sitemap defenitions
 
 google-sitemap-generator
 ------------------------
-Open the plugin configuration page, which is located under Options -> XML-Sitemap 
-and build the sitemap the first time. 
+Open the plugin configuration page, which is located under Options -> XML-Sitemap
+and build the sitemap the first time.
 If you get a permission error, check the file permissions of the newly created files.
 The plugin will automatically update your sitemap of you publish a post, so theres nothing more to do :)
 ------------------------
@@ -32,7 +32,7 @@ Allow selecting main Team category in team memebers:
 Name: Main Team
 Slug: main-team
 Description: This is the team that its members will be shown on the left
-Options (Title - Slug): 
+Options (Title - Slug):
 Patents - patents
 Litigation Support - litigation
 Breeder's Rights - breeders
@@ -74,7 +74,7 @@ TP------------------------------------------------------------------------------
 
 Task #28
 1. Go to Appearance > Widgets
-2. Edit content in 'Text' widget that exist in 'Home' box 
+2. Edit content in 'Text' widget that exist in 'Home' box
 T-----------------------------------------------------------------------------------------
 
 Anti spam in forms
@@ -143,3 +143,6 @@ Payment by check or bank transfer to:
 Appearance -> Widgets -> Contact Sidebar/
 replace: <div class="mobile-accordion">
 with: <div class="mobile-accordion desktop-accordion">
+-- 16.03.2016
+Settings -> AddToAny -> Floating -> Placement Right docked
+Settings -> AddToAny -> Floating -> Position 320 pixels from top
