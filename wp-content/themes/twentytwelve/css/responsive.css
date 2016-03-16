@@ -130,10 +130,11 @@
     .main-navigation ul li:hover > ul {
         border-left: 0;
         display: block;
+        background: #afafaf;
     }
 
     .main-navigation li ul li a {
-        background: #787068;
+        background: #afafaf;
         display: block;
         line-height: 1.081818182;
         height:14px;
