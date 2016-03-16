@@ -108,7 +108,7 @@
 
 
 				//Example of preserving a JavaScript event for inline calls.
-				$("#click").click(function(){ 
+				$("#click").click(function(){
 					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
 					return false;
 				});
@@ -165,6 +165,15 @@
 </head>
 
 <body <?php body_class(); ?>>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MSL7X3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MSL7X3');</script>
+<!-- End Google Tag Manager -->
 <div id="wrap">
 <section class="container">
 <header class="block">
@@ -180,21 +189,21 @@
 		</nav>
 </div>
 </header>
-<?php 
+<?php
 
 ?>
 <div id="home-top-div">
-	
+
 
 		<div class="flexslider" >
 		   <div class="slide">
 		   </div>
-		    	
+
 		 </div>
 		 <div class="main_total_top_holder">
-		 <?php 
+		 <?php
 		 echo '<p class="flex-caption">';
-		 
+
 		 echo '<span><img src="'; echo get_template_directory_uri(); echo '/images/Logo.png" style="width:265px;"></span>';
 		 //echo apply_filters( 'the_title', $attachment->post_title );
 		 echo '</p>';
@@ -242,11 +251,11 @@
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 		<!--<hgroup>
-			 <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1> 
-			 <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2> 
+			 <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			 <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>-->
-	
-		
+
+
 		<?php $header_image = get_header_image();
 		if ( ! empty( $header_image ) ) : ?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
@@ -254,7 +263,7 @@
 	</header><!-- #masthead -->
 
 	<div id="main" class="wrapper">
-		<?php if(!(is_page_template('page-home.php'))):?> 
+		<?php if(!(is_page_template('page-home.php'))):?>
 		<div class="breadcrumbs">
 		    <?php if(function_exists('bcn_display'))
 		    {
