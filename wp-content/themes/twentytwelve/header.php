@@ -139,7 +139,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<div class="top-div img-<?php echo rand(1, 7); ?>">
 	   <div class="main_total_top_holder" style="top:108px;">
 		 <p class="flex-caption erlich-fenster-logo"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="לדף הביח"><img src="http://www.ipatent.co.il/wp-content/themes/twentytwelve/images/Logo.png" style="width:280px;"></a> </span></p>
-		<p class="flex-caption ipatent-logo"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="לדף הביח"><img src="<?php echo get_template_directory_uri()."/images/iPatent_orange_logo.png";?>" style="width:280px;"></a> </span></p>
+		<p class="flex-caption ipatent-logo"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="לדף הביח"><img src="<?php echo get_template_directory_uri()."/images/iPatent_orange_logo.png";?>" style="width:210px;"></a> </span></p>
 		 </div>
 	</div>
 <section class="container">

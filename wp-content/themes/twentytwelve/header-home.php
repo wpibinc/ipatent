@@ -208,7 +208,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		 //echo apply_filters( 'the_title', $attachment->post_title );
 		 echo '</p>';
 		 echo '<p class="flex-caption ipatent-logo">';
-		 echo '<span><img src="'; echo get_template_directory_uri(); echo '/images/iPatent_orange_logo.png" style="width:265px;"></span>';
+		 echo '<span><img src="'; echo get_template_directory_uri(); echo '/images/iPatent_orange_logo.png" style="width:198px;"></span>';
 		 echo '</p>';
 		 ?>
 			 <div class="header_container_div">
