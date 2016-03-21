@@ -2075,6 +2075,15 @@ margin: auto;
 width: 100%;
 top: 90px;
 }
+.flex-caption .erlich-fenster-logo {
+	z-index: 1;
+}
+.flex-caption .ipatent-logo {
+	z-index: 2;
+}
+.flex-caption.ipatent-logo img {
+	float: right;
+}
 .header_container_div{
 	width: 940px;
 margin: auto;

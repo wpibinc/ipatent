@@ -202,10 +202,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		 </div>
 		 <div class="main_total_top_holder">
 		 <?php
-		 echo '<p class="flex-caption">';
+		 echo '<p class="flex-caption erlich-fenster-logo">';
 
 		 echo '<span><img src="'; echo get_template_directory_uri(); echo '/images/Logo.png" style="width:265px;"></span>';
 		 //echo apply_filters( 'the_title', $attachment->post_title );
+		 echo '</p>';
+		 echo '<p class="flex-caption ipatent-logo">';
+		 echo '<span><img src="'; echo get_template_directory_uri(); echo '/images/iPatent_orange_logo.png" style="width:265px;"></span>';
 		 echo '</p>';
 		 ?>
 			 <div class="header_container_div">
