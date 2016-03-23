@@ -236,7 +236,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					"></span>
 <span style="
     font-family: sans-serif;
-    color: red;
+    color: #ec6e00;
     float: right;
     margin-top: 3px;
     margin-left: 5px;
