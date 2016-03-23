@@ -51,9 +51,9 @@ function twentytwelve_setup() {
 	 * If you're building a theme based on Twenty Twelve, use a find and replace
 	 * to change 'twentytwelve' to the name of your theme in all the template files.
 	 */
-	
+
 	if ( function_exists('register_sidebar') ) {
-	
+
 		register_sidebar(array(
 		'id' => 'home',
 		'name' => 'Home',
@@ -110,7 +110,7 @@ function twentytwelve_setup() {
 		'before_title' => '',
 		'after_title' => ''
 				));
-		
+
 		register_sidebar(array(
 						'id' => 'career',
 						'name' => 'Career',
@@ -127,10 +127,10 @@ function twentytwelve_setup() {
 		'before_title' => '',
 		'after_title' => ''
 				));
-		
-	
+
+
 	}
-	
+
 	load_theme_textdomain( 'twentytwelve', get_template_directory() . '/languages' );
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.
@@ -156,7 +156,7 @@ function twentytwelve_setup() {
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
-	
+
 }
 add_action( 'after_setup_theme', 'twentytwelve_setup' );
 
@@ -539,7 +539,7 @@ function add_search_box_secondary_menu($items, $args) {
 		$searchform = ob_get_contents();
 		ob_end_clean();
 
-		$items .= '<li class="menu-item menu-item-type-custom menu-item-object-custom user-portfolio"><a href="https://my.ipatent.co.il" target="_blank" style="color:red">My IP Portfolio</a></li>';
+		$items .= '<li class="menu-item menu-item-type-custom menu-item-object-custom user-portfolio"><a href="https://my.ipatent.co.il" target="_blank">My IP Portfolio</a></li>';
 		$items .= '<li class="searchbox menu-item">
 					<div class="mobile-searchform">
 <div class="mobile-searchform-wrapper">' . $searchform . '</div></div></li>';
@@ -547,7 +547,7 @@ function add_search_box_secondary_menu($items, $args) {
 			<a href="http://facebook.com" class="facebook social"></a>
 			<a href="http://twitter.com" class="twitter social"></a></li>';
 	return $items;
-	 
+
 }
 /**
  * @author Brad Dalton - WP Sites

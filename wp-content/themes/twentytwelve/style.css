@@ -2149,7 +2149,7 @@ box-shadow: none!important;
 margin: 0px;
 font-size: 14px;
 }
-.port-ip p{margin-bottom: 5px; color: red; text-align: right; }
+.port-ip p{margin-bottom: 5px; color: #ec6e00; text-align: right; }
 .port-ip label{float: left;
 height: 14px;
 padding-top: 6px;}
