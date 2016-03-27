@@ -2078,11 +2078,11 @@ top: 90px;
 .flex-caption .erlich-fenster-logo {
 	z-index: 1;
 }
-.flex-caption .ipatent-logo {
+.flex-caption.ipatent-logo {
 	z-index: 2;
-}
-.flex-caption.ipatent-logo img {
-	float: right;
+	display: inline;
+	width: 15%;
+	left: 64%;
 }
 .header_container_div{
 	width: 940px;
