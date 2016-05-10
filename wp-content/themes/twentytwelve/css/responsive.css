@@ -669,7 +669,7 @@
         border: none;
     }
     #gform_1 input[type="submit"],#gform_2 input[type="submit"]{
-        background: url("../images/contact_mobile_text.png") center no-repeat, #49423e;
+        background: url("../images/contact_mobile_text.png") center no-repeat, #f07c00;
     }
     #gform_1 input::-webkit-input-placeholder,
     #gform_1 textarea::-webkit-input-placeholder,
