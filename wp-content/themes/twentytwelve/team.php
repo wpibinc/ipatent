@@ -36,9 +36,12 @@ get_header(); ?>
                                 $members->the_post();
                                 ?>
                                             <div class="member">
+                                                <a href="<?php the_permalink() ?>">
                                                 <?php the_post_thumbnail(); ?>
+                                                
                                                 <p><?php the_title() ?></p>
                                                 <p><?php the_content() ?></p>
+                                                </a>
                                             </div>
                                 <?php     
                             }

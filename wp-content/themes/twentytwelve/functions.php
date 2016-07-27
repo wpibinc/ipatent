@@ -233,6 +233,10 @@ function twentytwelve_scripts_styles() {
 	wp_enqueue_style( 'twentytwelve-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentytwelve-style' ), '20121010' );
 	wp_enqueue_style( 'responsive-style', get_template_directory_uri() . '/css/responsive.css', array( 'twentytwelve-style' ) );
 	$wp_styles->add_data( 'twentytwelve-ie', 'conditional', 'lt IE 9' );
+        wp_enqueue_script('main', get_template_directory_uri().'/js/main.js');
+        wp_localize_script('main', 'ajaxUrl', array(
+			'url' => admin_url('admin-ajax.php')
+		));
 }
 add_action( 'wp_enqueue_scripts', 'twentytwelve_scripts_styles' );
 
@@ -631,4 +635,38 @@ function exclude_post_by_category( $query ) {
 	}
 }
 add_action( 'pre_get_posts', 'exclude_post_by_category' );
-?>
+
+function ipatentFilterTeam(){
+    $catId = $_GET['cat'];
+    if($catId === 'all'){
+        $args = array(
+            'post_type' => 'page',
+            'cat' => 4
+        );
+    }else{
+        $args = array(
+            'post_type' => 'page',
+            'cat' => $catId
+        );
+    }
+    $members = new WP_Query($args);
+    if($members->have_posts()){
+        while($members->have_posts()){
+            $members->the_post();
+            ?>
+                        <div class="member">
+                            <a href="<?php the_permalink() ?>">
+                            <?php the_post_thumbnail(); ?>
+
+                            <p><?php the_title() ?></p>
+                            <p><?php the_content() ?></p>
+                            </a>
+                        </div>
+            <?php     
+        }
+    }
+    wp_reset_query();
+    die();
+}
+add_action('wp_ajax_filterTeam', 'ipatentFilterTeam');
+add_action('wp_ajax_filterTeam', 'ipatentFilterTeam');

@@ -96,5 +96,21 @@ $(document).ready(function(){
         tickerHover: true,
         speed: 50000
     });
+    
+    /**/
+    $(".filter > select").change(function(){
+        var cat = $(this).val();
+        $.ajax({
+            method: 'get',
+            url: ajaxUrl.url,
+            data: {
+                action: 'filterTeam',
+                cat: cat,
+            },
+            success: function(res){
+                $(".team-wrapper").html(res);
+            },
+        });
+    });
 		
 });
